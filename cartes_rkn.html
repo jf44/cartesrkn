@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="Author" content="JF">
+<meta name="description" content="Cartes GoogleEarth.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="author" title="Auteur" href="mailto:jean.fruitet@free.fr">
+<title>Vos bateaux dans Google Earth</title>
+<meta name="ROBOTS" content="none,noarchive">
+<link href="select_param.css" rel="stylesheet" type="text/css">
+<script src="js/cookies.js"></script>
+<script src="js/ajax_loader.js"></script>
+<script src="js/cartes_ge.js"></script>
+<script src="js/set_params.js"></script>
+<script src="js/set_positions.js"></script>
+<script src="js/config_server.js"></script> <!-- server configuration :: need to be adapted to the server position (local or remote) -->
+</head>
+<body>
+<div id="bandeauDiv"><h1 class="bandeau">Vos bateaux amis du Vendée Globe virtuel 2020 dans Google Earth</h1></div>
+<div id="leftDiv">
+<h2>Saisie des paramètres</h2>
+
+<p>Commencer par saisir le nom de votre bateau. (<i>En respectant la casse !</i>)</p>
+<form action="" name="naming" id="naming"  method="post" onsubmit="return get_params();">
+<b><label for="nomboat">Nom</label></b>
+<input type="text" class="textInput" name="nomboat" id="nomboat" size="30" value=""/>
+<input id="submitBtn2" type="submit" name="action2" value="Choisir" />
+</form>
+<br />
+<p>Puis sélectionnez les paramètres indispensables à la génération des fichiers KMZ.</p>
+<form action="" name="steering" id="steering"  method="post" onsubmit="return (steeringvalidate_params());">
+<label for="cCourse"><b>Course</b></label>
+<input type="text" name="cCourse" id="cCourse" size="20" maxsize="30" value="" onchange="placerUneValeur(0);"/>
+&nbsp; &nbsp;
+<label for="cTeam"><b>Team</b></label> &nbsp;
+<input type="text" name="cTeam" id="cTeam" size="10" maxsize="30" value="" onchange="placerUneValeur(1);"/>
+&nbsp; &nbsp;
+<label for="cScale"><b>Echelle</b></label> <span class="small"> (entre <i>6</i> et <i>15</i>)</span>
+<input type="text" name="cScale" id="cScale" size="4" maxsize="4" value="" onchange="placerUneValeur(3);"/>
+<br /><br />
+<label for="params">Jeu de paramètres choisis</label>
+<br />
+<input type="text" name="params" id="params" size="80" maxsize="255" value="" />
+<br /><br />
+<br /><i><span class="error"><label id="imputvalue"></label></span></i>
+<br /><br />
+<input type="hidden" name="course" id="course" value="" />
+<input type="hidden" name="team" id="team" value="" />
+<input type="reset" >
+<input id="submitBtn1" type="submit" name="action" value="Valider" />
+</form>
+<br />
+<div id="maPalette">
+<p align="center"><b>Votre configuration</b></p>
+Course:<label id="lCourse">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+Team:<label id="lTeam">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+Echelle:<label id="lScale">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+</div>
+<br />
+<div id="ajaxBox"></div>
+<div id="myMap"></div>
+</div> <!-- left frame -->
+<div id="rightDiv">
+    <h2>Saisie des positions de votre bateau et de vos amis</h2>
+	<li>Installer l'extension Chrome <a target="_blank" href="https://chrome.google.com/webstore/detail/vr-dashboard/amknkhejaogpekncjekiaolgldbejjan?hl=en">VR Dashboard</a></li>
+	<li>Lancer Virtual Regatta Vendée Globe virtuel dans le navigateur <b>Chrome</b></li>
+	<li>Activez l'extension VR Dashbord</li>
+	<li>Sélectionnez l'onglet "Fleet" et les filtres "Friends" et "Team"</li>
+	<li>Quand les données sont affichées <b>copier / coller</b> le tableau entier dans le formulaire ci-dessous</li>
+    <form action="" name="data" id="data" method="post" onsubmit="return (positions_validate());">
+    <textarea cols="70" rows="30" name="liste" id="liste"></textarea>
+    <input type="hidden" name="team" id="team" value="" />
+	<br />
+	<input type="reset" >
+	<input id="submitBtn1" type="submit" name="action" value="Valider">
+	</form>
+<script type="text/javascript">
+    document.getElementById("rightDiv").style.backgroundColor =  "#ffffcc";
+</script>
+</div> <!-- right frame -->
+
+
+<script type="text/javascript">
+	// Ajax Form treatment
+
+    var buttons = document.getElementsByName("command");
+
+  	// Prevent browser default  : do not send form because we use an Ajax call
+	document.getElementById("naming").addEventListener("submit", function(event){
+    	event.preventDefault()
+	});
+
+	document.getElementById("steering").addEventListener("submit", function(event){
+    	event.preventDefault()
+	});
+
+	//if ((document.getElementById("data") !== undefined)  && (document.getElementById("data") !== null))
+	//
+
+	document.getElementById("data").addEventListener("submit", function(event){
+    	event.preventDefault()
+	});
+
+
+    // Find a nomboat
+	var cookies = document.cookie;
+	if (cookies !== null)
+	{
+		nomboat = getCookie("rknnomboat");
+		if (nomboat.length != 0){
+	    	document.naming.nomboat.value = nomboat;
+			// console.debug("NOMBOAT: %s",nomboat);
+			get_params_boat(nomboat); // Appel Ajax
+		}
+		course = getCookie("rkncourse");
+		team = getCookie("rknteam");
+        scale = getCookie("rknscale");
+	}
+	if (scale.length != 0)
+	{
+		document.getElementById('cScale').value = scale;
+        setCookie("rknscale",scale,1);
+	}
+
+	if (team.length != 0)
+	{
+		document.getElementById('cTeam').value = team;
+        setCookie("rknteam",team,1);
+	}
+	if (course.length != 0)
+	{
+		document.getElementById('cCourse').value = course;
+        setCookie("rkncourse",course,1);
+	}
+	if (nomboat.length != 0)
+	{
+        nomboat = document.naming.nomboat.value;
+      	setCookie("rknnomboat",nomboat,1);
+	}
+	else
+	{
+           	//alert( "Fournissez un nom de bateau !" );
+			document.getElementById('imputvalue').innerHTML =  "Fournissez un nom de bateau !";
+            document.naming.nomboat.focus() ;
+	}
+
+</script>
+<div id="baspageDiv"><a class="bandeau" href="mailto:jean.fruitet@free.fr?subject=Cartes GE">(c) JF</a></div>
+
+</body>
+</html>

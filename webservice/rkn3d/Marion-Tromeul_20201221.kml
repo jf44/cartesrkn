@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Marion Tromeul</name>
+	<description>Vendée Globe 2020: The RKN Team around the world!</description>
+	<atom:author><atom:name>JF44</atom:name></atom:author>    
+	<LookAt>
+		<longitude>70.50</longitude>
+		<latitude>-49.44</latitude>
+		<altitude>5000000</altitude>
+		<heading>180</heading>
+		<tilt>50</tilt>
+		<range>500000</range>
+	</LookAt>
+		<Style id="Balise_sailboat">
+			<IconStyle>
+				<color>CC00FFFF</color>
+				<scale>0.5,0.5</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/shapes/sailing.PNG</href>
+				</Icon>
+				<hotSpot x="0.5"  y="0.5" xunits="fraction" yunits="fraction"/>    <!-- kml:vec2 -->		
+			</IconStyle>
+		</Style>
+	
+		<Placemark>
+			<name>Marion Tromeul</name>
+			<description><![CDATA[<p>
+"Marion Tromeul" autour du Monde, voilier d'assistance des RKN.
+Bal toutes les nuits, Vodka Tromeul à volonté...</p>]]></description>
+			<LookAt>
+				<longitude>70.50</longitude>
+				<latitude>-49.44</latitude>
+				<altitude>1800</altitude>
+				<heading>180</heading>
+				<tilt>85</tilt>
+				<range>100000</range>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#Balise_sailboat</styleUrl>
+			<MultiGeometry>
+				<Point>
+					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>70.50,-49.44,0</coordinates>
+				</Point>
+				<Model id="model_71.0">
+					<altitudeMode>relativeToGround</altitudeMode>
+					<Location>
+						<longitude>70.50</longitude>
+						<latitude>-49.44</latitude>
+						<altitude>1800</altitude>
+					</Location>
+					<Orientation>
+						<heading>180</heading>
+						<tilt>1</tilt>
+						<roll>-4</roll>
+					</Orientation>
+					<Scale>
+						<x>4</x>
+						<y>4</y>
+						<z>4</z>
+					</Scale>
+					<Link id="Clipper Tromeul">
+						<href>models/GSB_GENNAKER_BABORD.dae</href>
+					</Link>
+					<ResourceMap>
+						<Alias>
+							<targetHref>../textures/c_0_0_120.PNG</targetHref>
+							<sourceHref>c.PNG</sourceHref>
+						</Alias>
+						<Alias>
+							<targetHref>../textures/c_240_84_255.PNG</targetHref>
+							<sourceHref>der.PNG</sourceHref>
+						</Alias>
+						<Alias>
+							<targetHref>../textures/c_180_186_255.PNG</targetHref>
+							<sourceHref>gv.PNG</sourceHref>
+						</Alias>
+						<Alias>
+							<targetHref>../textures/c_247_168_255.PNG</targetHref>
+							<sourceHref>vav.PNG</sourceHref>
+						</Alias>
+					</ResourceMap>
+				</Model>
+			</MultiGeometry>
+		</Placemark>
+</Document>
+</kml>

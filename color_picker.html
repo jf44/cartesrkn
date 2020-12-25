@@ -1,0 +1,162 @@
+<!DOCtype HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="Author" content="JF">
+<meta name="description" content="Test HTML5.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="author" title="Auteur" href="mailto:jean.fruitet@free.fr">
+<title>Couleurs de vos voiles sur Virtual Regatta</title>
+<meta name="ROBOTS" content="none,noarchive">
+<link href="select_colors.css" rel="stylesheet" type="text/css">
+<script src="js/cookies.js"></script>
+<script src="js/color_picker.js"></script>
+<script src="js/color_picker2.js"></script>
+<script src="js/set_color.js"></script>
+<script src="js/config_server.js"></script> <!-- server configuration :: need to be adapted to the server position (local or remote) -->
+</head>
+<body onload="checkCookieBoatName()">
+<div id="bandeauDiv"><h1 class="bandeau">Le couleurs de votre bateau sur le Vendée Globe virtuel 2020</h1></div>
+<div id="leftDiv">
+<h2>Saisie des couleurs</h2>
+
+<p>Commencer par saisir le nom de votre bateau. (<i>En respectant la casse !</i>)</p>
+<form action="" name="naming" id="naming"  method="post" onsubmit="return get_couleurs();">
+<b><label for="nomboat">Nom</label></b>
+<input type="text" class="textInput" name="nomboat" id="nomboat" size="30" value=""/>
+<input id="submitBtn2" type="submit" name="action2" value="Choisir" />
+</form>
+<br >
+<p>Puis sélectionnez cinq couleurs avec la palette.</p>
+<form action="" name="steering" id="steering"  method="post" onsubmit="return (steeringvalidate_color());">
+<b><label for="rCoque">Coque</label></b>
+<input type="radio" name="command" id="rCoque" value="rCoque" checked />
+&nbsp; &nbsp;
+<b><label for="rPont">Pont</label></b>
+<input type="radio" name="command" id="rPont" value="rPont" />
+&nbsp; &nbsp;
+<b><label for="rGv">Grand'Voile</label></b>
+<input type="radio" name="command" id="rGv" value="rGv" />
+&nbsp; &nbsp;
+<b><label for="rVav">Génois</label></b>
+<input type="radio" name="command" id="rVav" value="rVav" />
+&nbsp; &nbsp;
+<b><label for="rSpi">Spi</label></b>
+<input type="radio" name="command" id="rSpi" value="rSpi" />
+<br ><br >
+
+<table>
+    <tr>
+      <td colspan="2">
+	  <label id="palette"></label>
+<script>
+//	ecriture du tableau de dégradé
+var sw = "<table border='0' cellpadding='0' cellspacing='0' style='border: 1px solid black'>";
+StepH = 24; // 20
+var StepV = 12;  // 8
+var i=0;
+var a=0;
+//	niveau foncé
+for (a=0;a<=255; a+=StepV){
+	sw += WriteRow2(a,i);
+}
+
+a=255
+//	niveau clair;
+for (i=0; i<=255; i+=StepV){
+	sw += WriteRow2(a,i);
+}
+sw += "</table>";
+document.getElementById("palette").innerHTML=sw;
+</script>
+	  </td>
+    </tr>
+    <tr>
+      <td>
+	  		<div id="ColorShow" style="width: 100; height: 60; border: 1px solid black"></div>
+	  </td>
+      <td>
+	  		<span class="middle">Code couleur : </span><input id="ColorCode" type="text" size="8" />
+	  </td>
+    </tr>
+</table>
+<br >
+<label for="couleurs">Jeu des couleurs choisies</label>
+<br >
+<input type="text" name="couleurs" id="couleurs" size="40" maxsize="40" value="" />
+<br ><br >
+<br ><i><span class="error"><label id="imputvalue"></label></span></i>
+<br ><br >
+<input type="hidden" name="course" id="course" value="" />
+<input type="hidden" name="groupe" id="groupe" value="" />
+<input type="reset" >
+<input id="submitBtn1" type="submit" name="action" value="Valider" />
+</form>
+<br >
+<div id="maPalette">
+<p align="center"><b>Votre palette</b></p>
+Coque:<label id="cCoque">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+Pont:<label id="cPont">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+GV:<label id="cGv">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+Génois:<label id="cVav">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+Spi:<label id="cSpi">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+</div>
+<br >
+
+</div> <!-- left frame -->
+<div id="rightDiv">
+<h2>Les voiliers des RKN</h2>
+<p>Pour l'affichage le modèle autorise 4 couleurs simultanément choisies parmi les 5 que vous fournissez  : coque, pont, grand'voile, voile d'avant
+ et spi...</p>
+<br />
+<img src="images/RKN_CZ.png" border=0" alt="GV + Foc" title="GV + Foc" />
+<img src="images/RKN_GENOIS.png" border=0" alt="GV + Génois" title="GV + Génois" />
+<img src="images/RKN_SPI.png" border=0" alt="GV + Spi" title="GV + Spi" />
+<br /><span class="small">Vues des modèles affichés dans G.E.</span>
+</div> <!-- right frame -->
+
+
+<script type="text/javascript">
+	// Ajax Form treatment
+
+    var buttons = document.getElementsByName("command");
+
+  	// Prevent browser default  : do not send form because we use an Ajax call
+	document.getElementById("naming").addEventListener("submit", function(event){
+    	event.preventDefault()
+	});
+
+	document.getElementById("steering").addEventListener("submit", function(event){
+    	event.preventDefault()
+	});
+
+
+    // Find a nomboat
+	var cookies = document.cookie;
+	if (cookies !== null)
+	{
+		nomboat = getCookie("rknnomboat");
+		if (nomboat.length != 0){
+	    	document.naming.nomboat.value = nomboat;
+			// console.debug("NOMBOAT: %s",nomboat);
+			get_colors_boat(nomboat); // Appel Ajax
+		}
+	}
+
+	if (nomboat.length != 0)
+	{
+        nomboat = document.naming.nomboat.value;
+      	setCookie("rknnomboat",nomboat,1);
+	}
+	else
+	{
+           	//alert( "Fournissez un nom de bateau !" );
+			document.getElementById('imputvalue').innerHTML =  "Fournissez un nom de bateau !";
+            document.naming.nomboat.focus() ;
+	}
+
+</script>
+<div id="baspageDiv"><a class="bandeau" href="mailto:jean.fruitet@free.fr">(c) JF</a></div>
+
+</body>
+</html>

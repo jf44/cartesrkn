@@ -1,0 +1,147 @@
+[Config]
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.HideOutput=0
+Compilator.ProgSaveAll=0
+Compilator.ProgRunSelection=0
+Compilator.LogType=0
+DefaultDir=D:\xampp\htdocs\voilevirtuelle\vgv2020\ge\cartes_rkn
+DefaultCPIndex=7
+LogtoEnd=0
+DontOpen=0
+AbsolutePath=0
+FileFormat=0
+ProjectFilesOnly=0
+Extensions=*.*
+[Project tree]
+cartes_rkn
+	-cartes_rkn
+		-images
+			images\RKN_COQUE.png
+			images\RKN_CZ.png
+			images\RKN_GENOIS.png
+			images\RKN_SPI.png
+		-js
+			js\cartes_ge.js
+			js\config_server.js
+			js\config_server_free.js
+			js\config_server_local.js
+			js\set_positions.js
+		-webservice
+			-classement
+			-csv
+				webservice\csv\VGv2020_RKN_jf44-RKN-20201216_0820.csv
+				webservice\csv\VGv2020_RKN_jf44-RKN-20201217_0930.csv
+			-data
+				webservice\data\boats.csv
+				webservice\data\boats_local.csv
+				webservice\data\ge_params.csv
+				webservice\data\index.php
+			-include
+				-pclzip
+					webservice\include\pclzip\composer.json
+					webservice\include\pclzip\gnu-lgpl.txt
+					webservice\include\pclzip\LICENSE
+					webservice\include\pclzip\pclzip.lib.php
+					webservice\include\pclzip\readme.txt
+				webservice\include\functions.php
+				webservice\include\GeoCalc.class.php
+				webservice\include\get_positions.php
+				webservice\include\kml_3d.php
+				webservice\include\kml_trajectoire.php
+				webservice\include\un_classement.php
+				webservice\include\Voilier.php
+				webservice\include\zip.php
+			-kmz
+			-sources_3d
+				-models
+					webservice\sources_3d\models\GSB_CZ_sauve.dae
+					webservice\sources_3d\models\GSB_FOC_BABORD.dae
+					webservice\sources_3d\models\GSB_FOC_TRIBORD.dae
+					webservice\sources_3d\models\GSB_GENNAKER_BABORD.dae
+					webservice\sources_3d\models\GSB_GENNAKER_TRIBORD.dae
+					webservice\sources_3d\models\GSB_GENOIS.dae
+					webservice\sources_3d\models\GSB_GENOIS_sauve.dae
+					webservice\sources_3d\models\GSB_SPI_BABORD.dae
+					webservice\sources_3d\models\GSB_SPI_sauve.dae
+					webservice\sources_3d\models\GSB_SPI_TRIBORD.dae
+					webservice\sources_3d\models\RKN_COQUE.dae
+					webservice\sources_3d\models\RKN_FOC.dae
+					webservice\sources_3d\models\RKN_FOC_BABORD.dae
+					webservice\sources_3d\models\RKN_FOC_TRIBORD.dae
+					webservice\sources_3d\models\RKN_GENNAKER_BABORD.dae
+					webservice\sources_3d\models\RKN_GENNAKER_TRIBORD.dae
+					webservice\sources_3d\models\RKN_GENOIS.dae
+					webservice\sources_3d\models\RKN_GENOIS_BABORD.dae
+					webservice\sources_3d\models\RKN_GENOIS_TRIBORD.dae
+					webservice\sources_3d\models\RKN_SPI.dae
+					webservice\sources_3d\models\RKN_SPI_BABORD.dae
+					webservice\sources_3d\models\RKN_SPI_TRIBORD.dae
+				-textures
+					webservice\sources_3d\textures\c.PNG
+					webservice\sources_3d\textures\der.PNG
+					webservice\sources_3d\textures\gv.PNG
+					webservice\sources_3d\textures\vav.PNG
+			-trajectoires
+			webservice\include\compute_kmz.php
+			webservice\get_boat_color.php
+			webservice\get_ge_params.php
+			webservice\get_params.php
+			webservice\index.php
+			webservice\lismoi.txt
+			webservice\set_boat_color.php
+			webservice\set_ge_params.php
+			webservice\set_params.php
+			webservice\test_vgv2kmz.php
+		cartes_rkn.html
+		index.html
+		README.md
+		select_param.css
+[Open project files]
+0=index.html
+1=js\set_positions.js
+2=js\set_params.js
+3=js\cartes_ge.js
+4=webservice\set_positions.php
+5=cartes_rkn.html
+6=webservice\include\get_positions.php
+7=webservice\kmz\get_kmz.php
+8=..\ge\cartes_rkn\webservice\include\functions.php
+9=js\get_kmz.js
+10=js\cookies.js
+[Selected Project Files]
+Main=
+Selected=index.html
+[index.html]
+TopLine=21
+Caret=88,25
+[js\set_positions.js]
+TopLine=78
+Caret=44,83
+[js\set_params.js]
+TopLine=149
+Caret=1,149
+[js\cartes_ge.js]
+TopLine=195
+Caret=49,202
+[webservice\set_positions.php]
+TopLine=17
+Caret=1,89
+[cartes_rkn.html]
+TopLine=50
+Caret=1,73
+[webservice\include\get_positions.php]
+TopLine=116
+Caret=1,172
+[webservice\kmz\get_kmz.php]
+TopLine=27
+Caret=56,128
+[..\ge\cartes_rkn\webservice\include\functions.php]
+TopLine=255
+Caret=1,297
+[js\get_kmz.js]
+TopLine=1
+Caret=1,10
+[js\cookies.js]
+TopLine=1
+Caret=1,3

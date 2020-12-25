@@ -1,0 +1,7 @@
+Dossier destiné à produire des ressources en XML ou en jason
+pour webservices (requetes externes passant par le web)
+
+Par exemple les couleurs associées au bateau "nomboat"
+get_boat_color.php : retourne la liste des couleurs avec séparateur ,
+set_boat_color.php : met le champ 'couleur' de la table 'rkn_boat' de la BD 'vgv20' à jour avec la liste des couleurs (separateur ',')
+
