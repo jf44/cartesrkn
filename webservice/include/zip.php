@@ -148,7 +148,7 @@ function supprime_dossier_vide($dossier){
 	// DEBUG
 	//echo "<br>DEBUG :: zip.php :: 149 :: Dossier : $dossier\n";
 
-	if (is_dir($dossier)){
+	if (!empty($dossier) && is_dir($dossier)){
 		return @rmdir($dossier);
 	}
 	else return true;
@@ -157,17 +157,21 @@ function supprime_dossier_vide($dossier){
 // ---------------------
 function delTree($dir) {
 // suppression recursive du contenu d'un dossier
-   $files = array_diff(scandir($dir), array('.','..'));
-    foreach ($files as $file) {
-      (is_dir("$dir/$file")) ? delTree("$dir/$file") : unlink("$dir/$file");
-    }
-    return rmdir($dir);
-  }
-
+	if (!empty($dir))
+	{
+		$files = array_diff(scandir($dir), array('.','..'));
+	    foreach ($files as $file)
+		{
+    	  (is_dir("$dir/$file")) ? delTree("$dir/$file") : unlink("$dir/$file");
+    	}
+    	return @rmdir($dir);
+  	}
+	return false;
+}
 
 // ----------------
 function supprime_fichier($fichier){
-	if (is_file($fichier)){
+	if (!empty($fichier) && is_file($fichier)){
 		return(unlink($fichier));
 	}
 	else return true;

@@ -118,7 +118,7 @@ if (!empty($_POST['team']))
 }
 if (!empty($_POST['scale']) && ($_POST['scale']!=''))
 {
-	$scale=(int)to_utf8($_POST['scale']);
+	$scale=(float)to_utf8($_POST['scale']);
 }
 if (!empty($_POST['liste']))
 {

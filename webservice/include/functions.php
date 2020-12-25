@@ -298,7 +298,7 @@ function to_utf8( $string ) {
 //-------------------------
 function hexa2_3dec($hexa){
 	// rrvvbb -> hexdec(rr);hexdec(vv);hexdec(bb)
-    if (list($rr, $vv, $bb) = explode(';', chunk_split ($hexa,2,';')))
+    if (!empty($hexa) && (strlen($hexa)>=6) && (list($rr, $vv, $bb) = explode(';', chunk_split ($hexa,2,';'))))
 	{
 		return (hexdec($rr).';'.hexdec($vv).';'.hexdec($bb));
 	}

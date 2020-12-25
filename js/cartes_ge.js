@@ -75,7 +75,7 @@ var message="";
         //message =  "Vous avez saisi la Team "+Valeur;
 		break;
 	  default :
-		var valeur = parseInt(document.getElementById("cScale").value);
+		var valeur = parseFloat(document.getElementById("cScale").value);
 		//console.debug(valeur);
 		if (isNaN(valeur))
 		{
