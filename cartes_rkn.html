@@ -19,8 +19,8 @@
 <body>
 <div id="bandeauDiv"><h1 class="bandeau">Vos bateaux amis du Vendée Globe virtuel 2020 dans Google Earth</h1></div>
 <div id="leftDiv">
+<p> &gt;&gt;&gt; <a href="index.html"><b>Accueil</b></a> &gt;&gt;&gt; <a href="color_picker.html"><b>Colorier vos voiles</b></a></p>
 <h2>Saisie des paramètres</h2>
-
 <p>Commencer par saisir le nom de votre bateau. (<i>En respectant la casse !</i>)</p>
 <form action="" name="naming" id="naming"  method="post" onsubmit="return get_params();">
 <b><label for="nomboat">Nom</label></b>
@@ -84,7 +84,7 @@ Echelle:<label id="lScale">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
 <script type="text/javascript">
 	// Ajax Form treatment
 
-    var buttons = document.getElementsByName("command");
+    // var buttons = document.getElementsByName("command");
 
   	// Prevent browser default  : do not send form because we use an Ajax call
 	document.getElementById("naming").addEventListener("submit", function(event){
@@ -120,23 +120,23 @@ Echelle:<label id="lScale">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
 	if (scale.length != 0)
 	{
 		document.getElementById('cScale').value = scale;
-        setCookie("rknscale",scale,1);
+        setCookie("rknscale",scale,8);
 	}
 
 	if (team.length != 0)
 	{
 		document.getElementById('cTeam').value = team;
-        setCookie("rknteam",team,1);
+        setCookie("rknteam",team,8);
 	}
 	if (course.length != 0)
 	{
 		document.getElementById('cCourse').value = course;
-        setCookie("rkncourse",course,1);
+        setCookie("rkncourse",course,8);
 	}
 	if (nomboat.length != 0)
 	{
         nomboat = document.naming.nomboat.value;
-      	setCookie("rknnomboat",nomboat,1);
+      	setCookie("rknnomboat",nomboat8);
 	}
 	else
 	{

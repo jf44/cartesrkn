@@ -57,7 +57,7 @@
 <name>DANA_C-RKN</name>
 <description>
 <![CDATA[<p>
-<br>2020-12-25 14:58:24 UTC
+<br>2020-12-26 14:58:24 UTC
 <br>Lon: 77.528805555556
 <br>Lat: -38.754205974944
 <br>COG: 301.024<br>TWA: 44.98<br>TWS: 11<br>Voile : genois</p>]]>
@@ -65,7 +65,7 @@
 	<LookAt>
     	<longitude>77.528805555556</longitude>
 		<latitude>-38.754205974944</latitude>
-        <altitude>7.5</altitude>
+        <altitude>600</altitude>
 		<range>100000</range>
         <heading>301.024</heading>
         <tilt>85</tilt>
@@ -84,7 +84,7 @@
 	    	<Location>
     			<longitude>77.528805555556</longitude>
     			<latitude>-38.754205974944</latitude>
-    			<altitude>7.5</altitude>
+    			<altitude>600</altitude>
 	    	</Location>
     		<Orientation>
     			<heading>301.024</heading>
@@ -92,9 +92,9 @@
                 <roll>-4</roll>
     		</Orientation>
 	    	<Scale>
-    			<x>0.05</x>
-        		<y>0.05</y>
-        		<z>0.05</z>
+    			<x>4</x>
+        		<y>4</y>
+        		<z>4</z>
 	    	</Scale>
 
 			<Link id="DANA_C-RKN">
@@ -123,158 +123,20 @@
 	</MultiGeometry>
 </Placemark>
 <Placemark>
-<name>EoliaMC-RKN</name>
-<description>
-<![CDATA[<p>
-<br>2020-12-25 17:31:49 UTC
-<br>Lon: 77.538944444444
-<br>Lat: -38.755537022806
-<br>COG: 18.676<br>TWA: 73.515<br>TWS: 6.8<br>Voile : genois</p>]]>
-</description>
-	<LookAt>
-    	<longitude>77.538944444444</longitude>
-		<latitude>-38.755537022806</latitude>
-        <altitude>7.5</altitude>
-		<range>100000</range>
-        <heading>18.676</heading>
-        <tilt>85</tilt>
-		<altitudeMode>relativeToGround</altitudeMode>
-    </LookAt>
-
-	<styleUrl>#Balise_sailboat</styleUrl>
-	<MultiGeometry>
-    	<Point>
-            <extrude>1</extrude>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <coordinates>77.538944444444,-38.755537022806,0</coordinates>
-		</Point>
-		<Model>
-			<altitudeMode>relativeToGround</altitudeMode>
-	    	<Location>
-    			<longitude>77.538944444444</longitude>
-    			<latitude>-38.755537022806</latitude>
-    			<altitude>7.5</altitude>
-	    	</Location>
-    		<Orientation>
-    			<heading>18.676</heading>
-				<tilt>0</tilt>
-                <roll>-4</roll>
-    		</Orientation>
-	    	<Scale>
-    			<x>0.05</x>
-        		<y>0.05</y>
-        		<z>0.05</z>
-	    	</Scale>
-
-			<Link id="EoliaMC-RKN">
-    			<href>models/RKN_EoliaMC-RKN_genois.dae</href>
-    		</Link>
-<ResourceMap>
-	<Alias>
-		<sourceHref>c.PNG</sourceHref>
-    	<targetHref>../textures/c_255_36_227.PNG</targetHref>
-	</Alias>
-	<Alias>
-		<sourceHref>der.PNG</sourceHref>
-    	<targetHref>../textures/c_132_0_115.PNG</targetHref>
-	</Alias>
-	<Alias>
-		<sourceHref>gv.PNG</sourceHref>
-    	<targetHref>../textures/c_255_84_176.PNG</targetHref>
-	</Alias>
-	<Alias>
-		<sourceHref>vav.PNG</sourceHref>
-    	<targetHref>../textures/c_228_0_76.PNG</targetHref>
-	</Alias>
-</ResourceMap>
-
-		</Model>
-	</MultiGeometry>
-</Placemark>
-<Placemark>
-<name>GarosseC-RKN</name>
-<description>
-<![CDATA[<p>
-<br>2020-12-25 18:40:00 UTC
-<br>Lon: 77.503625
-<br>Lat: -38.727107063166
-<br>COG: 132<br>TWA: 176.576<br>TWS: 6.6<br>Voile : genois</p>]]>
-</description>
-	<LookAt>
-    	<longitude>77.503625</longitude>
-		<latitude>-38.727107063166</latitude>
-        <altitude>7.5</altitude>
-		<range>100000</range>
-        <heading>132</heading>
-        <tilt>85</tilt>
-		<altitudeMode>relativeToGround</altitudeMode>
-    </LookAt>
-
-	<styleUrl>#Balise_sailboat</styleUrl>
-	<MultiGeometry>
-    	<Point>
-            <extrude>1</extrude>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <coordinates>77.503625,-38.727107063166,0</coordinates>
-		</Point>
-		<Model>
-			<altitudeMode>relativeToGround</altitudeMode>
-	    	<Location>
-    			<longitude>77.503625</longitude>
-    			<latitude>-38.727107063166</latitude>
-    			<altitude>7.5</altitude>
-	    	</Location>
-    		<Orientation>
-    			<heading>132</heading>
-				<tilt>0</tilt>
-                <roll>-4</roll>
-    		</Orientation>
-	    	<Scale>
-    			<x>0.05</x>
-        		<y>0.05</y>
-        		<z>0.05</z>
-	    	</Scale>
-
-			<Link id="GarosseC-RKN">
-    			<href>models/RKN_GarosseC-RKN_genois.dae</href>
-    		</Link>
-<ResourceMap>
-	<Alias>
-		<sourceHref>c.PNG</sourceHref>
-    	<targetHref>../textures/c_0_0_0.PNG</targetHref>
-	</Alias>
-	<Alias>
-		<sourceHref>der.PNG</sourceHref>
-    	<targetHref>../textures/c_255_255_255.PNG</targetHref>
-	</Alias>
-	<Alias>
-		<sourceHref>gv.PNG</sourceHref>
-    	<targetHref>../textures/c_153_153_255.PNG</targetHref>
-	</Alias>
-	<Alias>
-		<sourceHref>vav.PNG</sourceHref>
-    	<targetHref>../textures/c_255_255_153.PNG</targetHref>
-	</Alias>
-</ResourceMap>
-
-		</Model>
-	</MultiGeometry>
-</Placemark>
-<Placemark>
 <name>Iroizo C-RKN</name>
 <description>
 <![CDATA[<p>
-<br>2020-12-25 22:00:50 UTC
-<br>Lon: 77.532552777778
-<br>Lat: -38.75450886475
-<br>COG: 9<br>TWA: 44.826<br>TWS: 7<br>Voile : genois</p>]]>
+<br>2020-12-26 10:00:00 UTC
+<br>Lon: 77.517594444444
+<br>Lat: -38.636882025584
+<br>COG: 293.95<br>SOG: 10.48<br>TWA: 43.878<br>TWS: 17.1<br>Voile : genois</p>]]>
 </description>
 	<LookAt>
-    	<longitude>77.532552777778</longitude>
-		<latitude>-38.75450886475</latitude>
-        <altitude>7.5</altitude>
+    	<longitude>77.517594444444</longitude>
+		<latitude>-38.636882025584</latitude>
+        <altitude>600</altitude>
 		<range>100000</range>
-        <heading>9</heading>
+        <heading>293.95</heading>
         <tilt>85</tilt>
 		<altitudeMode>relativeToGround</altitudeMode>
     </LookAt>
@@ -284,24 +146,24 @@
     	<Point>
             <extrude>1</extrude>
             <altitudeMode>relativeToGround</altitudeMode>
-            <coordinates>77.532552777778,-38.75450886475,0</coordinates>
+            <coordinates>77.517594444444,-38.636882025584,0</coordinates>
 		</Point>
 		<Model>
 			<altitudeMode>relativeToGround</altitudeMode>
 	    	<Location>
-    			<longitude>77.532552777778</longitude>
-    			<latitude>-38.75450886475</latitude>
-    			<altitude>7.5</altitude>
+    			<longitude>77.517594444444</longitude>
+    			<latitude>-38.636882025584</latitude>
+    			<altitude>600</altitude>
 	    	</Location>
     		<Orientation>
-    			<heading>9</heading>
+    			<heading>293.95</heading>
 				<tilt>0</tilt>
-                <roll>-5</roll>
+                <roll>-6</roll>
     		</Orientation>
 	    	<Scale>
-    			<x>0.05</x>
-        		<y>0.05</y>
-        		<z>0.05</z>
+    			<x>4</x>
+        		<y>4</y>
+        		<z>4</z>
 	    	</Scale>
 
 			<Link id="Iroizo C-RKN">
@@ -330,10 +192,148 @@
 	</MultiGeometry>
 </Placemark>
 <Placemark>
+<name>GarosseC-RKN</name>
+<description>
+<![CDATA[<p>
+<br>2020-12-26 10:00:00 UTC
+<br>Lon: 77.382875
+<br>Lat: -38.518902278112
+<br>COG: 7<br>SOG: 6.69<br>TWA: 30.028<br>TWS: 16.9<br>Voile : genois</p>]]>
+</description>
+	<LookAt>
+    	<longitude>77.382875</longitude>
+		<latitude>-38.518902278112</latitude>
+        <altitude>600</altitude>
+		<range>100000</range>
+        <heading>7</heading>
+        <tilt>85</tilt>
+		<altitudeMode>relativeToGround</altitudeMode>
+    </LookAt>
+
+	<styleUrl>#Balise_sailboat</styleUrl>
+	<MultiGeometry>
+    	<Point>
+            <extrude>1</extrude>
+            <altitudeMode>relativeToGround</altitudeMode>
+            <coordinates>77.382875,-38.518902278112,0</coordinates>
+		</Point>
+		<Model>
+			<altitudeMode>relativeToGround</altitudeMode>
+	    	<Location>
+    			<longitude>77.382875</longitude>
+    			<latitude>-38.518902278112</latitude>
+    			<altitude>600</altitude>
+	    	</Location>
+    		<Orientation>
+    			<heading>7</heading>
+				<tilt>0</tilt>
+                <roll>-13</roll>
+    		</Orientation>
+	    	<Scale>
+    			<x>4</x>
+        		<y>4</y>
+        		<z>4</z>
+	    	</Scale>
+
+			<Link id="GarosseC-RKN">
+    			<href>models/RKN_GarosseC-RKN_genois.dae</href>
+    		</Link>
+<ResourceMap>
+	<Alias>
+		<sourceHref>c.PNG</sourceHref>
+    	<targetHref>../textures/c_0_0_0.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>der.PNG</sourceHref>
+    	<targetHref>../textures/c_255_255_255.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>gv.PNG</sourceHref>
+    	<targetHref>../textures/c_153_153_255.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>vav.PNG</sourceHref>
+    	<targetHref>../textures/c_255_255_153.PNG</targetHref>
+	</Alias>
+</ResourceMap>
+
+		</Model>
+	</MultiGeometry>
+</Placemark>
+<Placemark>
+<name>EoliaMC-RKN</name>
+<description>
+<![CDATA[<p>
+<br>2020-12-26 08:16:15 UTC
+<br>Lon: 77.551602777778
+<br>Lat: -37.808075480584
+<br>COG: 180<br>TWA: 162.619<br>TWS: 15.7<br>Voile : genois</p>]]>
+</description>
+	<LookAt>
+    	<longitude>77.551602777778</longitude>
+		<latitude>-37.808075480584</latitude>
+        <altitude>600</altitude>
+		<range>100000</range>
+        <heading>180</heading>
+        <tilt>85</tilt>
+		<altitudeMode>relativeToGround</altitudeMode>
+    </LookAt>
+
+	<styleUrl>#Balise_sailboat</styleUrl>
+	<MultiGeometry>
+    	<Point>
+            <extrude>1</extrude>
+            <altitudeMode>relativeToGround</altitudeMode>
+            <coordinates>77.551602777778,-37.808075480584,0</coordinates>
+		</Point>
+		<Model>
+			<altitudeMode>relativeToGround</altitudeMode>
+	    	<Location>
+    			<longitude>77.551602777778</longitude>
+    			<latitude>-37.808075480584</latitude>
+    			<altitude>600</altitude>
+	    	</Location>
+    		<Orientation>
+    			<heading>180</heading>
+				<tilt>0</tilt>
+                <roll>13</roll>
+    		</Orientation>
+	    	<Scale>
+    			<x>4</x>
+        		<y>4</y>
+        		<z>4</z>
+	    	</Scale>
+
+			<Link id="EoliaMC-RKN">
+    			<href>models/RKN_EoliaMC-RKN_genois.dae</href>
+    		</Link>
+<ResourceMap>
+	<Alias>
+		<sourceHref>c.PNG</sourceHref>
+    	<targetHref>../textures/c_255_36_227.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>der.PNG</sourceHref>
+    	<targetHref>../textures/c_132_0_115.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>gv.PNG</sourceHref>
+    	<targetHref>../textures/c_255_84_176.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>vav.PNG</sourceHref>
+    	<targetHref>../textures/c_228_0_76.PNG</targetHref>
+	</Alias>
+</ResourceMap>
+
+		</Model>
+	</MultiGeometry>
+</Placemark>
+<Placemark>
 <name>SrevnelaC-RKN</name>
 <description>
 <![CDATA[<p>
-<br>2020-12-25 21:51:15 UTC
+<br>2020-12-26 21:51:15 UTC
 <br>Lon: 77.509497222222
 <br>Lat: -38.744913649166
 <br>COG: 30<br>TWA: 65.744<br>TWS: 6.9<br>Voile : genois</p>]]>
@@ -341,7 +341,7 @@
 	<LookAt>
     	<longitude>77.509497222222</longitude>
 		<latitude>-38.744913649166</latitude>
-        <altitude>7.5</altitude>
+        <altitude>600</altitude>
 		<range>100000</range>
         <heading>30</heading>
         <tilt>85</tilt>
@@ -360,7 +360,7 @@
 	    	<Location>
     			<longitude>77.509497222222</longitude>
     			<latitude>-38.744913649166</latitude>
-    			<altitude>7.5</altitude>
+    			<altitude>600</altitude>
 	    	</Location>
     		<Orientation>
     			<heading>30</heading>
@@ -368,9 +368,9 @@
                 <roll>-5</roll>
     		</Orientation>
 	    	<Scale>
-    			<x>0.05</x>
-        		<y>0.05</y>
-        		<z>0.05</z>
+    			<x>4</x>
+        		<y>4</y>
+        		<z>4</z>
 	    	</Scale>
 
 			<Link id="SrevnelaC-RKN">
@@ -415,43 +415,7 @@
 <extrude>1</extrude>
 <tessellate>1</tessellate>
 <coordinates>
-56.490930555556,-45.320844444444,0 70.151047222222,-49.347402777778,0 70.244475,-49.369552777778,0 70.608452777778,-49.092580555556,0 69.617441666667,-48.306538888889,0 71.854658333333,-45.676744444444,0 74.341680555556,-43.043033333333,0 77.528805555556,-38.768545031155,7.5
-
-</coordinates>
-</LineString>
-</Placemark>
-
-<Placemark>
-<name>EoliaMC-RKN_route</name>
-<Style>
-<LineStyle>
-<color>ffe324ff</color>
-<width>1</width>
-</LineStyle>
-</Style>
-<LineString>
-<extrude>1</extrude>
-<tessellate>1</tessellate>
-<coordinates>
-72.411144444444,-49.143805555556,0 71.780502777778,-49.202855555556,0 70.491069444444,-49.405905555556,0 69.518494444444,-48.823136111111,0 68.865905555556,-48.421691666667,0 71.070202777778,-46.121391666667,0 74.423197222222,-43.132125,0 76.881069444444,-40.389394444444,0 77.538944444444,-38.769876571504,7.5
-
-</coordinates>
-</LineString>
-</Placemark>
-
-<Placemark>
-<name>GarosseC-RKN_route</name>
-<Style>
-<LineStyle>
-<color>ff000000</color>
-<width>1</width>
-</LineStyle>
-</Style>
-<LineString>
-<extrude>1</extrude>
-<tessellate>1</tessellate>
-<coordinates>
-73.53245,-49.576655555556,0 72.955391666667,-49.570125,0 71.142127777778,-49.825430555556,0 70.458194444444,-49.432641666667,0 69.173336111111,-48.61925,0 69.612736111111,-47.837416666667,0 71.766447222222,-45.587472222222,0 74.829813888889,-42.559238888889,0 77.206272222222,-40.103577777778,0 77.503625,-38.74143609278,7.5
+56.490930555556,-45.320844444444,0 70.151047222222,-49.347402777778,0 70.244475,-49.369552777778,0 70.608452777778,-49.092580555556,0 69.617441666667,-48.306538888889,0 71.854658333333,-45.676744444444,0 74.341680555556,-43.043033333333,0 77.528805555556,-38.768545031155,600
 
 </coordinates>
 </LineString>
@@ -469,7 +433,43 @@
 <extrude>1</extrude>
 <tessellate>1</tessellate>
 <coordinates>
-48.912763888889,-42.300238888889,0 68.519372222222,-49.411283333333,0 68.675697222222,-49.683383333333,0 70.269722222222,-49.6948,0 70.343686111111,-49.493805555556,0 68.33635,-49.687275,0 71.158375,-46.347116666667,0 73.999927777778,-43.514686111111,0 76.835402777778,-40.927230555556,0 77.532552777778,-38.76884803303,7.5
+48.912763888889,-42.300238888889,0 68.519372222222,-49.411283333333,0 68.675697222222,-49.683383333333,0 70.269722222222,-49.6948,0 70.343686111111,-49.493805555556,0 68.33635,-49.687275,0 71.158375,-46.347116666667,0 73.999927777778,-43.514686111111,0 76.835402777778,-40.927230555556,0 77.517594444444,-38.622591666667,0 77.517594444444,-38.651177671933,600
+
+</coordinates>
+</LineString>
+</Placemark>
+
+<Placemark>
+<name>GarosseC-RKN_route</name>
+<Style>
+<LineStyle>
+<color>ff000000</color>
+<width>1</width>
+</LineStyle>
+</Style>
+<LineString>
+<extrude>1</extrude>
+<tessellate>1</tessellate>
+<coordinates>
+73.53245,-49.576655555556,0 72.955391666667,-49.570125,0 71.142127777778,-49.825430555556,0 70.458194444444,-49.432641666667,0 69.173336111111,-48.61925,0 69.612736111111,-47.837416666667,0 71.766447222222,-45.587472222222,0 74.829813888889,-42.559238888889,0 77.206272222222,-40.103577777778,0 77.382875,-38.504655555556,0 77.382875,-38.533154271954,600
+
+</coordinates>
+</LineString>
+</Placemark>
+
+<Placemark>
+<name>EoliaMC-RKN_route</name>
+<Style>
+<LineStyle>
+<color>ffe324ff</color>
+<width>1</width>
+</LineStyle>
+</Style>
+<LineString>
+<extrude>1</extrude>
+<tessellate>1</tessellate>
+<coordinates>
+72.411144444444,-49.143805555556,0 71.780502777778,-49.202855555556,0 70.491069444444,-49.405905555556,0 69.518494444444,-48.823136111111,0 68.865905555556,-48.421691666667,0 71.070202777778,-46.121391666667,0 74.423197222222,-43.132125,0 76.881069444444,-40.389394444444,0 77.551602777778,-37.822064468511,600
 
 </coordinates>
 </LineString>
@@ -487,7 +487,7 @@
 <extrude>1</extrude>
 <tessellate>1</tessellate>
 <coordinates>
-55.221380555556,-44.654158333333,0 70.320394444444,-49.522738888889,0 68.623119444444,-49.287813888889,0 69.322627777778,-48.409616666667,0 71.386555555556,-46.256075,0 73.962522222222,-43.346191666667,0 76.044347222222,-40.682686111111,0 77.509497222222,-38.759249267217,7.5
+55.221380555556,-44.654158333333,0 70.320394444444,-49.522738888889,0 68.623119444444,-49.287813888889,0 69.322627777778,-48.409616666667,0 71.386555555556,-46.256075,0 73.962522222222,-43.346191666667,0 76.044347222222,-40.682686111111,0 77.509497222222,-38.759249267217,600
 
 </coordinates>
 </LineString>
@@ -518,9 +518,9 @@
         			<LookAt>
           				<longitude>77.528805555556</longitude>
           				<latitude>-38.768545031155</latitude>
-          				<altitude>250</altitude>
-          				<heading>286.024</heading>
-                        <range>1250</range>
+          				<altitude>20000</altitude>
+          				<heading>289.024</heading>
+                        <range>100000</range>
           				<tilt>80.0</tilt>
         			</LookAt>
       			</gx:FlyTo>
@@ -531,82 +531,7 @@
           				<targetHref></targetHref>
           				<Change>
             				<IconStyle targetId="mystyle">
-              					<scale>0.05</scale>
-            				</IconStyle>
-          				</Change>
-			        </Update>
-			    </gx:AnimatedUpdate>
-
-				<gx:FlyTo>
-        			<gx:flyToMode>smooth</gx:flyToMode>
-        			<gx:duration>11.166317273081</gx:duration>
-        			<LookAt>
-          				<longitude>77.503625</longitude>
-          				<latitude>-38.74143609278</latitude>
-          				<altitude>250</altitude>
-          				<heading>136</heading>
-                        <range>1250</range>
-          				<tilt>80.0</tilt>
-        			</LookAt>
-      			</gx:FlyTo>
-
-				<gx:AnimatedUpdate>
-       				<gx:duration>2.0</gx:duration>
-        			<Update>
-          				<targetHref></targetHref>
-          				<Change>
-            				<IconStyle targetId="mystyle">
-              					<scale>0.05</scale>
-            				</IconStyle>
-          				</Change>
-			        </Update>
-			    </gx:AnimatedUpdate>
-
-				<gx:FlyTo>
-        			<gx:flyToMode>smooth</gx:flyToMode>
-        			<gx:duration>11.842538663291</gx:duration>
-        			<LookAt>
-          				<longitude>77.532552777778</longitude>
-          				<latitude>-38.76884803303</latitude>
-          				<altitude>250</altitude>
-          				<heading>9</heading>
-                        <range>1250</range>
-          				<tilt>80.0</tilt>
-        			</LookAt>
-      			</gx:FlyTo>
-
-				<gx:AnimatedUpdate>
-       				<gx:duration>2.0</gx:duration>
-        			<Update>
-          				<targetHref></targetHref>
-          				<Change>
-            				<IconStyle targetId="mystyle">
-              					<scale>0.05</scale>
-            				</IconStyle>
-          				</Change>
-			        </Update>
-			    </gx:AnimatedUpdate>
-
-				<gx:FlyTo>
-        			<gx:flyToMode>smooth</gx:flyToMode>
-        			<gx:duration>6.798205269739</gx:duration>
-        			<LookAt>
-          				<longitude>77.509497222222</longitude>
-          				<latitude>-38.759249267217</latitude>
-          				<altitude>250</altitude>
-          				<heading>40</heading>
-                        <range>1250</range>
-          				<tilt>80.0</tilt>
-        			</LookAt>
-      			</gx:FlyTo>
-
-				<gx:AnimatedUpdate>
-       				<gx:duration>2.0</gx:duration>
-        			<Update>
-          				<targetHref></targetHref>
-          				<Change>
-            				<IconStyle targetId="mystyle">
-              					<scale>0.05</scale>
+              					<scale>4</scale>
             				</IconStyle>
           				</Change>
 			        </Update>

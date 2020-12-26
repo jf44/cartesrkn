@@ -7,28 +7,43 @@
 
 	var nomboat;
 
+
+    // -------------------------------------
+    // Set the boatname.
+	function set_BoatName()
+	{
+		if (document.naming.nomboat.value != "")
+		{
+            nomboat=document.naming.nomboat.value;
+            setCookie("rknnomboat", nomboat, 8);
+			document.naming.nomboat.style.backgroundColor =  "#ceceff";
+    		document.naming.nomboat.innerHTML=nomboat;
+            get_kmz(nomboat);
+  		}
+        return true;
+	}
+
+
 	// -------------------------------
 	function checkCookieBoatName()
 	{
   		nomboat = getCookie("rknnomboat");
 
-  		if (nomboat == "")
+ 		if (nomboat.length != 0)
 		{
-			nomboat = prompt("Nom de votre bateau :", "");
-			if (nomboat != "" && nomboat != null)
-			{
-				setCookie("rknnomboat", nomboat, 8);
-			}
-  		}
-
-  		if (nomboat != "")
-		{
-			document.getElementById("nomboat").style.backgroundColor =  "#ceceff";
-    		document.getElementById("nomboat").innerHTML="Bienvenue "+nomboat;
+        	nomboat = document.naming.nomboat.value;
+      		setCookie("rknnomboat",nomboat,8);
+			document.naming.nomboat.style.backgroundColor =  "#ceceff";
+    		document.naming.nomboat.innerHTML=nomboat;
             get_kmz(nomboat);
-  		}
+		}
+		else
+		{
+           	//alert( "Fournissez un nom de bateau !" );
+			document.getElementById('imputvalue').innerHTML =  "Fournissez un nom de bateau !";
+            document.naming.nomboat.focus() ;
+		}
 	}
-	// Uncaught SyntaxError: unexpected token: identifier get_kmz.js:47:88
 
 
 	// -------------------
