@@ -34,7 +34,7 @@ else{
     $correction_geodesique=1.0;
 }
 
-$boat_type='RKN'; // Le modèle 3D de voilier IMOCA à foils de la VGv,
+$boat_type='IMOCA'; // Le modèle 3D de voilier IMOCA à foils de la VGv,
 // Différent du $team sauf pour le groupe RKN
 // Pour changer le modèle voilier il faut creer des modeles 3D différents
 $scale=6;		// valeur d'echelle des voiliers 3D par defaut
@@ -63,6 +63,9 @@ $dossier_textures='textures';
 $dossier_modeles='models';
 $dossier_marques='marques';
 $fichier_marques='MarquesParcoursVGV2020.kml';
+
+$t_fichiers_dae = array();    // Optimisation des fichiers de modèles
+$t_fichiers_texture = array();// Optimisation des fichiers de texture
 
 // Langue utilisateur (n'est pas vraiment utilisé dans cette version).
 $langue_user="FR";

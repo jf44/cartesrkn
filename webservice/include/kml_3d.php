@@ -57,6 +57,8 @@ function GetFichierModele($nom_voile, $boat_type, $cog, $twa){
 function GenereCoqueBateau_3D($dossier_3d, $url_serveur, $couleurcoque, $couleurpont){
 global $dir_serveur;
 global $dossier_textures;
+global $t_fichiers_texture;
+
 $s='';
 	$chemin=$dir_serveur.'/'.$dossier_3d.'/'.$dossier_textures;
 	if ($url_serveur!=''){ // liens absolus
@@ -69,9 +71,11 @@ $s='';
 	if ($couleurcoque){
 		list($rouge, $vert, $bleu) = explode(';', $couleurcoque);
 		$texture=genere_texture($chemin, $rouge, $vert, $bleu);
+
 		if ($texture!=""){
+            $t_fichiers_texture[]=$texture;
 			$s.='	<Alias>
-		<sourceHref>c.PNG</sourceHref>
+		<sourceHref>der.PNG</sourceHref>
     	<targetHref>'.$url.'/'.$texture.'</targetHref>
 	</Alias>
 ';
@@ -81,8 +85,9 @@ $s='';
 		list($rouge, $vert, $bleu) = explode(';', $couleurpont);
 		$texture=genere_texture($chemin, $rouge, $vert, $bleu);
 		if ($texture!=""){
+            $t_fichiers_texture[]=$texture;
 			$s.='	<Alias>
-		<sourceHref>der.PNG</sourceHref>
+		<sourceHref>c.PNG</sourceHref>
     	<targetHref>'.$url.'/'.$texture.'</targetHref>
 	</Alias>
 ';
@@ -95,6 +100,8 @@ $s='';
 function GenereGrandVoileBateau_3D($dossier_3d, $url_serveur, $couleur){
 global $dir_serveur;
 global $dossier_textures;
+global $t_fichiers_texture;
+
 	$chemin=$dir_serveur.'/'.$dossier_3d.'/'.$dossier_textures;
 	if ($url_serveur!=''){ // liens absolus
 		$url=$url_serveur.'/'.$dossier_3d.'/'.$dossier_textures;
@@ -110,6 +117,7 @@ global $dossier_textures;
 		$texture=genere_texture($chemin, $rouge, $vert, $bleu);
 
 		if ($texture!=""){
+        	$t_fichiers_texture[]=$texture;
 			$s='	<Alias>
 		<sourceHref>gv.PNG</sourceHref>
     	<targetHref>'.$url.'/'.$texture.'</targetHref>
@@ -127,6 +135,8 @@ function GenereVoileAvantBateau_3D($dossier_3d, $url_serveur, $voile, $couleur){
 // amure fournie par une fonction de cog et twa
 global $dir_serveur;
 global $dossier_textures;
+global $t_fichiers_texture;
+
 	$chemin=$dir_serveur.'/'.$dossier_3d.'/'.$dossier_textures;
 	if ($url_serveur!=''){ // liens absolus
 		$url=$url_serveur.'/'.$dossier_3d.'/'.$dossier_textures;
@@ -142,6 +152,7 @@ global $dossier_textures;
 		$texture=genere_texture($chemin, $rouge, $vert, $bleu);
 
 		if ($texture!=""){
+            $t_fichiers_texture[]=$texture;
 			$s='	<Alias>
 		<sourceHref>vav.PNG</sourceHref>
     	<targetHref>'.$url.'/'.$texture.'</targetHref>
@@ -187,10 +198,10 @@ function GenereBateauKML_3D($dossier_3d, $url_serveur, $boat_type, $bato, $echel
 // Modele 3D
 // Pas de generation de parcours dans cette fonction
 // le parcours est transformé en Tour appelé dans GenereEnQueue()
+// Optimisation du dossier des modeles pour éviter de trainer des fichiers inutiles
 global $dossier_modeles;
 global $afficher_trajectoire;
 global $t_parcours;
-
 
 	// $echelle_z=$echelle*1.5;
 	$echelle_z=$echelle;
@@ -206,68 +217,6 @@ global $t_parcours;
 
 	if (!empty($bato))
 	{
-
-/****************
-		if (!empty($bato->symbole) )
-		{
-			// On place juste une balise
-			// Pas de parcours
-			$s.='<Placemark>
-<open>1</open>
-<description>
-<![CDATA[<p>
-';
-			if (!empty($bato->id))
-			{
-			    $s.=' Id: '.$bato->idboat;
-			}
-			$s.='<br>'.$bato->date_enregistrement.'
-<br>Lon: '.$bato->longitude.'
-<br>Lat: '.$bato->latitude.'
-<br>COG: '.$bato->cog;
-			if (!empty($bato->sog))
-			{
-			    $s.='<br>SOG: '.$bato->sog;
-			}
-			if (!empty($bato->twa))
-			{
-			    $s.='<br>TWA: '.$bato->twa;
-			}
-			if (!empty($bato->tws))
-			{
-			    $s.='<br>TWS: '.$bato->tws;
-			}
-			if (!empty($bato->classement))
-			{
-				$s.='<br>Rang Team : '.$bato->classement;
-			}
-			if (!empty($bato->dtu))
-			{
-				$s.='<br>DTU : '.$bato->dtu;
-			}
-			$s.='</p>]]>
-</description>
-	<LookAt>
-    	<longitude>'.$bato->longitude.'</longitude>
-		<latitude>'.$bato->latitude.'</latitude>
-        <altitude>'.$altitude.'</altitude>
-		<range>100000</range>
-        <heading>'.$bato->cog.'</heading>
-        <tilt>85</tilt>
-		<altitudeMode>relativeToGround</altitudeMode>
-    </LookAt>
-<styleUrl>#Balise_sailboat</styleUrl>
-	<Point>
-		<gx:drawOrder>1</gx:drawOrder>
-		<coordinates>'.$bato->longitude.','.$bato->latitude.',0</coordinates>
-	</Point>
-</Placemark>
-';
-
-		}
-		else
-		{
-**********************/
 			$gite=$bato->GiteVoilier();
             $t_parcours[]=new Coordonnees($bato->longitude, $bato->latitude);
 
@@ -362,6 +311,7 @@ if (!empty($bato->dbl)){
 ';
 				// A VERIFIER CAR ICI J'IMPROVISE
 				$fichier_dae=GetFichierModele($bato->GetVoile(), $boat_type, $bato->cog, $bato->twa);
+
 				if ($fichier_dae!='')
 				{
 					// recopier le fichier modele
@@ -504,13 +454,17 @@ function recopier_modele_dae($dossier_3d, $fichier_dae, $nom_bato, $voile, $boat
 global $dir_serveur;
 global $extension_dae;
 global $dossier_modeles;
-	// DEBUG
-	// echo "\nkml_3d.php:: 417 :: DIR_SERVEUR:".$dir_serveur.'/sources_3d/'.$dossier_modeles.'/'.$fichier_dae."<br />\n";
+global $t_fichiers_dae;
 
-	if (file_exists($dir_serveur.'/sources_3d/'.$dossier_modeles.'/'.$fichier_dae)){
+	// DEBUG
+	//echo "\nkml_3d.php:: 459 :: DIR_SERVEUR:".$dir_serveur.'/sources_3d/'.$dossier_modeles.'/'.$fichier_dae."<br />\n";
+
+	if (file_exists($dir_serveur.'/sources_3d/'.$dossier_modeles.'/'.$fichier_dae))
+	{
 		$contenu=file_get_contents($dir_serveur.'/sources_3d/'.$dossier_modeles.'/'.$fichier_dae);
 		$f_name=$dir_serveur.'/'.$dossier_3d.'/'.$dossier_modeles.'/'.$boat_type.'_'.$nom_bato.'_'.$voile.$extension_dae;
         // echo "\n422 :: -->".$dir_serveur.'/'.$dossier_3d.'/'.$dossier_modeles.'/'.$boat_type.'-'.$nom_bato.'_'.$voile.$extension_dae."<br />\n";
+        $t_fichiers_dae[]=$boat_type.'_'.$nom_bato.'_'.$voile.$extension_dae;
 		if (file_exists($f_name))
 		{
 			return true;
@@ -536,7 +490,7 @@ function EnregistreKML_3D($dossier_cible, $contenu){
 // Deux fichiers sont crees : un fichier d'archive et un fichier courant (dit de cache) au contenu identique.
 // c'est ce fichier de cache (dont le nom est toujours identique) qui est appelé par le fichier rkn.kml lu par GoogleEarth
 // Le dossier d'achive est zippé
-
+// Optimisation de la taille des dossiers modele et texture pour éviter d'enregistrer des modeles inutilisés
 global $dir_serveur;
 global $fichier_kml_courant;
 global $fichier_kml_cache;
@@ -550,6 +504,8 @@ global $dossier_kmz;
 global $course;
 global $team;
 global $boatname;
+global $t_fichiers_dae;
+global $t_fichiers_texture;
 
 	$fichier_kml_cache_3d=$fichier_kml_cache.'_3D';
 	// Commencer par enregister le fichier KML
@@ -559,12 +515,21 @@ global $boatname;
 		fwrite($fp_data, $contenu);
 		fclose($fp_data);
 	}
-	// faire une copie zippee du  dossier $dossier_cible
+	// faire une copie zippee du dossier $dossier_cible
 	$t_fichiers=array();
-	$t_fichiers[0]=$dossier_cible.'/'.$fichier_kml_cache_3d.$extension_kml;
-	$t_fichiers[1]=$dossier_cible.'/'.$dossier_modeles;
-	$t_fichiers[2]=$dossier_cible.'/'.$dossier_textures;
-	$t_fichiers[3]=$dossier_cible.'/'.$dossier_marques;
+	$t_fichiers[]=$dossier_cible.'/'.$fichier_kml_cache_3d.$extension_kml;
+	//$t_fichiers[1]=$dossier_cible.'/'.$dossier_modeles;
+	// Ne recopier que les fichiers modeles necessaires
+	foreach($t_fichiers_dae as $a_file_dae)
+	{
+        $t_fichiers[]=$dossier_cible.'/'.$dossier_modeles.'/'.$a_file_dae;
+	}
+	// $t_fichiers[2]=$dossier_cible.'/'.$dossier_textures;
+	foreach($t_fichiers_texture as $a_file_png)
+	{
+        $t_fichiers[]=$dossier_cible.'/'.$dossier_textures.'/'.$a_file_png;
+	}
+	$t_fichiers[]=$dossier_cible.'/'.$dossier_marques;
     if (creer_fichier_zip($dossier_cible, $t_fichiers, $fichier_kml_cache_3d))
 	{
 		// puis le renommer .kmz

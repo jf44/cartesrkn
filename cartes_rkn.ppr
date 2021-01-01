@@ -1,0 +1,691 @@
+[Config]
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.HideOutput=0
+Compilator.ProgSaveAll=0
+Compilator.ProgRunSelection=0
+Compilator.LogType=0
+DefaultDir=D:\xampp\htdocs\voilevirtuelle\vgv2020\cartes_rkn
+DefaultCPIndex=7
+LogtoEnd=0
+DontOpen=0
+AbsolutePath=0
+FileFormat=0
+ProjectFilesOnly=0
+Extensions=*.*
+[Project tree]
+cartes_rkn
+	-cartes_rkn
+		-.git
+			-hooks
+				.git\hooks\applypatch-msg.sample
+				.git\hooks\commit-msg.sample
+				.git\hooks\fsmonitor-watchman.sample
+				.git\hooks\post-update.sample
+				.git\hooks\pre-applypatch.sample
+				.git\hooks\pre-commit.sample
+				.git\hooks\pre-merge-commit.sample
+				.git\hooks\prepare-commit-msg.sample
+				.git\hooks\pre-push.sample
+				.git\hooks\pre-rebase.sample
+				.git\hooks\pre-receive.sample
+				.git\hooks\update.sample
+			-info
+				.git\info\exclude
+				.git\info\refs
+			-logs
+				-refs
+					-heads
+						.git\logs\refs\heads\master
+					-remotes
+						-cartesrkn
+							.git\logs\refs\remotes\cartesrkn\main
+							.git\logs\refs\remotes\cartesrkn\master
+				.git\logs\HEAD
+			-objects
+				-02
+					.git\objects\02\0d1ef72ff5049f8171f092b34ada9f7eb2697d
+				-03
+					.git\objects\03\2a2b9c03005dd9ed969381e643ac7d280cd879
+				-10
+					.git\objects\10\99008a5877af98652905eba2e03a9175f4a1a0
+					.git\objects\10\a24a8e9c10207f7dad50ecb7c75bd2aebac021
+				-13
+					.git\objects\13\891b55bc069597160d33ba2f084bf48254b951
+				-14
+					.git\objects\14\7f0c2183dadc58242975cfc78c7e87306cee8d
+				-15
+					.git\objects\15\f1478c5e87ca85b1a45a0519dc102acfc50854
+				-16
+					.git\objects\16\461d8b06ed9fdf9785b626418ff87d5abda465
+				-24
+					.git\objects\24\e6bc7b23e1efd1b57cdae2db7d0c586f730f3e
+				-28
+					.git\objects\28\190426d48a4edbccd7a3edb61e2f2c1d6ac9bf
+				-37
+					.git\objects\37\ada9897d19291f0515ad7cf353d9e194897b66
+					.git\objects\37\d5cd52d0eaa4269f1ab284a56a55850a0530d4
+				-3f
+					.git\objects\3f\56b8e7df6b5bef08523926e3f649faaabb8e65
+				-40
+					.git\objects\40\246c6ed6e97a0d453a46b09d3cb3f0976de2b6
+				-41
+					.git\objects\41\d08a51309c8a50d82141f784f44358bab48147
+				-43
+					.git\objects\43\8d596604e391d6f100c0e25c860499aca841c6
+				-46
+					.git\objects\46\d34f991c1fa9e2a54cdf42edb69c60f5614c0c
+				-47
+					.git\objects\47\82b38a70594f2b3fae2e5680d873937b8d9999
+				-49
+					.git\objects\49\daccb6ed1ba9913f1e46f1fb88ff0adefec69d
+				-4b
+					.git\objects\4b\825dc642cb6eb9a060e54bf8d69288fbee4904
+				-4d
+					.git\objects\4d\7a6d95bb6e5d0e1311efd0464e35c0050beb5e
+				-4e
+					.git\objects\4e\e8ac5da431a3b4306d9ecdf71e52b9d9772832
+				-57
+					.git\objects\57\f83e75af1809fc0c9a3a15d3a8583b57deccbd
+				-5a
+					.git\objects\5a\68cfc4acfcac895ad47208d2fef26687d8995b
+				-5f
+					.git\objects\5f\24d5706e17d2b37bd7b842f65baf9b4ea1ca0a
+				-62
+					.git\objects\62\67858effe00deebab64e01ce725709c06cfe5a
+				-68
+					.git\objects\68\cb4305cfccef369abbb314810b0dcc06185544
+				-69
+					.git\objects\69\9154ea92ecddfa4b1a18ba0468d9254e2a3981
+				-6c
+					.git\objects\6c\3ae061b08cf11a75ad1822082474998c1aa89d
+				-6f
+					.git\objects\6f\68e740a60e90e3d18663f8ba3a1eb465ea7afa
+				-70
+					.git\objects\70\a3e0ea4ba6b693ac5b29514c18c2b778819c8c
+				-71
+					.git\objects\71\05abf613a861968427357bf29da5d1b86e63cb
+				-75
+					.git\objects\75\f9e29baee4161570a48ef2acc1ca06e619279d
+				-78
+					.git\objects\78\749312ceb911b3f326222a17d492be2c9886ac
+				-7f
+					.git\objects\7f\e64c2cf653f11e39c8b0f367a31a6ffafe381b
+				-82
+					.git\objects\82\f269562bfdaea8d5aa87be6e2eaca3fa5e4ee8
+				-8c
+					.git\objects\8c\0fd1889d3321ea83729c6bccc4e6a1d1079660
+					.git\objects\8c\cf5d6f4b5bc259e9582369f8612c63ed92b07d
+				-8e
+					.git\objects\8e\c13737d2c5ef206e26adeb31bd6fbb36c64442
+				-92
+					.git\objects\92\09ee9a21e2fa034d5e49633d450e65a89aca5e
+				-9c
+					.git\objects\9c\0ac61a9d015d27ad26ddd9c1cd0ed6ef4d50f2
+				-a1
+					.git\objects\a1\bc1a1a08c5224b212b400c6169edea2ec2e876
+					.git\objects\a1\e1f59ad79582c6d7ee92a172b7225f4590f76d
+				-a8
+					.git\objects\a8\d9fdcd800ec166cd08a9e64ec098781e84fe3b
+				-a9
+					.git\objects\a9\1a00baac06ced53bd0d8d5d03be2fdb27725f0
+				-b0
+					.git\objects\b0\1b0ed779db1e0054f4537cdd39117224a24cb7
+				-ba
+					.git\objects\ba\a68be5bc470d440c928b04cca34a0a4e37182e
+				-bb
+					.git\objects\bb\1dd76cf9b7d4f847cad5ee6c4956cfc938129d
+				-be
+					.git\objects\be\b4fe7c00c4c70833c4730eae1a0674f37177be
+				-c0
+					.git\objects\c0\3950e2f4db2cdad5f2d91831f2aae0ee1778d0
+				-c7
+					.git\objects\c7\8a8bfc8b8f2a1b3d4ea08ebd41ff64bf876378
+				-ce
+					.git\objects\ce\378f8b4ebb04a730d1531159980469b7796fb0
+				-cf
+					.git\objects\cf\bcc45eacc6723e9d640a72ec55d5511168ad01
+				-d1
+					.git\objects\d1\fd8140b05969578d5f1cbf1d3a98fd21185fda
+				-d2
+					.git\objects\d2\d9da9811b2ae3737979d5d8c5f886d99c8f15c
+				-d3
+					.git\objects\d3\50520383e36c322ba63a22871d77e4370e88bf
+				-d7
+					.git\objects\d7\b806f27bc2ed89e20ff834871684f8dade6600
+				-d8
+					.git\objects\d8\08430230d2d40fabfe4b94e0d0d26ba3182681
+				-db
+					.git\objects\db\f3be7f09d36c2aa32ce48fb3cb19d4e31c6285
+				-dc
+					.git\objects\dc\cc84eb9af25dc22151079e230867467bc8eb1a
+				-de
+					.git\objects\de\a39a20385cbcff50cfa85eefff8542841685c7
+				-df
+					.git\objects\df\ef9545d9e1e66c39e0d848a47946dd88fcf497
+				-e1
+					.git\objects\e1\308f235dbe41838be348b2d7c30cca639f724b
+				-e4
+					.git\objects\e4\4174173fc2551f42fa9cd8243ee89ec10ce325
+				-e7
+					.git\objects\e7\4a8a3e81a676b7df8c8ee9571ccbd0ec2ae2f9
+				-ef
+					.git\objects\ef\04071f82934637b2c254bcab9f6837c99d2dbe
+				-f5
+					.git\objects\f5\9712a34c18faaa1feca8ff41af5e88deeaad0c
+					.git\objects\f5\f0d5676ccd6b23c84710357110f6caa89a3702
+				-f8
+					.git\objects\f8\22fdd3ac8a3c7d1ac47a2d192a833ccee83705
+				-fa
+					.git\objects\fa\127f8c57f6cbff9849fa855229d817e0ced592
+				-fd
+					.git\objects\fd\272cf0bfa02536788fbde3b1096158c928ca5b
+				-info
+					.git\objects\info\packs
+				-pack
+					.git\objects\pack\pack-074dc488c63f4d08f2be586f40b2d702e3698739.idx
+					.git\objects\pack\pack-074dc488c63f4d08f2be586f40b2d702e3698739.pack
+			-refs
+				-heads
+					.git\refs\heads\master
+				-remotes
+					-cartesrkn
+						.git\refs\remotes\cartesrkn\main
+						.git\refs\remotes\cartesrkn\master
+				-tags
+			.git\config
+			.git\description
+			.git\FETCH_HEAD
+			.git\HEAD
+			.git\index
+			.git\packed-refs
+		-images
+			images\gen_cartes_01.png
+			images\gen_cartes_02.png
+			images\giphy.gif
+			images\index.php
+			images\RKN_COQUE.png
+			images\RKN_CZ.png
+			images\RKN_GENOIS.png
+			images\RKN_SPI.png
+			images\vgv20-rkn.jpg
+			images\vgv20-rkn_02.jpg
+			images\vgv20-rkn_202012051530-04.jpg
+		-js
+			js\ajax_loader.js
+			js\cartes_ge.js
+			js\color_picker.js
+			js\color_picker2.js
+			js\config_server.js
+			js\config_server_free.js
+			js\config_server_local.js
+			js\cookies.js
+			js\get_kmz.js
+			js\index.php
+			js\set_color.js
+			js\set_params.js
+			js\set_positions.js
+		-webservice
+			-classement
+			-data
+				webservice\data\boats.csv
+				webservice\data\boats_local.csv
+				webservice\data\ge_params.csv
+				webservice\data\index.php
+			-include
+				-pclzip
+					webservice\include\pclzip\composer.json
+					webservice\include\pclzip\gnu-lgpl.txt
+					webservice\include\pclzip\LICENSE
+					webservice\include\pclzip\pclzip.lib.php
+					webservice\include\pclzip\readme.txt
+				webservice\include\compute_kmz.php
+				webservice\include\functions.php
+				webservice\include\GeoCalc.class.php
+				webservice\include\get_positions.php
+				webservice\include\index.php
+				webservice\include\kml_3d.php
+				webservice\include\kml_trajectoire.php
+				webservice\include\un_classement.php
+				webservice\include\Voilier.php
+				webservice\include\zip.php
+			-kmz
+				-VG2020_C-RKN_IroizoC-RKN_3D2020123111
+					-marques
+						webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2020123111\marques\MarquesParcoursVGV2020.kml
+					-textures
+						webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2020123111\textures\c_0_0_0.PNG
+						webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2020123111\textures\c_153_153_255.PNG
+						webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2020123111\textures\c_255_255_153.PNG
+					webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2020123111\VG2020_C-RKN_IroizoC-RKN_3D.kml
+				webservice\kmz\get_kmz.php
+				webservice\kmz\index.php
+				webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2020123111.kmz
+				webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2020123119.kmz
+				webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2020123121.kmz
+				webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2021010108.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122112.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122118.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122309.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122320.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122408.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122415.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122522.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122523.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122611.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122621.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122712.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122808.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122822.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020122907.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020123008.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020123019.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020123108.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2020123110.kmz
+				webservice\kmz\VGv2020_C-RKN_IroizoC-RKN_3D2021010109.kmz
+				webservice\kmz\vgv2020_RKN_jf44-RKN_3D2020122521.kmz
+			-marques
+				webservice\marques\Clipper-Tromeul_20201212.kml
+				webservice\marques\Croisière RKN de Noël 2020.kmz
+				webservice\marques\index.php
+			-positions
+				webservice\positions\index.php
+				webservice\positions\VG2020_C-RKN_IroizoC-RKN_20201231_0730.csv
+				webservice\positions\VG2020_C-RKN_IroizoC-RKN_20201231_1950.csv
+				webservice\positions\VG2020_C-RKN_IroizoC-RKN_20210101_0730.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201221_1200.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201221_1800.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201222_0720.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201222_1720.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201222_2200.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201223_0810.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201223_1950.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201224_0730.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201225_2151.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201225_2230.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201226_1000.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201226_1707.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201226_2151.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201227_1210.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201228_0840.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201228_2150.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201229_0730.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201230_0800.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201230_1630.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201230_1910.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20201231_0800.csv
+				webservice\positions\VGv2020_C-RKN_IroizoC-RKN_20210101_0730.csv
+				webservice\positions\vgv2020_RKN_jf44-RKN_20201225_2030.csv
+			-rkn3d
+				-marques
+					webservice\rkn3d\marques\MarquesParcoursVGV2020.kml
+				-models
+					webservice\rkn3d\models\GSB_FOC_BABORD.dae
+					webservice\rkn3d\models\GSB_FOC_TRIBORD.dae
+					webservice\rkn3d\models\GSB_GENNAKER_BABORD.dae
+					webservice\rkn3d\models\GSB_GENNAKER_TRIBORD.dae
+					webservice\rkn3d\models\GSB_GENNOIS_BABORD.dae
+					webservice\rkn3d\models\GSB_GENNOIS_TRIBORD.dae
+					webservice\rkn3d\models\GSB_SPI_BABORD.dae
+					webservice\rkn3d\models\GSB_SPI_TRIBORD.dae
+					webservice\rkn3d\models\IMOCA_DANA_C-RKN_genois.dae
+					webservice\rkn3d\models\IMOCA_EoliaMC-RKN_genois.dae
+					webservice\rkn3d\models\IMOCA_GarosseC-RKN_genois.dae
+					webservice\rkn3d\models\IMOCA_Iroizo C-RKN_genois.dae
+					webservice\rkn3d\models\IMOCA_SrevnelaC-RKN_genois.dae
+					webservice\rkn3d\models\MT_Marion-Tromeul_genois.dae
+					webservice\rkn3d\models\MT_SPI_BABORD.dae
+					webservice\rkn3d\models\MT_SPI_TRIBORD.dae
+					webservice\rkn3d\models\RKN_AbsoluteDreamer_genois.dae
+					webservice\rkn3d\models\RKN_Barquasse RKN_genois.dae
+					webservice\rkn3d\models\RKN_bigouden wind RKN_genois.dae
+					webservice\rkn3d\models\RKN_Bourne34 RKN_genois.dae
+					webservice\rkn3d\models\RKN_Celemans RKN_genois.dae
+					webservice\rkn3d\models\RKN_Chamino_genois.dae
+					webservice\rkn3d\models\RKN_City of le MANS RKN_genois.dae
+					webservice\rkn3d\models\RKN_DANA_C-RKN_genois.dae
+					webservice\rkn3d\models\RKN_davor56_RKN_genois.dae
+					webservice\rkn3d\models\RKN_domainecuris.com_genois.dae
+					webservice\rkn3d\models\RKN_EoliaMC-RKN_genois.dae
+					webservice\rkn3d\models\RKN_F1704 RKN_genois.dae
+					webservice\rkn3d\models\RKN_Fun lifestyles RKN_genois.dae
+					webservice\rkn3d\models\RKN_G1vaguealameRKN_genois.dae
+					webservice\rkn3d\models\RKN_GarosseC-RKN_genois.dae
+					webservice\rkn3d\models\RKN_Garrouille RKN_genois.dae
+					webservice\rkn3d\models\RKN_GazelleDesNeiges06_genois.dae
+					webservice\rkn3d\models\RKN_Iety_RKN_genois.dae
+					webservice\rkn3d\models\RKN_Iroizo C-RKN_genois.dae
+					webservice\rkn3d\models\RKN_iroizo_genois.dae
+					webservice\rkn3d\models\RKN_jazz69rkn_genois.dae
+					webservice\rkn3d\models\RKN_JB_N RKN_genois.dae
+					webservice\rkn3d\models\RKN_jf44-RKN_genois.dae
+					webservice\rkn3d\models\RKN_KELPIEDSinglePlayer_genois.dae
+					webservice\rkn3d\models\RKN_kerhilloRKN_genois.dae
+					webservice\rkn3d\models\RKN_letango RKN_genois.dae
+					webservice\rkn3d\models\RKN_Lothe60RKN_genois.dae
+					webservice\rkn3d\models\RKN_Malamoc_genois.dae
+					webservice\rkn3d\models\RKN_Malizia rkn_genois.dae
+					webservice\rkn3d\models\RKN_Matheja1664_genois.dae
+					webservice\rkn3d\models\RKN_mezua34_genois.dae
+					webservice\rkn3d\models\RKN_MLS RKN_genois.dae
+					webservice\rkn3d\models\RKN_MoutonVolantRKN_genois.dae
+					webservice\rkn3d\models\RKN_Onyx Star_genois.dae
+					webservice\rkn3d\models\RKN_PeliouRKN_genois.dae
+					webservice\rkn3d\models\RKN_philou 33 RKN_genois.dae
+					webservice\rkn3d\models\RKN_Picova-RKN_genois.dae
+					webservice\rkn3d\models\RKN_pirond_genois.dae
+					webservice\rkn3d\models\RKN_pirond2_genois.dae
+					webservice\rkn3d\models\RKN_PostR 2cvFurtive RKN_genois.dae
+					webservice\rkn3d\models\RKN_R3e Nice RKN_genois.dae
+					webservice\rkn3d\models\RKN_RafaleRKN_genois.dae
+					webservice\rkn3d\models\RKN_Raid2cvTeam-RKN_genois.dae
+					webservice\rkn3d\models\RKN_rapido79 RKN_genois.dae
+					webservice\rkn3d\models\RKN_Rcfan77_genois.dae
+					webservice\rkn3d\models\RKN_RKN Major Tom_genois.dae
+					webservice\rkn3d\models\RKN_RKobisN_genois.dae
+					webservice\rkn3d\models\RKN_Silwo RKN_genois.dae
+					webservice\rkn3d\models\RKN_Skipper_genois.dae
+					webservice\rkn3d\models\RKN_SrevnelaC-RKN_genois.dae
+					webservice\rkn3d\models\RKN_thechmot.RKN_genois.dae
+					webservice\rkn3d\models\RKN_Tovaritch_RKN_genois.dae
+					webservice\rkn3d\models\RKN_Varlingue RKN_genois.dae
+					webservice\rkn3d\models\RKN_VICACAPOURSO_genois.dae
+					webservice\rkn3d\models\RKN_www.talmondais.com_genois.dae
+					webservice\rkn3d\models\RKN_Xolub RKN_genois.dae
+					webservice\rkn3d\models\RKN_zlatanix_genois.dae
+				-textures
+					webservice\rkn3d\textures\c_0_0_0.PNG
+					webservice\rkn3d\textures\c_0_0_120.PNG
+					webservice\rkn3d\textures\c_0_0_204.PNG
+					webservice\rkn3d\textures\c_0_0_228.PNG
+					webservice\rkn3d\textures\c_0_0_255.PNG
+					webservice\rkn3d\textures\c_0_0_60.PNG
+					webservice\rkn3d\textures\c_0_105_180.PNG
+					webservice\rkn3d\textures\c_0_11_12.PNG
+					webservice\rkn3d\textures\c_0_12_11.PNG
+					webservice\rkn3d\textures\c_0_12_8.PNG
+					webservice\rkn3d\textures\c_0_120_0.PNG
+					webservice\rkn3d\textures\c_0_120_75.PNG
+					webservice\rkn3d\textures\c_0_255_0.PNG
+					webservice\rkn3d\textures\c_0_39_72.PNG
+					webservice\rkn3d\textures\c_0_42_204.PNG
+					webservice\rkn3d\textures\c_0_49_168.PNG
+					webservice\rkn3d\textures\c_0_56_192.PNG
+					webservice\rkn3d\textures\c_100_60_255.PNG
+					webservice\rkn3d\textures\c_119_85_51.PNG
+					webservice\rkn3d\textures\c_12_0_2.PNG
+					webservice\rkn3d\textures\c_12_2_0.PNG
+					webservice\rkn3d\textures\c_12_3_0.PNG
+					webservice\rkn3d\textures\c_12_9_0.PNG
+					webservice\rkn3d\textures\c_120_221_255.PNG
+					webservice\rkn3d\textures\c_132_0_115.PNG
+					webservice\rkn3d\textures\c_144_199_255.PNG
+					webservice\rkn3d\textures\c_153_153_255.PNG
+					webservice\rkn3d\textures\c_156_213_255.PNG
+					webservice\rkn3d\textures\c_16_0_48.PNG
+					webservice\rkn3d\textures\c_170_170_255.PNG
+					webservice\rkn3d\textures\c_170_255_170.PNG
+					webservice\rkn3d\textures\c_18_0_216.PNG
+					webservice\rkn3d\textures\c_18_0_24.PNG
+					webservice\rkn3d\textures\c_180_186_255.PNG
+					webservice\rkn3d\textures\c_180_251_255.PNG
+					webservice\rkn3d\textures\c_189_180_255.PNG
+					webservice\rkn3d\textures\c_19_0_228.PNG
+					webservice\rkn3d\textures\c_192_239_255.PNG
+					webservice\rkn3d\textures\c_2_0_24.PNG
+					webservice\rkn3d\textures\c_204_255_229.PNG
+					webservice\rkn3d\textures\c_206_204_255.PNG
+					webservice\rkn3d\textures\c_216_0_81.PNG
+					webservice\rkn3d\textures\c_216_27_0.PNG
+					webservice\rkn3d\textures\c_217_216_255.PNG
+					webservice\rkn3d\textures\c_220_240_0.PNG
+					webservice\rkn3d\textures\c_220_255_216.PNG
+					webservice\rkn3d\textures\c_228_0_47.PNG
+					webservice\rkn3d\textures\c_228_0_76.PNG
+					webservice\rkn3d\textures\c_228_19_0.PNG
+					webservice\rkn3d\textures\c_228_255_252.PNG
+					webservice\rkn3d\textures\c_232_120_255.PNG
+					webservice\rkn3d\textures\c_233_228_255.PNG
+					webservice\rkn3d\textures\c_238_0_170.PNG
+					webservice\rkn3d\textures\c_238_238_170.PNG
+					webservice\rkn3d\textures\c_24_2_0.PNG
+					webservice\rkn3d\textures\c_24_22_0.PNG
+					webservice\rkn3d\textures\c_24_4_0.PNG
+					webservice\rkn3d\textures\c_240_0_10.PNG
+					webservice\rkn3d\textures\c_240_0_20.PNG
+					webservice\rkn3d\textures\c_240_20_0.PNG
+					webservice\rkn3d\textures\c_240_244_255.PNG
+					webservice\rkn3d\textures\c_240_255_253.PNG
+					webservice\rkn3d\textures\c_240_84_255.PNG
+					webservice\rkn3d\textures\c_242_228_255.PNG
+					webservice\rkn3d\textures\c_245_255_240.PNG
+					webservice\rkn3d\textures\c_247_168_255.PNG
+					webservice\rkn3d\textures\c_252_0_0.PNG
+					webservice\rkn3d\textures\c_252_0_63.PNG
+					webservice\rkn3d\textures\c_252_0_84.PNG
+					webservice\rkn3d\textures\c_252_21_0.PNG
+					webservice\rkn3d\textures\c_252_31_0.PNG
+					webservice\rkn3d\textures\c_255_0_0.PNG
+					webservice\rkn3d\textures\c_255_0_255.PNG
+					webservice\rkn3d\textures\c_255_0_31.PNG
+					webservice\rkn3d\textures\c_255_0_42.PNG
+					webservice\rkn3d\textures\c_255_0_74.PNG
+					webservice\rkn3d\textures\c_255_12_244.PNG
+					webservice\rkn3d\textures\c_255_125_60.PNG
+					webservice\rkn3d\textures\c_255_132_108.PNG
+					webservice\rkn3d\textures\c_255_144_153.PNG
+					webservice\rkn3d\textures\c_255_170_170.PNG
+					webservice\rkn3d\textures\c_255_170_255.PNG
+					webservice\rkn3d\textures\c_255_186_48.PNG
+					webservice\rkn3d\textures\c_255_200_168.PNG
+					webservice\rkn3d\textures\c_255_204_210.PNG
+					webservice\rkn3d\textures\c_255_222_60.PNG
+					webservice\rkn3d\textures\c_255_225_204.PNG
+					webservice\rkn3d\textures\c_255_237_48.PNG
+					webservice\rkn3d\textures\c_255_240_242.PNG
+					webservice\rkn3d\textures\c_255_240_243.PNG
+					webservice\rkn3d\textures\c_255_240_248.PNG
+					webservice\rkn3d\textures\c_255_240_255.PNG
+					webservice\rkn3d\textures\c_255_242_240.PNG
+					webservice\rkn3d\textures\c_255_246_216.PNG
+					webservice\rkn3d\textures\c_255_250_228.PNG
+					webservice\rkn3d\textures\c_255_252_252.PNG
+					webservice\rkn3d\textures\c_255_252_255.PNG
+					webservice\rkn3d\textures\c_255_255_153.PNG
+					webservice\rkn3d\textures\c_255_255_240.PNG
+					webservice\rkn3d\textures\c_255_255_255.PNG
+					webservice\rkn3d\textures\c_255_36_127.PNG
+					webservice\rkn3d\textures\c_255_36_227.PNG
+					webservice\rkn3d\textures\c_255_36_245.PNG
+					webservice\rkn3d\textures\c_255_36_255.PNG
+					webservice\rkn3d\textures\c_255_42_12.PNG
+					webservice\rkn3d\textures\c_255_48_255.PNG
+					webservice\rkn3d\textures\c_255_53_0.PNG
+					webservice\rkn3d\textures\c_255_60_230.PNG
+					webservice\rkn3d\textures\c_255_84_133.PNG
+					webservice\rkn3d\textures\c_255_84_176.PNG
+					webservice\rkn3d\textures\c_255_99_36.PNG
+					webservice\rkn3d\textures\c_34_204_153.PNG
+					webservice\rkn3d\textures\c_6_156_0.PNG
+					webservice\rkn3d\textures\c_60_255_92.PNG
+					webservice\rkn3d\textures\c_63_252_0.PNG
+					webservice\rkn3d\textures\c_66_0_144.PNG
+					webservice\rkn3d\textures\c_72_255_79.PNG
+					webservice\rkn3d\textures\c_84_119_255.PNG
+					webservice\rkn3d\textures\c_85_51_153.PNG
+					webservice\rkn3d\textures\c_96_235_255.PNG
+					webservice\rkn3d\textures\c_96_255_96.PNG
+				webservice\rkn3d\Clipper-Tromeul_20201212.kml
+				webservice\rkn3d\Clipper-Tromeul_20201221.kml
+				webservice\rkn3d\index.php
+				webservice\rkn3d\Marion-Tromeul_20201221.kml
+				webservice\rkn3d\VG2020_C-RKN_IroizoC-RKN_3D.kml
+				webservice\rkn3d\VGv2020_C-RKN_Iroizo C-RKN_3D.kml
+				webservice\rkn3d\VGv2020_C-RKN_IroizoC-RKN_3D.kml
+				webservice\rkn3d\VGv2020_RKN_Iroizo C-RKN_3D.kml
+				webservice\rkn3d\VGv2020_RKN_IroizoC-RKN_3D.kml
+				webservice\rkn3d\vgv2020_RKN_jf44-RKN_3D.kml
+			-rkn3d_2020122522
+				-marques
+					webservice\rkn3d_2020122522\marques\MarquesParcoursVGV2020.kml
+				-models
+				-textures
+			-sources_3d
+				-marques
+					webservice\sources_3d\marques\MarquesParcoursVGV2020.kml
+				-models
+					-GSB
+						webservice\sources_3d\models\GSB\GSB_CZ_sauve.dae
+						webservice\sources_3d\models\GSB\GSB_FOC_BABORD.dae
+						webservice\sources_3d\models\GSB\GSB_FOC_TRIBORD.dae
+						webservice\sources_3d\models\GSB\GSB_GENNAKER_BABORD.dae
+						webservice\sources_3d\models\GSB\GSB_GENNAKER_TRIBORD.dae
+						webservice\sources_3d\models\GSB\GSB_GENOIS.dae
+						webservice\sources_3d\models\GSB\GSB_GENOIS_sauve.dae
+						webservice\sources_3d\models\GSB\GSB_SPI_BABORD.dae
+						webservice\sources_3d\models\GSB\GSB_SPI_sauve.dae
+						webservice\sources_3d\models\GSB\GSB_SPI_TRIBORD.dae
+					-MT
+						webservice\sources_3d\models\MT\MT_FOC_BABORD.dae
+						webservice\sources_3d\models\MT\MT_FOC_TRIBORD.dae
+						webservice\sources_3d\models\MT\MT_GENNAKER_BABORD.dae
+						webservice\sources_3d\models\MT\MT_GENNAKER_TRIBORD.dae
+						webservice\sources_3d\models\MT\MT_GENOIS_BABORD.dae
+						webservice\sources_3d\models\MT\MT_GENOIS_TRIBORD.dae
+						webservice\sources_3d\models\MT\MT_SPI_BABORD.dae
+						webservice\sources_3d\models\MT\MT_SPI_TRIBORD.dae
+					-RKN
+						webservice\sources_3d\models\RKN\RKN_COQUE.dae
+						webservice\sources_3d\models\RKN\RKN_FOC.dae
+						webservice\sources_3d\models\RKN\RKN_FOC_BABORD.dae
+						webservice\sources_3d\models\RKN\RKN_FOC_TRIBORD.dae
+						webservice\sources_3d\models\RKN\RKN_GENNAKER_BABORD.dae
+						webservice\sources_3d\models\RKN\RKN_GENNAKER_TRIBORD.dae
+						webservice\sources_3d\models\RKN\RKN_GENOIS.dae
+						webservice\sources_3d\models\RKN\RKN_GENOIS_BABORD.dae
+						webservice\sources_3d\models\RKN\RKN_GENOIS_TRIBORD.dae
+						webservice\sources_3d\models\RKN\RKN_SPI.dae
+						webservice\sources_3d\models\RKN\RKN_SPI_BABORD.dae
+						webservice\sources_3d\models\RKN\RKN_SPI_TRIBORD.dae
+					-textures
+						webservice\sources_3d\models\textures\c.PNG
+						webservice\sources_3d\models\textures\der.PNG
+						webservice\sources_3d\models\textures\gv.PNG
+						webservice\sources_3d\models\textures\vav.PNG
+					webservice\sources_3d\models\IMOCA_COQUE.dae
+					webservice\sources_3d\models\IMOCA_FOC.dae
+					webservice\sources_3d\models\IMOCA_FOC_BABORD.dae
+					webservice\sources_3d\models\IMOCA_FOC_TRIBORD.dae
+					webservice\sources_3d\models\IMOCA_GENNAKER_BABORD.dae
+					webservice\sources_3d\models\IMOCA_GENNAKER_TRIBORD.dae
+					webservice\sources_3d\models\IMOCA_GENOIS.dae
+					webservice\sources_3d\models\IMOCA_GENOIS_BABORD.dae
+					webservice\sources_3d\models\IMOCA_GENOIS_TRIBORD.dae
+					webservice\sources_3d\models\IMOCA_SPI.dae
+					webservice\sources_3d\models\IMOCA_SPI_BABORD.dae
+					webservice\sources_3d\models\IMOCA_SPI_TRIBORD.dae
+					webservice\sources_3d\models\TROISMATS_CZ_sauve.dae
+					webservice\sources_3d\models\TROISMATS_FOC_BABORD.dae
+					webservice\sources_3d\models\TROISMATS_FOC_TRIBORD.dae
+					webservice\sources_3d\models\TROISMATS_GENNAKER_BABORD.dae
+					webservice\sources_3d\models\TROISMATS_GENNAKER_TRIBORD.dae
+					webservice\sources_3d\models\TROISMATS_GENOIS.dae
+					webservice\sources_3d\models\TROISMATS_GENOIS_sauve.dae
+					webservice\sources_3d\models\TROISMATS_SPI_BABORD.dae
+					webservice\sources_3d\models\TROISMATS_SPI_sauve.dae
+					webservice\sources_3d\models\TROISMATS_SPI_TRIBORD.dae
+				-textures
+					webservice\sources_3d\textures\c.PNG
+					webservice\sources_3d\textures\der.PNG
+					webservice\sources_3d\textures\gv.PNG
+					webservice\sources_3d\textures\vav.PNG
+				webservice\sources_3d\fichiers de modeles 3d.txt
+				webservice\sources_3d\get_models.php
+				webservice\sources_3d\index.php
+			-trajectoires
+				webservice\trajectoires\index.php
+				webservice\trajectoires\VGv2020_AbsoluteDreamer.json
+				webservice\trajectoires\VGv2020_Barquasse RKN.json
+				webservice\trajectoires\VGv2020_bigouden wind RKN.json
+				webservice\trajectoires\VGv2020_Bourne34 RKN.json
+				webservice\trajectoires\VGv2020_Celemans RKN.json
+				webservice\trajectoires\VGv2020_Chamino.json
+				webservice\trajectoires\VGv2020_City of le MANS RKN.json
+				webservice\trajectoires\VGv2020_DANA_C-RKN.json
+				webservice\trajectoires\VGv2020_davor56_RKN.json
+				webservice\trajectoires\VGv2020_domainecuris.com.json
+				webservice\trajectoires\VGv2020_EoliaMC-RKN.json
+				webservice\trajectoires\VGv2020_F1704 RKN.json
+				webservice\trajectoires\VGv2020_Fun lifestyles RKN.json
+				webservice\trajectoires\VGv2020_G1vaguealameRKN.json
+				webservice\trajectoires\VGv2020_GarosseC-RKN.json
+				webservice\trajectoires\VGv2020_Garrouille RKN.json
+				webservice\trajectoires\VGv2020_GazelleDesNeiges06.json
+				webservice\trajectoires\VGv2020_Iety_RKN.json
+				webservice\trajectoires\VGv2020_Iroizo C-RKN.json
+				webservice\trajectoires\VGv2020_iroizo.json
+				webservice\trajectoires\VGv2020_jazz69rkn.json
+				webservice\trajectoires\VGv2020_JB_N RKN.json
+				webservice\trajectoires\VGv2020_jf44-RKN.json
+				webservice\trajectoires\VGv2020_KELPIEDSinglePlayer.json
+				webservice\trajectoires\VGv2020_kerhilloRKN.json
+				webservice\trajectoires\VGv2020_letango RKN.json
+				webservice\trajectoires\VGv2020_Lothe60RKN.json
+				webservice\trajectoires\VGv2020_Malamoc.json
+				webservice\trajectoires\VGv2020_Malizia rkn.json
+				webservice\trajectoires\VGv2020_Marion-Tromeul.json
+				webservice\trajectoires\VGv2020_Matheja1664.json
+				webservice\trajectoires\VGv2020_mezua34.json
+				webservice\trajectoires\VGv2020_MLS RKN.json
+				webservice\trajectoires\VGv2020_MoutonVolantRKN.json
+				webservice\trajectoires\VGv2020_Onyx Star.json
+				webservice\trajectoires\VGv2020_PeliouRKN.json
+				webservice\trajectoires\VGv2020_philou 33 RKN.json
+				webservice\trajectoires\VGv2020_Picova-RKN.json
+				webservice\trajectoires\VGv2020_pirond.json
+				webservice\trajectoires\VGv2020_pirond2.json
+				webservice\trajectoires\VGv2020_PostR 2cvFurtive RKN.json
+				webservice\trajectoires\VGv2020_R3e Nice RKN.json
+				webservice\trajectoires\VGv2020_RafaleRKN.json
+				webservice\trajectoires\VGv2020_Raid2cvTeam-RKN.json
+				webservice\trajectoires\VGv2020_rapido79 RKN.json
+				webservice\trajectoires\VGv2020_Rcfan77.json
+				webservice\trajectoires\VGv2020_RKN Major Tom.json
+				webservice\trajectoires\VGv2020_RKobisN.json
+				webservice\trajectoires\VGv2020_Silwo RKN.json
+				webservice\trajectoires\VGv2020_SrevnelaC-RKN.json
+				webservice\trajectoires\VGv2020_thechmot.RKN.json
+				webservice\trajectoires\VGv2020_Tovaritch_RKN.json
+				webservice\trajectoires\VGv2020_Varlingue RKN.json
+				webservice\trajectoires\VGv2020_VICACAPOURSO.json
+				webservice\trajectoires\VGv2020_www.talmondais.com.json
+				webservice\trajectoires\VGv2020_Xolub RKN.json
+				webservice\trajectoires\VGv2020_zlatanix.json
+			webservice\course-2-kml.php
+			webservice\get_boat_color.php
+			webservice\get_ge_params.php
+			webservice\get_params.php
+			webservice\index.php
+			webservice\lismoi.txt
+			webservice\set_boat_color.php
+			webservice\set_ge_params.php
+			webservice\set_params.php
+			webservice\set_positions.php
+			webservice\test_vgv2kmz.php
+			webservice\test1.php
+			webservice\test2.php
+		cartes_rkn.html
+		cartes_rkn_en.html
+		color_picker.html
+		color_picker_en.html
+		data-test.txt
+		GenerationCartesGE.odt
+		GenerationCartesGE.pdf
+		index.html
+		index_en.html
+		README.md
+		select_colors.css
+		select_param.css
+[Open project files]
+[Selected Project Files]
+Main=

@@ -41,7 +41,7 @@
 		{
 			//alert("validate_cparam STRPARAM",strparam);
 			//console.debug(strparam);
-	        var re = /(.+,){2}(.+)$/; // 3 chaines non vide avec separateur ','
+	        var re = /(.+,){3}(.+)$/; // 4 chaines non vide avec separateur ','
 			if (re.test(strparam) !== null)
 			{
                 //console.debug("--> OK");
@@ -134,7 +134,7 @@
 
 					if ((this.response!==undefined) && (this.response.length>0))
 					{
-        	            //console.debug("RESPONSE: %s",this.response);
+        	            console.debug("RESPONSE: %s",this.response);
                         var json = this.response;
                         // Converting JSON-encoded string to JS object
 						var obj = JSON.parse(json);
@@ -151,3 +151,69 @@
 			xhr.send();
 		}
 	}
+
+	// -------------------
+	function select_modele_3D()
+	{
+		if ((tmodeles !== null) && (tmodeles !== "undefined"))
+		{
+ 			for(const item of tmodeles)
+			{
+                if (item==modele)
+				{
+					document.getElementById("cModele").innerHTML += "<option value=\""+item+"\" selected>"+item+"</option>";
+				}
+				else
+				{
+					document.getElementById("cModele").innerHTML += "<option value=\""+item+"\">"+item+"</option>";
+				}
+			}
+		}
+	}
+
+
+    // -------------------
+	function get_models3D()
+	{
+			//var rknserveururl ="http://localhost:8080/voilevirtuelle/vgv2020/";
+			// Deplacé dans le fichier de configuration
+			//console.debug("BOATNAME: %s",boatname);
+            var url =	rknserveururl+"webservice/sources_3d/get_models.php";
+			var xhr = new XMLHttpRequest();
+        	xhr.open("GET", encodeURI(url), true);
+        	xhr.responseType = 'text';
+			xhr.onload = function(e)
+			{
+				if (this.readyState === 4)  // Requête terminée
+				{
+ 					if (this.status === 200)  // page trouvée
+					{
+ 						if ((this.response!==undefined) && (this.response.length>0))
+						{
+                            console.debug("RESPONSE : "+this.responseText);
+							var obj = JSON.parse(this.responseText);
+  							// Accessing individual value from JS object
+							if (obj.modeles)
+							{
+								console.debug("MODELES  : "+obj.modeles);
+								tmodeles=obj.modeles.split(",");
+                                select_modele_3D();
+							}
+                            else
+							{
+								ajaxBox_setText("Error Models");
+							}
+ 						}
+					}
+					else
+					{
+                   		ajaxBox_setText('Error...');
+					}
+				}
+
+			};
+
+			// GET
+			xhr.send();
+	}
+

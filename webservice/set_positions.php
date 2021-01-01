@@ -1,7 +1,7 @@
 <?php
 // set_positions.php
 // Version webservice de file_charge_data.php
-// DVR Dashvoard est une extension Chrome interfacée avec Virtual Regatta qui capture els données d'un bateau et les transmet àau roteur ZeZo
+// DVR Dashvoard est une extension Chrome interfacée avec Virtual Regatta qui capture les données d'un bateau et les transmet àau roteur ZeZo
 // Les données se présentent sous forme d'un tableau avec séparateur tab et label des données en tête
 // Cette page permet la capture du tableau par copier coller
 // Les données sont placées dans un fichier .csv du dossier csv
@@ -94,6 +94,10 @@ if (!empty($_GET['team']))
 {
 	$team=to_utf8($_GET['team']);
 }
+if (!empty($_GET['modele']))
+{
+	$boat_type=to_utf8($_GET['modele']);
+}
 if (!empty($_GET['scale']) && ($_GET['scale']!='') && ($_GET['scale']>0))
 {
 	$scale=(int)to_utf8($_GET['scale']);
@@ -115,6 +119,10 @@ if (!empty($_POST['course']))
 if (!empty($_POST['team']))
 {
 	$team=to_utf8($_POST['team']);
+}
+if (!empty($_POST['modele']))
+{
+	$boat_type=to_utf8($_POST['modele']);
 }
 if (!empty($_POST['scale']) && ($_POST['scale']!=''))
 {

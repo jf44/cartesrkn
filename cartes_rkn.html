@@ -16,7 +16,7 @@
 <script src="js/set_positions.js"></script>
 <script src="js/config_server.js"></script> <!-- server configuration :: need to be adapted to the server position (local or remote) -->
 </head>
-<body>
+<body onload="get_models3D();">
 <div id="bandeauDiv"><h1 class="bandeau">Vos bateaux amis du Vendée Globe virtuel 2020 dans Google Earth</h1></div>
 <div id="leftDiv">
 <p> &gt;&gt;&gt; <a href="index.html"><b>Accueil</b></a> &gt;&gt;&gt; <a href="color_picker.html"><b>Colorier vos voiles</b></a></p>
@@ -27,7 +27,6 @@
 <input type="text" class="textInput" name="nomboat" id="nomboat" size="30" value=""/>
 <input id="submitBtn2" type="submit" name="action2" value="Choisir" />
 </form>
-<br />
 <p>Puis sélectionnez les paramètres indispensables à la génération des fichiers KMZ.</p>
 <form action="" name="steering" id="steering"  method="post" onsubmit="return (steeringvalidate_params());">
 <label for="cCourse"><b>Course</b></label>
@@ -36,8 +35,12 @@
 <label for="cTeam"><b>Team</b></label> &nbsp;
 <input type="text" name="cTeam" id="cTeam" size="10" maxsize="30" value="" onchange="placerUneValeur(1);"/>
 &nbsp; &nbsp;
-<label for="cScale"><b>Echelle</b></label> <span class="small"> (entre <i>6</i> et <i>15</i>)</span>
-<input type="text" name="cScale" id="cScale" size="4" maxsize="4" value="" onchange="placerUneValeur(3);"/>
+<label for="cScale"><b>Echelle</b></label> <span class="small"> (entre <i>0.1</i> et <i>50</i>)</span>
+<input type="text" name="cScale" id="cScale" size="4" maxsize="4" value="" onchange="placerUneValeur(2);"/>
+<br />
+<label for="cModele"><b>Modèle 3D</b></label> <span class="small"> (parmi ceux disponibles sur le serveur)</span>
+&nbsp; &nbsp; <select name="cModele" id="cModele" onchange="placerUneValeur(3);">
+</select>
 <br /><br />
 <label for="params">Jeu de paramètres choisis</label>
 <br />
@@ -45,8 +48,6 @@
 <br /><br />
 <br /><i><span class="error"><label id="imputvalue"></label></span></i>
 <br /><br />
-<input type="hidden" name="course" id="course" value="" />
-<input type="hidden" name="team" id="team" value="" />
 <input type="reset" >
 <input id="submitBtn1" type="submit" name="action" value="Valider" />
 </form>
@@ -56,6 +57,7 @@
 Course:<label id="lCourse">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
 Team:<label id="lTeam">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
 Echelle:<label id="lScale">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+Modèle:<label id="lModele">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
 </div>
 <br />
 <div id="ajaxBox"></div>
@@ -64,9 +66,9 @@ Echelle:<label id="lScale">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
 <div id="rightDiv">
     <h2>Saisie des positions de votre bateau et de vos amis</h2>
 	<li>Installer l'extension Chrome <a target="_blank" href="https://chrome.google.com/webstore/detail/vr-dashboard/amknkhejaogpekncjekiaolgldbejjan?hl=en">VR Dashboard</a></li>
-	<li>Lancer Virtual Regatta Vendée Globe virtuel dans le navigateur <b>Chrome</b></li>
+	<li>Lancer Virtual Regatta dans le navigateur <b>Chrome</b></li>
 	<li>Activez l'extension VR Dashbord</li>
-	<li>Sélectionnez l'onglet "Fleet" et les filtres "Friends" et "Team"</li>
+	<li>Sélectionnez une Course puis l'onglet "Fleet" et les filtres "Friends" et/ou "Team"</li>
 	<li>Quand les données sont affichées <b>copier / coller</b> le tableau entier dans le formulaire ci-dessous</li>
     <form action="" name="data" id="data" method="post" onsubmit="return (positions_validate());">
     <textarea cols="70" rows="30" name="liste" id="liste"></textarea>
@@ -83,9 +85,6 @@ Echelle:<label id="lScale">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
 
 <script type="text/javascript">
 	// Ajax Form treatment
-
-    // var buttons = document.getElementsByName("command");
-
   	// Prevent browser default  : do not send form because we use an Ajax call
 	document.getElementById("naming").addEventListener("submit", function(event){
     	event.preventDefault()
@@ -94,10 +93,7 @@ Echelle:<label id="lScale">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
 	document.getElementById("steering").addEventListener("submit", function(event){
     	event.preventDefault()
 	});
-
-	//if ((document.getElementById("data") !== undefined)  && (document.getElementById("data") !== null))
-	//
-
+	
 	document.getElementById("data").addEventListener("submit", function(event){
     	event.preventDefault()
 	});
@@ -116,13 +112,18 @@ Echelle:<label id="lScale">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
 		course = getCookie("rkncourse");
 		team = getCookie("rknteam");
         scale = getCookie("rknscale");
+        modele = getCookie("rknmodele");
+	}
+	if (modele.length != 0)
+	{
+		document.getElementById('cModele').value = scale;
+        setCookie("rknmodele",modele,8);
 	}
 	if (scale.length != 0)
 	{
 		document.getElementById('cScale').value = scale;
         setCookie("rknscale",scale,8);
 	}
-
 	if (team.length != 0)
 	{
 		document.getElementById('cTeam').value = team;
@@ -136,13 +137,13 @@ Echelle:<label id="lScale">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
 	if (nomboat.length != 0)
 	{
         nomboat = document.naming.nomboat.value;
-      	setCookie("rknnomboat",nomboat8);
+      	setCookie("rknnomboat",nomboat,8);
 	}
 	else
 	{
-           	//alert( "Fournissez un nom de bateau !" );
-			document.getElementById('imputvalue').innerHTML =  "Fournissez un nom de bateau !";
-            document.naming.nomboat.focus() ;
+        //alert( "Fournissez un nom de bateau !" );
+		document.getElementById('imputvalue').innerHTML =  "Fournissez un nom de bateau !";
+        document.naming.nomboat.focus() ;
 	}
 
 </script>

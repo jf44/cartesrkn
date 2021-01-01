@@ -1,0 +1,165 @@
+<!DOCtype HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="Author" content="JF">
+<meta name="description" content="HTML5 Color Picker.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="author" title="Auteur" href="mailto:jean.fruitet@free.fr">
+<title>Sails and Boat Colors on Virtual Regatta</title>
+<meta name="ROBOTS" content="none,noarchive">
+<link href="select_colors.css" rel="stylesheet" type="text/css">
+<script src="js/cookies.js"></script>
+<script src="js/color_picker.js"></script>
+<script src="js/color_picker2.js"></script>
+<script src="js/set_color.js"></script>
+<script src="js/config_server.js"></script> <!-- server configuration :: need to be adapted to the server position (local or remote) -->
+</head>
+<body>
+<div id="bandeauDiv"><h1 class="bandeau">Sails and Boat Colors on Google Earth Maps</h1></div>
+<div id="leftDiv">
+<p> &gt;&gt;&gt; <a href="index_en.html"><b>Home</b></a> &gt;&gt;&gt; <a href="cartes_rkn_en.html"><b>Set up a Map</b></a></p>
+<h2>Colors</h2>
+<p>Type in your Boat Name. (<i>Exact spelling!</i>)</p>
+<form action="" name="naming" id="naming"  method="post" onsubmit="return get_couleurs();">
+<b><label for="nomboat">Name</label></b>
+<input type="text" class="textInput" name="nomboat" id="nomboat" size="30" value=""/>
+<input id="submitBtn2" type="submit" name="action2" value="Choisir" />
+</form>
+<br >
+<p>Then select five colors with the color picker.</p>
+<form action="" name="steering" id="steering"  method="post" onsubmit="return (steeringvalidate_color());">
+<b><label for="rCoque">Hull</label></b>
+<input type="radio" name="command" id="rCoque" value="rCoque" checked />
+&nbsp; &nbsp;
+<b><label for="rPont">Desk</label></b>
+<input type="radio" name="command" id="rPont" value="rPont" />
+&nbsp; &nbsp;
+<b><label for="rGv">Big Sail</label></b>
+<input type="radio" name="command" id="rGv" value="rGv" />
+&nbsp; &nbsp;
+<b><label for="rVav">Jib</label></b>
+<input type="radio" name="command" id="rVav" value="rVav" />
+&nbsp; &nbsp;
+<b><label for="rSpi">Spi</label></b>
+<input type="radio" name="command" id="rSpi" value="rSpi" />
+<br ><br >
+
+<table>
+    <tr>
+      <td colspan="2">
+	  <label id="palette"></label>
+<script>
+//	ecriture du tableau de dégradé
+var sw = "<table border='0' cellpadding='0' cellspacing='0' style='border: 1px solid black'>";
+StepH = 24; // 20
+var StepV = 12;  // 8
+var i=0;
+var a=0;
+//	niveau foncé
+for (a=0;a<=255; a+=StepV){
+	sw += WriteRow2(a,i);
+}
+
+a=255
+//	niveau clair;
+for (i=0; i<=255; i+=StepV){
+	sw += WriteRow2(a,i);
+}
+sw += "</table>";
+document.getElementById("palette").innerHTML=sw;
+</script>
+	  </td>
+    </tr>
+    <tr>
+      <td>
+	  		<div id="ColorShow" style="width: 100; height: 60; border: 1px solid black"></div>
+	  </td>
+      <td>
+	  		<span class="middle">Color hexa code : </span><input id="ColorCode" type="text" size="8" />
+	  </td>
+    </tr>
+</table>
+<br >
+<label for="couleurs">Colors Selected</label>
+<br >
+<input type="text" name="couleurs" id="couleurs" size="40" maxsize="40" value="" />
+<br ><br >
+<br ><i><span class="error"><label id="imputvalue"></label></span></i>
+<br ><br >
+<input type="hidden" name="course" id="course" value="" />
+<input type="hidden" name="groupe" id="groupe" value="" />
+<input type="reset" >
+<input id="submitBtn1" type="submit" name="action" value="Valider" />
+</form>
+<br >
+<div id="maPalette">
+<p align="center"><b>Color palette</b></p>
+<b>Hull</b>: <label id="cCoque">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+<b>Desk</b>: <label id="cPont">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+<b>Sail</b>: <label id="cGv">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+<b>Jib</b>: <label id="cVav">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+<b>Spi</b>: <label id="cSpi">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+</div>
+<br >
+
+</div> <!-- left frame -->
+<div id="rightDiv">
+<h2>3D Models</h2>
+<p>My model uses 4 colors of the 5 you have to set up : Hull color, Desk, Big Sail, Jib or Gennaker, Spi...)</p>
+<h3>Boats colors</h3>
+<br />
+<img src="images/RKN_CZ.png" border=0" alt="GV + Foc" title="GV + Foc" />
+<img src="images/RKN_GENOIS.png" border=0" alt="GV + Génois" title="GV + Génois" />
+<img src="images/RKN_SPI.png" border=0" alt="GV + Spi" title="GV + Spi" />
+<p><span class="small">The 3D models as displayed in G.E.</span></p>
+<p>
+<img src="images/vgv20-rkn_02.jpg" border="0" alt="Rkn Fleet (Vendée Globe 2020)" title="Rkn Fleet (Vendée Globe 2020)" />
+</p>
+</div> <!-- right frame -->
+
+
+<script type="text/javascript">
+	// Ajax Form treatment
+
+    var buttons = document.getElementsByName("command");
+
+  	// Prevent browser default  : do not send form because we use an Ajax call
+	document.getElementById("naming").addEventListener("submit", function(event){
+    	event.preventDefault()
+	});
+
+	document.getElementById("steering").addEventListener("submit", function(event){
+    	event.preventDefault()
+	});
+
+
+    // Find a nomboat
+	var cookies = document.cookie;
+	if (cookies !== null)
+	{
+		nomboat = getCookie("rknnomboat");
+		if (nomboat.length != 0){
+	    	document.naming.nomboat.value = nomboat;
+			// console.debug("NOMBOAT: %s",nomboat);
+			get_colors_boat(nomboat); // Appel Ajax
+		}
+	}
+
+	if (nomboat.length != 0)
+	{
+        nomboat = document.naming.nomboat.value;
+      	setCookie("rknnomboat",nomboat,8);
+	}
+	else
+	{
+           	//alert( "Fournissez un nom de bateau !" );
+			document.getElementById('imputvalue').innerHTML =  "Type in a Boat Name !";
+            document.naming.nomboat.focus() ;
+	}
+
+</script>
+<div id="baspageDiv"><a class="bandeau" href="mailto:jean.fruitet@free.fr?subject=Cartes GE">(c) JF</a></div>
+
+</body>
+</html>

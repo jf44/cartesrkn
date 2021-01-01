@@ -40,7 +40,7 @@
 		else
 		{
            	//alert( "Fournissez un nom de bateau !" );
-			document.getElementById('imputvalue').innerHTML =  "Fournissez un nom de bateau !";
+			document.getElementById('imputvalue').innerHTML =  "Fournissez un nom de bateau ! Give Boatname Please!";
             document.naming.nomboat.focus() ;
 		}
 	}
@@ -54,8 +54,8 @@
 			var res= str.split(",");
 			var urlbase = rknserveururl+"webservice/kmz/";
 			document.getElementById("myFiles").style.backgroundColor =  "#ceffce";
-    		document.getElementById("myFiles").innerHTML="<h3>Liste des fichiers KMZ pour votre bateau</h3>";
- 			document.getElementById("myFiles").innerHTML+="<p>Les cartes G.E. sont distribuées au format KML /KMZ indépendants du serveur</p>";
+    		document.getElementById("myFiles").innerHTML="<h3>Fichiers KMZ pour votre bateau / KMZ files for your boat</h3>";
+ 			document.getElementById("myFiles").innerHTML+="<p>Les cartes G.E. sont distribuées au format KMZ indépendants du serveur / G.E. Maps are in KMZ format.</p>";
             document.getElementById("myFiles").innerHTML+="<ul>";
 
 			for(const item of res)
@@ -92,7 +92,7 @@
 							var obj = JSON.parse(this.responseText);
                             if ((obj.erreur !==null) && (obj.erreur !== undefined) && (obj.erreur !== "OK"))
 							{
-								ajaxBox_setText("Erreur : "+obj.erreur);
+								ajaxBox_setText("Error : "+obj.erreur);
 							}
   							// Accessing individual value from JS object
 							else if (obj.fichiers)

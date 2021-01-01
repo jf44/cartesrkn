@@ -19,7 +19,7 @@
             return false;
 		}
 
-	    var data = "boatname="+encodeURI(document.naming.nomboat.value)+"&course="+course+"&team="+team+"&scale="+scale+"&liste="+encodeURI(document.data.liste.value);
+	    var data = "boatname="+encodeURI(document.naming.nomboat.value)+"&course="+course+"&team="+team+"&modele="+modele+"&scale="+scale+"&liste="+encodeURI(document.data.liste.value);
 		//document.getElementById('imputvalue').innerHTML = "DATA SENT: "+data;
         document.getElementById('imputvalue').innerHTML = "Données envoyées";
         document.data.action.value = "Sending...";
@@ -62,7 +62,7 @@
 							&& (fname!=='empty file') && (fname!=='empty data'))
 						{
  		        	    	document.data.action.value = "Valider";
-	        		    	document.data.liste.value = "";
+	        		    	// document.data.liste.value = "";
 							document.getElementById('imputvalue').innerHTML = "Carte Google Earth disponible !  ";
         	                info_carte(fname);
 						}

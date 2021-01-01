@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="Author" content="JF">
+<meta name="description" content="Cartes GoogleEarth.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="author" title="Auteur" href="mailto:jean.fruitet@free.fr">
+<title>Your Boats in Google Earth</title>
+<meta name="ROBOTS" content="none,noarchive">
+<link href="select_param.css" rel="stylesheet" type="text/css">
+<script src="js/cookies.js"></script>
+<script src="js/ajax_loader.js"></script>
+<script src="js/get_kmz.js"></script>
+<script src="js/config_server.js"></script> <!-- server configuration :: need to be adapted to the server position (local or remote) -->
+</head>
+<body onload="checkCookieBoatName()">
+<div id="bandeauDiv"><h1 class="bandeau">Vendée Globe Virtuel: Your Friend's boats in Google Earth</h1></div>
+<div id="leftDiv">
+<p> &gt;&gt;&gt; <b>English</b> &gt;&gt;&gt; <a href="index.html">French</a></p>
+<h2>Google Earth Map Generation</h2>
+<div id="inputValue"></div>
+<form action="" name="naming" id="naming" method="post" onsubmit="return set_BoatName();">
+<b><label for="nomboat">Name</label></b>
+<input type="text" class="textInput" name="nomboat" id="nomboat" size="30" value=""/>
+<input id="submitBtn2" type="submit" name="action2" value="Go" />
+</form>
+<p> &gt;&gt;&gt; <a href="cartes_rkn_en.html"><b>Set up a Map</b></a></p>
+<h2>Sails and Hull colors</h2>
+<p> &gt;&gt;&gt; <a href="color_picker_en.html"><b>Sails and Hull Colors</b></a></p>
+<div id="ajaxBox"></div>
+<div id="myMap"></div>
+<div id="myFiles">
+<img src="images/vgv20-rkn_202012051530-04.jpg" border="0" alt="Rkn en course" title="Rkn en course" />
+</div>
+</div> <!-- left frame -->
+<div id="rightDiv">
+<h2>How we display in 3D the Vendée Globe virtuel 2020 boats</h2>
+<p>My model use 4 colors of the 5 you have to set  : hull color, desk, Big Sail, Jib or Gennaker, Spi...)</p>
+<br /><img src="images/RKN_CZ.png" border="0" alt="Sail + Jib" title="Sail + Jib" />
+<img src="images/RKN_GENOIS.png" border=0" alt="Sail + Genois" title="Sail + Genois" />
+<img src="images/RKN_SPI.png" border=0" alt="Sail + Spi" title="Sail + Spi" />
+<br /><span class="small">The 3D models as displayed in G.E.</span></p>
+<h3>Boats colors</h3>
+<div id="linkDiv"></div>
+<h2>Display the KMZ Files in G.E.</h2>
+<p>The G.E. maps are KMZ files server independent</p>
+<ul>
+<li>Clic <b>Download</b></li>
+<li>If the file is downloaded as a "<i><b>.ZIP</b></i>" file, rename it "<i><b>.kmz</b></i>"</li>
+<li>Then launch Google Earth; if needed empty the "<i>Prefered Sites</i>" directory.</li>
+<li>... then enjoy the Tour! :))</li>
+</ul>
+<h5>Documentation (in French): <a target="_blank" href="GenerationCartesGE.pdf">Génération des cartes G.E.</a></h5>
+</div>
+
+<script type="text/javascript">
+	// Ajax Form treatment
+  	// Prevent browser default  : do not send form because we use an Ajax call
+	document.getElementById("naming").addEventListener("submit", function(event){
+    	event.preventDefault()
+	});
+	// info utilisateur
+	document.getElementById("linkDiv").innerHTML="<p>Let your friends choose the colors of their boats; give them the link :<br /><a target=\"_blank\" href=\""+rknserveururl+"color_picker.html\">"+rknserveururl+"color_picker_en.html</a>";
+</script>
+
+<div id="baspageDiv"><a class="bandeau" href="mailto:jean.fruitet@free.fr?subject=Cartes GE">(c) JF</a></div>
+</body>
+</html>

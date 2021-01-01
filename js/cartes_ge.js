@@ -36,7 +36,9 @@ function verifHexa(acolor){
 }
 
 
-var tparam = ["","",""];
+var tparam = ["","","",""];
+var modele="";
+var tmodeles=[];
 var course="";
 var team="";
 var scale="";
@@ -47,8 +49,9 @@ var nomboat="";
 // enregistre la valeurs dans un tableau global
 function placerUneValeur(index){
 var message="";
-	switch(index){
-	  case 0 :
+	switch(index)
+	{
+		case 0 :
         var valeur = document.getElementById("cCourse").value;
 		if (valeur.length==0)
 		{
@@ -61,7 +64,7 @@ var message="";
         document.getElementById("lCourse").innerHTML = valeur;
 		//message =  "Vous avez saisi la Course "+Valeur;
 		break;
-	  case 1 :
+		case 1 :
         var valeur = document.getElementById("cTeam").value;
 		if (valeur.length==0)
 		{
@@ -74,7 +77,7 @@ var message="";
  		document.getElementById("lTeam").innerHTML = valeur;
         //message =  "Vous avez saisi la Team "+Valeur;
 		break;
-	  default :
+  		case 2 :
 		var valeur = parseFloat(document.getElementById("cScale").value);
 		//console.debug(valeur);
 		if (isNaN(valeur))
@@ -86,6 +89,19 @@ var message="";
 		scale = valeur;
        	document.getElementById("cScale").style.backgroundColor = "#ffffaa";
 		document.getElementById("lScale").innerHTML = valeur;
+		break;
+    	case 3 :
+		var valeur = document.getElementById("cModele").value;
+		//console.debug(valeur);
+		if (valeur.length==0)
+		{
+            document.getElementById("imputvalue").innerHTML = "Valeur nulle !";
+			return false;
+		}
+		tparam[3]= valeur;
+		modele = valeur;
+       	document.getElementById("cModele").style.backgroundColor = "#ffffaa";
+		document.getElementById("lModele").innerHTML = valeur;
 		break;
 	}
 
@@ -108,7 +124,7 @@ var message="";
 	{
         set_params();
 		document.steering.submitBtn1.focus() ;
-		message =  "Vous pouvez maintenant valider vos choix...";
+		message =  "Vous pouvez maintenant valider vos choix... / You can validate your choices...";
 	}
 
 	// console.debug("couleurs chargées: "+strparams );
@@ -130,7 +146,7 @@ function set_all_params(strparams){
 	  	tparam=strparams.split(',')
   		document.getElementById("params").style.background = "#ffff33";
         document.getElementById("params").value= strparams;
-		document.getElementById("imputvalue").innerHTML = "Paramètres rechargés...";
+		document.getElementById("imputvalue").innerHTML = "Paramètres rechargés... / Parameters reloaded ";
 
 		if ( tparam.length==1)
 		{
@@ -141,7 +157,7 @@ function set_all_params(strparams){
 		}
 		else if ( tparam.length==2)
 		{
-			document.getElementById("cCourse").style.backgroundColor =  "#aaffaa";
+			document.getElementById("cCourse").style.backgroundColor =  "#ffaaff";
             document.getElementById("cCourse").value = tparam[0];
             document.getElementById("lCourse").innerHTML = tparam[0];
             course = tparam[0];
@@ -164,6 +180,26 @@ function set_all_params(strparams){
             document.getElementById("cScale").value = tparam[2];
             document.getElementById("lScale").innerHTML = tparam[2];
             scale = tparam[2];
+			return true;
+		}
+		else if ( tparam.length==4)
+		{
+			document.getElementById("cCourse").style.backgroundColor = "#ffaaff";
+            document.getElementById("cCourse").value = tparam[0];
+            document.getElementById("lCourse").innerHTML = tparam[0];
+            course = tparam[0];
+            document.getElementById("cTeam").style.backgroundColor = "#aaffaa";
+            document.getElementById("cTeam").value = tparam[1];
+            document.getElementById("lTeam").innerHTML = tparam[1];
+            team = tparam[1];
+            document.getElementById("cScale").style.backgroundColor = "#aaaaff";
+            document.getElementById("cScale").value = tparam[2];
+            document.getElementById("lScale").innerHTML = tparam[2];
+            scale = tparam[2];
+            document.getElementById("cModele").style.backgroundColor = "#ffaaaa";
+            document.getElementById("cModele").value = tparam[3];
+            document.getElementById("lModele").innerHTML = tparam[3];
+            modele = tparam[3];
 			return true;
 		}
 	}
@@ -199,10 +235,10 @@ function helpkmz(){
 function info_carte(fname){
     document.getElementById("myMap").style.backgroundColor =  "#ccccff";
     document.getElementById("myMap").innerHTML="<h2>Génération de la carte Google Earth</h2>";
-    document.getElementById("myMap").innerHTML+="<p>Votre fichier Google Earth est disponible : <a target=\"_blank\" href=\""+ fname +"\">Télécharger</a></p>";
-    document.getElementById("myMap").innerHTML+="<h3>Lire les fichiers KML / KMZ</h3>";
- 	document.getElementById("myMap").innerHTML+="<p>Les cartes G.E. sont distribuées au format KML /KMZ indépendants du serveur<br />";
- 	document.getElementById("myMap").innerHTML+="<li>Cliquez sur <b>Télécharger</b></li>\n";
+    document.getElementById("myMap").innerHTML+="<p>Votre fichier Google Earth est disponible / the map is here: <a target=\"_blank\" href=\""+ fname +"\">Télécharger / Download</a></p>";
+    document.getElementById("myMap").innerHTML+="<h3>Lire les fichiers KMZ</h3>";
+ 	document.getElementById("myMap").innerHTML+="<p>Les cartes G.E. sont distribuées au format KMZ indépendants du serveur<br />";
+ 	document.getElementById("myMap").innerHTML+="<li>Cliquez sur <b>Télécharger / Download</b></li>\n";
     document.getElementById("myMap").innerHTML+="<li>Si le fichier s'enregistre comme un fichier <i><b>.ZIP</b></i>\" renommez le <i><b>.kmz</b></i>\"</li>\n";
     document.getElementById("myMap").innerHTML+="<li>Puis ouvrez le dans Google Earth; au besoin supprimez le contenu du dossier \"Lieux préférés\".</li>\n";
     document.getElementById("myMap").innerHTML+="<li>... et profitez de la vue ! :))</li>\n";

@@ -1,0 +1,126 @@
+Affichage du Vendée Globe Virtuel 2020 dans Google Earth
+jean.fruitet@free.fr
+
+Création des modèles 3D
+=======================
+
+Un dossier par modèle de bateau
+Attention de maintenir des fichiers aux noms génériques dans leurs dossiers respectifs
+
+Les modèles 3D génériques des bateaux sont nommés selon le schéma "MODELE_VOILE_AMURE".extension":
+RKN_COQUE_SANS_VOILE.skp
+RKN_FOC_BABORD.skp
+RKN_FOC_TRIBORD.skp     --> symétrie axiale du précédent
+RKN_GENOIS_BABORD.skp
+RKN_GENOIS_TRIBORD.skp  --> symétrie axiale du précédent
+RKN_GENNAKER_BABORD.skp
+RKN_GENNAKER_TRIBORD.skp --> symétrie axiale du précédent
+RKN_SPI_BABORD.skp
+RKN_SPI_TRIBORD.skp --> symétrie axiale du précédent
+
+Ces modèles sont créés sous SketchUp dans des dossiers 3D spécifiques,
+par exemple "Imoca Foils", "Trimaran Rkn", etc.
+
+Le dossier des voiliers Imoca à Foils pour affichage dans G.E. est :
+JF/Voile/Sketchup/Imoca Foils/RKN_Imoca-foils
+
+Lors de la conception des modèes 3D veiller à n'utiliser ques le couleurs "Utilisées dans le Modèle"
+et qui doivent être exclusivement définies par des fichiers de matières / textures de type .PNG
+C'est la garantie que les couleurs des coques, voiles, etc. pourront être instanciées à la volée
+lors de la création des fichiers KML / KMZ par le programme de génération (vgv2020_2_kml.php par exemple).
+Si d'autres textures sont présentes il faut les supprimer et recolorier les éléments avec les textures et matières
+disponibles :
+c.PNG: pont de couleur verte, det.PNG : coque et appendices de couleur jaune,
+gv.PNG : Grand'voile et capot de couleur bleu ciel translucide 80%, vav.PNG: voiles d'avant et roof de couleur rose tyrien translucide 80%
+Ces matières sont stockées dans les dossiers ./textures/
+
+A partir de ces modèles spécifiques (Imoca, Trimaran, etc.)
+sauvegarder les 9 versions génériques.
+(RKN est le nom du groupe à afficher, chaque groupe peut avoir son type de nom de fichiers génériques particuliers)
+
+Puis exporter chaque fichier générique depuis SketchUp en 3D au format DAE
+(format XML qu'on peut éditer "manuellement" sous NotePad+++)
+
+RKN_COQUE_SANS_VOILE.dae
+RKN_FOC_BABORD.dae
+RKN_FOC_TRIBORD.dae     --> symétrie axiale du précédent
+RKN_GENOIS_BABORD.dae
+RKN_GENOIS_TRIBORD.dae  --> symétrie axiale du précédent
+RKN_GENNAKER_BABORD.dae
+RKN_GENNAKER_TRIBORD.dae --> symétrie axiale du précédent
+RKN_SPI_BABORD.dae
+RKN_SPI_TRIBORD.dae --> symétrie axiale du précédent
+
+Ce sont ces fichiers qui serviront à l'intégration des modèles de bateaux dans des fichiers KML / KMZ pour G.E.
+
+Génération des fichiers KML / KMZ
+=================================
+Attention de maintenir des fichiers aux noms génériques dans leurs dossiers respectifs
+./sources_3d/models
+./sources_3d/textures
+
+Après l'export 3D des fichiers collada (dae) depuis Sketchup veiller à remplacer partout dans ces fichier
+(sous éditeur Notepad++ ) le chemin des images de texture (par exemple "RKN_COQUE/c.png" par "c.png"
+pour que le chemin des textures soit correctement initialisé lors de la production des fichiers KML / KMZ.
+Renommer toutes les extension .png en .PNG
+Remplacer toutes les textures parasites par des textures fichier
+texture_coque --> det
+texture_pont --> c
+texture_voile --> gv ou vav selon la voile
+
+Affichage dans Google Earth
+===========================
+Si des couleurs manquent lors de l'affichage dans G.E. vérifier les chemins des modèles et les extensions de noms de fichier ".PNG" et pas ".png" !
+
+Si les textures ne sont pas placées directement dans le dossier des modèles il faut indiquer le chemin relatif par rapport
+au chemin du modèle.
+Si par exemple les modèles collada sont situés dans le dossier "models" et les textures dans le dossier "textures"
+le lien des textures à placer dans le fichier collada est "../textures/"
+
+			<MultiGeometry>
+				<Point>
+					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>70,-47,0</coordinates>
+				</Point>
+				<Model id="model_70">
+					<altitudeMode>relativeToGround</altitudeMode>
+					<Location>
+						<longitude>70</longitude>
+						<latitude>-47</latitude>
+						<altitude>1800</altitude>
+					</Location>
+					<Orientation>
+						<heading>90</heading>
+						<tilt>1</tilt>
+						<roll>-4</roll>
+					</Orientation>
+					<Scale>
+						<x>13</x>
+						<y>13</y>
+						<z>13</z>
+					</Scale>
+					<Link id="Clipper Tromeul">
+						<href>models/GSB_jf44-RKN_gennaker.dae</href>
+					</Link>
+					<ResourceMap>
+						<Alias>
+							<targetHref>../textures/c_0_0_120.PNG</targetHref>
+							<sourceHref>c.PNG</sourceHref>
+						</Alias>
+						<Alias>
+							<targetHref>../textures/c_240_84_255.PNG</targetHref>
+							<sourceHref>der.PNG</sourceHref>
+						</Alias>
+						<Alias>
+							<targetHref>../textures/c_180_186_255.PNG</targetHref>
+							<sourceHref>gv.PNG</sourceHref>
+						</Alias>
+						<Alias>
+							<targetHref>../textures/c_247_168_255.PNG</targetHref>
+							<sourceHref>vav.PNG</sourceHref>
+						</Alias>
+					</ResourceMap>
+				</Model>
+			</MultiGeometry>
+

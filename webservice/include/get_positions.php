@@ -129,7 +129,7 @@ function set_trajectoire_json($skipper, $course, $lonlat) {
 		mkdir($dir_name);
 	}
 	// fichier à charger
-    $f_name=$dir_name.$course.'_'.$skipper.$extension_json;
+    $f_name=$dir_name.strtoupper($course.'_'.$skipper).$extension_json;
 	$s=get_trajectoire_json($f_name);
 
 	if (!empty($s))
@@ -164,7 +164,7 @@ function get_trajectoire($skipper, $course) {
 	$s='';
     $dir_name=$dir_serveur.$datadirjson;
 	// fichier à charger
-    $f_name=$dir_name.$course.'_'.$skipper.$extension_json;
+    $f_name=$dir_name.strtoupper($course.'_'.$skipper).$extension_json;
 	return get_trajectoire_json($f_name);
 }
 
