@@ -125,6 +125,12 @@
 
         	xhr.open("GET", encodeURI(url), true);
 
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); // Mandatory
+
+			// The following code does'nt work on the the SolServer because it is not CORS  (Cross-Origin Resource Sharing)!
+			// xhr.setRequestHeader("Access-Control-Allow-Credentials", true);  // CORS (Cross-Origin Resource Sharing)
+			// xhr.setRequestHeader("Access-Control-Allow-Origin", "*"); // CORS (Cross-Origin Resource Sharing)
+
         	xhr.responseType = 'text';
 			xhr.onload = function(e)
 			{
@@ -178,9 +184,16 @@
 			//var rknserveururl ="http://localhost:8080/voilevirtuelle/vgv2020/";
 			// Deplacé dans le fichier de configuration
 			//console.debug("BOATNAME: %s",boatname);
-            var url =	rknserveururl+"webservice/sources_3d/get_models.php";
+            var url =	rknserveururl+"webservice/get_models.php";
 			var xhr = new XMLHttpRequest();
         	xhr.open("GET", encodeURI(url), true);
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); // Mandatory
+
+			// The following code does'nt work on the SolServer is not CORS  (Cross-Origin Resource Sharing)!
+			// xhr.setRequestHeader("Access-Control-Allow-Credentials", true);  // CORS (Cross-Origin Resource Sharing)
+			// xhr.setRequestHeader("Access-Control-Allow-Origin", "*"); // CORS (Cross-Origin Resource Sharing)
+
+
         	xhr.responseType = 'text';
 			xhr.onload = function(e)
 			{

@@ -40,7 +40,7 @@
 		else
 		{
            	//alert( "Fournissez un nom de bateau !" );
-			document.getElementById('imputvalue').innerHTML =  "Fournissez un nom de bateau ! Give Boatname Please!";
+			document.naming.imputvalue.innerHTML =  "Fournissez un nom de bateau ! Give Boatname Please!";
             document.naming.nomboat.focus() ;
 		}
 	}
@@ -79,6 +79,8 @@
             var url =	rknserveururl+"webservice/kmz/get_kmz.php?boatname="+boatname;
 			var xhr = new XMLHttpRequest();
         	xhr.open("GET", encodeURI(url), true);
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); // Mandatory
+
         	xhr.responseType = 'text';
 			xhr.onload = function(e)
 			{
