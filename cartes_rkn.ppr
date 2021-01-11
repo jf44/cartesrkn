@@ -258,7 +258,7 @@ cartes_rkn
 						webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2020123111\textures\c_153_153_255.PNG
 						webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2020123111\textures\c_255_255_153.PNG
 					webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2020123111\VG2020_C-RKN_IroizoC-RKN_3D.kml
-				webservice\kmz\get_kmz.php
+				webservice\trajectoires\renomme_upper.php
 				webservice\kmz\index.php
 				webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2020123111.kmz
 				webservice\kmz\VG2020_C-RKN_IroizoC-RKN_3D2020123119.kmz
@@ -600,7 +600,7 @@ cartes_rkn
 					webservice\sources_3d\textures\gv.PNG
 					webservice\sources_3d\textures\vav.PNG
 				webservice\sources_3d\fichiers de modeles 3d.txt
-				webservice\sources_3d\get_models.php
+				webservice\get_models.php
 				webservice\sources_3d\index.php
 			-trajectoires
 				webservice\trajectoires\index.php
@@ -687,5 +687,62 @@ cartes_rkn
 		select_colors.css
 		select_param.css
 [Open project files]
+0=webservice\set_positions.php
+1=webservice\include\compute_kmz.php
+2=webservice\include\get_positions.php
+3=webservice\include\kml_3d.php
+4=webservice\test2.php
+5=js\set_positions.js
+6=js\cartes_ge.js
+7=C:\Users\jf.AcerJF\Documents\ln\p\ln.txt
+8=cartes_rkn_en.html
+9=webservice\rkn3d\.gitignore
+10=color_picker.html
+11=webservice\get_models.php
+12=js\set_params.js
+13=js\get_kmz.js
 [Selected Project Files]
 Main=
+Selected=C:\Users\jf.AcerJF\Documents\ln\p\ln.txt
+[webservice\set_positions.php]
+TopLine=7
+Caret=126,7
+[webservice\include\compute_kmz.php]
+TopLine=15
+Caret=18,37
+[webservice\include\get_positions.php]
+TopLine=139
+Caret=55,167
+[webservice\include\kml_3d.php]
+TopLine=67
+Caret=44,88
+[webservice\test2.php]
+TopLine=1
+Caret=3,9
+[js\set_positions.js]
+TopLine=17
+Caret=20,65
+[js\cartes_ge.js]
+TopLine=211
+Caret=1,235
+[C:\Users\jf.AcerJF\Documents\ln\p\ln.txt]
+TopLine=463
+Caret=1,491
+[cartes_rkn_en.html]
+TopLine=98
+Caret=9,146
+[webservice\rkn3d\.gitignore]
+TopLine=1
+Caret=22,6
+[color_picker.html]
+TopLine=129
+Caret=75,162
+[webservice\get_models.php]
+TopLine=3
+Caret=13,9
+[js\set_params.js]
+TopLine=159
+Caret=1,191
+[js\get_kmz.js]
+TopLine=79
+Caret=1,83

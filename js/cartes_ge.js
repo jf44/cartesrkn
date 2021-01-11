@@ -152,33 +152,33 @@ function set_all_params(strparams){
 		{
 			document.getElementById("cCourse").style.backgroundColor =  "#ffffaa";
             document.getElementById("cCourse").value = tparam[0];
-            document.getElementById("lCourse").innerHTML = tparam[0];
+            //document.getElementById("lCourse").innerHTML = tparam[0];
 			course = tparam[0];
 		}
 		else if ( tparam.length==2)
 		{
 			document.getElementById("cCourse").style.backgroundColor =  "#ffaaff";
             document.getElementById("cCourse").value = tparam[0];
-            document.getElementById("lCourse").innerHTML = tparam[0];
+            //document.getElementById("lCourse").innerHTML = tparam[0];
             course = tparam[0];
             document.getElementById("cTeam").style.backgroundColor = "#ffffaa";
             document.getElementById("cTeam").value = tparam[1];
             team = tparam[1];
-        	document.getElementById("lTeam").innerHTML = tparam[1];
+        	//document.getElementById("lTeam").innerHTML = tparam[1];
 		}
 		else if ( tparam.length==3)
 		{
 			document.getElementById("cCourse").style.backgroundColor = "#ffaaff";
             document.getElementById("cCourse").value = tparam[0];
-            document.getElementById("lCourse").innerHTML = tparam[0];
+            //document.getElementById("lCourse").innerHTML = tparam[0];
             course = tparam[0];
             document.getElementById("cTeam").style.backgroundColor = "#aaffaa";
             document.getElementById("cTeam").value = tparam[1];
-            document.getElementById("lTeam").innerHTML = tparam[1];
+            //document.getElementById("lTeam").innerHTML = tparam[1];
             team = tparam[1];
             document.getElementById("cScale").style.backgroundColor = "#ffffaa";
             document.getElementById("cScale").value = tparam[2];
-            document.getElementById("lScale").innerHTML = tparam[2];
+            //document.getElementById("lScale").innerHTML = tparam[2];
             scale = tparam[2];
 			return true;
 		}
@@ -186,19 +186,19 @@ function set_all_params(strparams){
 		{
 			document.getElementById("cCourse").style.backgroundColor = "#ffaaff";
             document.getElementById("cCourse").value = tparam[0];
-            document.getElementById("lCourse").innerHTML = tparam[0];
+            //document.getElementById("lCourse").innerHTML = tparam[0];
             course = tparam[0];
             document.getElementById("cTeam").style.backgroundColor = "#aaffaa";
             document.getElementById("cTeam").value = tparam[1];
-            document.getElementById("lTeam").innerHTML = tparam[1];
+            //document.getElementById("lTeam").innerHTML = tparam[1];
             team = tparam[1];
             document.getElementById("cScale").style.backgroundColor = "#aaaaff";
             document.getElementById("cScale").value = tparam[2];
-            document.getElementById("lScale").innerHTML = tparam[2];
+            //document.getElementById("lScale").innerHTML = tparam[2];
             scale = tparam[2];
             document.getElementById("cModele").style.backgroundColor = "#ffaaaa";
             document.getElementById("cModele").value = tparam[3];
-            document.getElementById("lModele").innerHTML = tparam[3];
+            //document.getElementById("lModele").innerHTML = tparam[3];
             modele = tparam[3];
 			return true;
 		}
@@ -207,13 +207,31 @@ function set_all_params(strparams){
 }
 
 // -------------------
+function help(){
+    document.getElementById("myMap").style.backgroundColor =  "#ceceaa";
+    document.getElementById("myMap").innerHTML="<h3>Sélection des paramètres d'affichage</h3>";
+    document.getElementById("myMap").innerHTML="<p><b>Echelle des modèles</b><br>Elle détermine la taille des modèles dans Google Earth. <span class=\"small\"><i>Entre 10 et 20</i> --&gt; Courses océaniques, sinon voiliers invisibles ! <i>De 2 à 10</i> --&gt;  Détroits et îles ; <i>De 0.1 et 2</i> --&gt; Passages étroits et arrivées de courses, sinon les modèles se superposent.</span></p>";
+    document.getElementById("myMap").innerHTML+="<img src=\"images/voiliers_echelles.jpg\" border=\"0\" alt=\"Echelles 0.1 à 12\" title=\"Echelles 0.1 à 12\" />";
+	document.getElementById("myMap").innerHTML+="<p><b>Modèles 3D</b><br>Les modèles sont simplifiés au maximum pour accélérer la restitution. Si vous souhaitez ajouter votre propre modèle de voilier contactez-moi.</p>";
+}
+
+// -------------------
+function help_en(){
+    document.getElementById("myMap").style.backgroundColor =  "#ceceaa";
+    document.getElementById("myMap").innerHTML="<h3>Display pParameters Selection</h3>";
+    document.getElementById("myMap").innerHTML="<p><b>Models' scale</b><br>The scale set the models size in G.E. <span class=\"small\"><i>Between 10 and 20</i> --&gt; Ocean races, otherway boats are too small! <i>2 to 10</i> --&gt; Islands and Narrows; <i>0.1 to 2</i> --&gt; Very narrow and Arrival, otherway the boats are packed.</span></p>";
+    document.getElementById("myMap").innerHTML+="<img src=\"images/voiliers_echelles.jpg\" border=\"0\" alt=\"Echelles 0.1 à 12\" title=\"Echelles 0.1 à 12\" />";
+	document.getElementById("myMap").innerHTML+="<p><b>3D Models</b><br>Very simplificated to speed up the restitution. If you like add your own boat model contact-me.</p>";
+}
+
+// -------------------
 function help1(){
     document.getElementById("rightDiv").style.backgroundColor =  "#ceffce";
     document.getElementById("rightDiv").innerHTML="<h2>Les voiliers du Vendée Globe virtuel 2020</h2>";
  	document.getElementById("rightDiv").innerHTML+="<p>Pour l'affichage le modèle autorise 4 couleurs simultanément à choisir parmi 5 que vous me fournissez  : coque, pont, grand'voile, une voile d'avantet un spi...)</p>";
  	document.getElementById("rightDiv").innerHTML+="<br /><img src=\"images/RKN_CZ.png\" border=\"0\" alt=\"GV + Foc\" title=\"GV + Foc\" />";
-	document.getElementById("rightDiv").innerHTML+="<img src=\"images/RKN_GENOIS.png\" border=0\" alt=\"GV + Génois\" title=\"GV + Génois\" />";
-	document.getElementById("rightDiv").innerHTML+="<img src=\"images/RKN_SPI.png\" border=0\" alt=\"GV + Spi\" title=\"GV + Spi\" />";
+	document.getElementById("rightDiv").innerHTML+="<img src=\"images/RKN_GENOIS.png\" border=\"0\" alt=\"GV + Génois\" title=\"GV + Génois\" />";
+	document.getElementById("rightDiv").innerHTML+="<img src=\"images/RKN_SPI.png\" border=\"0\" alt=\"GV + Spi\" title=\"GV + Spi\" />";
 	document.getElementById("rightDiv").innerHTML+="<br /><span class=\"small\">Vues des modèles affichés dans G.E.</span></p>";
 	document.getElementById("rightDiv").innerHTML+="<h3>Couleurs de vos bateaux</h3>";
 	document.getElementById("rightDiv").innerHTML+="<p>Pour que vos amis choisissent leurs couleurs de voile et de coque fournissez leur le lien :<br />";

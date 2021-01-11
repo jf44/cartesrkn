@@ -18,12 +18,12 @@
 		<name>C-RKN_3D</name>
 		<open>1</open>
 		<LookAt>
-			<longitude>115.39833333333</longitude>
-			<latitude>-32.284168502056</latitude>
+			<longitude>115.64102222222</longitude>
+			<latitude>-20.736600259862</latitude>
     	    <altitude>5000000</altitude>
 			<range>100000</range>
 	        <heading>0</heading>
-    	    <tilt>216</tilt>
+    	    <tilt>231</tilt>
 
 			<range>100000</range>
 	        <heading>270</heading>
@@ -54,20 +54,20 @@
 		<open>1</open>
 		<name>Positions des voiliers</name>
 <Placemark>
-<name>Marion-Tromeul</name>
+<name>Iroizo C-RKN</name>
 <description>
 <![CDATA[<p>
-<br>2021-01-01 16:00:00 UTC
-<br>Lon: 115.39833333333
-<br>Lat: -32.284168502056
-<br>COG: 36.721<br>SOG: 20.45<br>TWA: 88<br>TWS: 25.7<br>Voile : genois</p>]]>
+<br>2021-01-11 13:10:00 UTC
+<br>Lon: 115.64102222222
+<br>Lat: -20.736600259862
+<br>COG: 51.876<br>SOG: 8.73<br>TWA: 136.516<br>TWS: 8.7<br>Voile : genois</p>]]>
 </description>
 	<LookAt>
-    	<longitude>115.39833333333</longitude>
-		<latitude>-32.284168502056</latitude>
-        <altitude>600</altitude>
+    	<longitude>115.64102222222</longitude>
+		<latitude>-20.736600259862</latitude>
+        <altitude>150</altitude>
 		<range>100000</range>
-        <heading>36.721</heading>
+        <heading>51.876</heading>
         <tilt>85</tilt>
 		<altitudeMode>relativeToGround</altitudeMode>
     </LookAt>
@@ -77,45 +77,321 @@
     	<Point>
             <extrude>1</extrude>
             <altitudeMode>relativeToGround</altitudeMode>
-            <coordinates>115.39833333333,-32.284168502056,0</coordinates>
+            <coordinates>115.64102222222,-20.736600259862,0</coordinates>
 		</Point>
 		<Model>
 			<altitudeMode>relativeToGround</altitudeMode>
 	    	<Location>
-    			<longitude>115.39833333333</longitude>
-    			<latitude>-32.284168502056</latitude>
-    			<altitude>600</altitude>
+    			<longitude>115.64102222222</longitude>
+    			<latitude>-20.736600259862</latitude>
+    			<altitude>150</altitude>
 	    	</Location>
     		<Orientation>
-    			<heading>36.721</heading>
+    			<heading>51.876</heading>
 				<tilt>0</tilt>
-                <roll>-17</roll>
+                <roll>-4</roll>
     		</Orientation>
 	    	<Scale>
-    			<x>4</x>
-        		<y>4</y>
-        		<z>4</z>
+    			<x>1</x>
+        		<y>1</y>
+        		<z>1</z>
 	    	</Scale>
 
-			<Link id="Marion-Tromeul">
-    			<href>models/TROISMATS_Marion-Tromeul_genois.dae</href>
+			<Link id="Iroizo C-RKN">
+    			<href>models/IMOCA_Iroizo C-RKN_genois.dae</href>
     		</Link>
 <ResourceMap>
 	<Alias>
 		<sourceHref>der.PNG</sourceHref>
-    	<targetHref>../textures/c_156_110_0.PNG</targetHref>
+    	<targetHref>../textures/c_252_105_0.PNG</targetHref>
 	</Alias>
 	<Alias>
 		<sourceHref>c.PNG</sourceHref>
-    	<targetHref>../textures/c_84_70_0.PNG</targetHref>
+    	<targetHref>../textures/c_255_246_216.PNG</targetHref>
 	</Alias>
 	<Alias>
 		<sourceHref>gv.PNG</sourceHref>
-    	<targetHref>../textures/c_255_255_132.PNG</targetHref>
+    	<targetHref>../textures/c_96_255_96.PNG</targetHref>
 	</Alias>
 	<Alias>
 		<sourceHref>vav.PNG</sourceHref>
-    	<targetHref>../textures/c_214_60_255.PNG</targetHref>
+    	<targetHref>../textures/c_0_120_75.PNG</targetHref>
+	</Alias>
+</ResourceMap>
+
+		</Model>
+	</MultiGeometry>
+</Placemark>
+<Placemark>
+<name>EoliaMC-RKN</name>
+<description>
+<![CDATA[<p>
+<br>2021-01-11 13:10:00 UTC
+<br>Lon: 115.43577777778
+<br>Lat: -20.450336047944
+<br>COG: 214.922<br>SOG: 8.88<br>TWA: 59.545<br>TWS: 8.7<br>Voile : genois</p>]]>
+</description>
+	<LookAt>
+    	<longitude>115.43577777778</longitude>
+		<latitude>-20.450336047944</latitude>
+        <altitude>150</altitude>
+		<range>100000</range>
+        <heading>214.922</heading>
+        <tilt>85</tilt>
+		<altitudeMode>relativeToGround</altitudeMode>
+    </LookAt>
+
+	<styleUrl>#Balise_sailboat</styleUrl>
+	<MultiGeometry>
+    	<Point>
+            <extrude>1</extrude>
+            <altitudeMode>relativeToGround</altitudeMode>
+            <coordinates>115.43577777778,-20.450336047944,0</coordinates>
+		</Point>
+		<Model>
+			<altitudeMode>relativeToGround</altitudeMode>
+	    	<Location>
+    			<longitude>115.43577777778</longitude>
+    			<latitude>-20.450336047944</latitude>
+    			<altitude>150</altitude>
+	    	</Location>
+    		<Orientation>
+    			<heading>214.922</heading>
+				<tilt>0</tilt>
+                <roll>1</roll>
+    		</Orientation>
+	    	<Scale>
+    			<x>1</x>
+        		<y>1</y>
+        		<z>1</z>
+	    	</Scale>
+
+			<Link id="EoliaMC-RKN">
+    			<href>models/IMOCA_EoliaMC-RKN_genois.dae</href>
+    		</Link>
+<ResourceMap>
+	<Alias>
+		<sourceHref>der.PNG</sourceHref>
+    	<targetHref>../textures/c_255_36_227.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>c.PNG</sourceHref>
+    	<targetHref>../textures/c_132_0_115.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>gv.PNG</sourceHref>
+    	<targetHref>../textures/c_255_84_176.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>vav.PNG</sourceHref>
+    	<targetHref>../textures/c_228_0_76.PNG</targetHref>
+	</Alias>
+</ResourceMap>
+
+		</Model>
+	</MultiGeometry>
+</Placemark>
+<Placemark>
+<name>DANA_C-RKN</name>
+<description>
+<![CDATA[<p>
+<br>2021-01-11 13:10:00 UTC
+<br>Lon: 115.31710277778
+<br>Lat: -20.815854573112
+<br>COG: 200.776<br>SOG: 9.21<br>TWA: 57.857<br>TWS: 9.2<br>Voile : genois</p>]]>
+</description>
+	<LookAt>
+    	<longitude>115.31710277778</longitude>
+		<latitude>-20.815854573112</latitude>
+        <altitude>150</altitude>
+		<range>100000</range>
+        <heading>200.776</heading>
+        <tilt>85</tilt>
+		<altitudeMode>relativeToGround</altitudeMode>
+    </LookAt>
+
+	<styleUrl>#Balise_sailboat</styleUrl>
+	<MultiGeometry>
+    	<Point>
+            <extrude>1</extrude>
+            <altitudeMode>relativeToGround</altitudeMode>
+            <coordinates>115.31710277778,-20.815854573112,0</coordinates>
+		</Point>
+		<Model>
+			<altitudeMode>relativeToGround</altitudeMode>
+	    	<Location>
+    			<longitude>115.31710277778</longitude>
+    			<latitude>-20.815854573112</latitude>
+    			<altitude>150</altitude>
+	    	</Location>
+    		<Orientation>
+    			<heading>200.776</heading>
+				<tilt>0</tilt>
+                <roll>2</roll>
+    		</Orientation>
+	    	<Scale>
+    			<x>1</x>
+        		<y>1</y>
+        		<z>1</z>
+	    	</Scale>
+
+			<Link id="DANA_C-RKN">
+    			<href>models/IMOCA_DANA_C-RKN_genois.dae</href>
+    		</Link>
+<ResourceMap>
+	<Alias>
+		<sourceHref>der.PNG</sourceHref>
+    	<targetHref>../textures/c_228_19_0.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>c.PNG</sourceHref>
+    	<targetHref>../textures/c_255_242_240.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>gv.PNG</sourceHref>
+    	<targetHref>../textures/c_255_200_168.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>vav.PNG</sourceHref>
+    	<targetHref>../textures/c_252_0_63.PNG</targetHref>
+	</Alias>
+</ResourceMap>
+
+		</Model>
+	</MultiGeometry>
+</Placemark>
+<Placemark>
+<name>SrevnelaC-RKN</name>
+<description>
+<![CDATA[<p>
+<br>2021-01-11 13:10:00 UTC
+<br>Lon: 115.30699444444
+<br>Lat: -20.835345115278
+<br>COG: 199<br>SOG: 9.11<br>TWA: 59.237<br>TWS: 9.2<br>Voile : genois</p>]]>
+</description>
+	<LookAt>
+    	<longitude>115.30699444444</longitude>
+		<latitude>-20.835345115278</latitude>
+        <altitude>150</altitude>
+		<range>100000</range>
+        <heading>199</heading>
+        <tilt>85</tilt>
+		<altitudeMode>relativeToGround</altitudeMode>
+    </LookAt>
+
+	<styleUrl>#Balise_sailboat</styleUrl>
+	<MultiGeometry>
+    	<Point>
+            <extrude>1</extrude>
+            <altitudeMode>relativeToGround</altitudeMode>
+            <coordinates>115.30699444444,-20.835345115278,0</coordinates>
+		</Point>
+		<Model>
+			<altitudeMode>relativeToGround</altitudeMode>
+	    	<Location>
+    			<longitude>115.30699444444</longitude>
+    			<latitude>-20.835345115278</latitude>
+    			<altitude>150</altitude>
+	    	</Location>
+    		<Orientation>
+    			<heading>199</heading>
+				<tilt>0</tilt>
+                <roll>2</roll>
+    		</Orientation>
+	    	<Scale>
+    			<x>1</x>
+        		<y>1</y>
+        		<z>1</z>
+	    	</Scale>
+
+			<Link id="SrevnelaC-RKN">
+    			<href>models/IMOCA_SrevnelaC-RKN_genois.dae</href>
+    		</Link>
+<ResourceMap>
+	<Alias>
+		<sourceHref>der.PNG</sourceHref>
+    	<targetHref>../textures/c_0_0_60.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>c.PNG</sourceHref>
+    	<targetHref>../textures/c_217_216_255.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>gv.PNG</sourceHref>
+    	<targetHref>../textures/c_16_0_48.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>vav.PNG</sourceHref>
+    	<targetHref>../textures/c_66_0_144.PNG</targetHref>
+	</Alias>
+</ResourceMap>
+
+		</Model>
+	</MultiGeometry>
+</Placemark>
+<Placemark>
+<name>GarosseC-RKN</name>
+<description>
+<![CDATA[<p>
+<br>2021-01-11 13:10:00 UTC
+<br>Lon: 115.25258888889
+<br>Lat: -20.98393618475
+<br>COG: 113<br>SOG: 8.78<br>TWA: 139.785<br>TWS: 9.7<br>Voile : genois</p>]]>
+</description>
+	<LookAt>
+    	<longitude>115.25258888889</longitude>
+		<latitude>-20.98393618475</latitude>
+        <altitude>150</altitude>
+		<range>100000</range>
+        <heading>113</heading>
+        <tilt>85</tilt>
+		<altitudeMode>relativeToGround</altitudeMode>
+    </LookAt>
+
+	<styleUrl>#Balise_sailboat</styleUrl>
+	<MultiGeometry>
+    	<Point>
+            <extrude>1</extrude>
+            <altitudeMode>relativeToGround</altitudeMode>
+            <coordinates>115.25258888889,-20.98393618475,0</coordinates>
+		</Point>
+		<Model>
+			<altitudeMode>relativeToGround</altitudeMode>
+	    	<Location>
+    			<longitude>115.25258888889</longitude>
+    			<latitude>-20.98393618475</latitude>
+    			<altitude>150</altitude>
+	    	</Location>
+    		<Orientation>
+    			<heading>113</heading>
+				<tilt>0</tilt>
+                <roll>-7</roll>
+    		</Orientation>
+	    	<Scale>
+    			<x>1</x>
+        		<y>1</y>
+        		<z>1</z>
+	    	</Scale>
+
+			<Link id="GarosseC-RKN">
+    			<href>models/IMOCA_GarosseC-RKN_genois.dae</href>
+    		</Link>
+<ResourceMap>
+	<Alias>
+		<sourceHref>der.PNG</sourceHref>
+    	<targetHref>../textures/c_0_0_0.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>c.PNG</sourceHref>
+    	<targetHref>../textures/c_255_255_255.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>gv.PNG</sourceHref>
+    	<targetHref>../textures/c_153_153_255.PNG</targetHref>
+	</Alias>
+	<Alias>
+		<sourceHref>vav.PNG</sourceHref>
+    	<targetHref>../textures/c_255_255_153.PNG</targetHref>
 	</Alias>
 </ResourceMap>
 
@@ -128,10 +404,10 @@
 		<name>Trajectoires des voiliers </name>
 
 <Placemark>
-<name>Marion-Tromeul_route</name>
+<name>Iroizo C-RKN_route</name>
 <Style>
 <LineStyle>
-<color>ff006e9c</color>
+<color>ff0069fc</color>
 <width>1</width>
 </LineStyle>
 </Style>
@@ -139,11 +415,155 @@
 <extrude>1</extrude>
 <tessellate>1</tessellate>
 <coordinates>
-103.34396944444,-42.373538888889,0 114.74986666667,-32.760730555556,0 115.39815277778,-32.272227777778,0 115.39833333333,-32.272227777778,0 115.39833333333,-32.296113644402,600
+48.912763888889,-42.300238888889,0 68.519372222222,-49.411283333333,0 68.675697222222,-49.683383333333,0 70.269722222222,-49.6948,0 70.343686111111,-49.493805555556,0 68.33635,-49.687275,0 71.158375,-46.347116666667,0 73.999927777778,-43.514686111111,0 76.835402777778,-40.927230555556,0 77.517594444444,-38.622591666667,0 78.13555,-38.363783333333,0 82.728483333333,-38.800994444444,0 84.768794444444,-40.105736111111,0 87.079138888889,-41.251272222222,0 97.560311111111,-41.972288888889,0 101.53125833333,-41.538025,0 105.01139166667,-40.293616666667,0 108.29997222222,-39.064786111111,0 111.36496666667,-36.567355555556,0 113.82816944444,-30.07335,0 113.19591388889,-27.451758333333,0 113.39161944444,-26.880127777778,0 112.79500555556,-25.826430555556,0 112.96100277778,-25.476427777778,0 113.16290833333,-26.127613888889,0 112.76951111111,-24.493,0 112.74502222222,-23.393705555556,0 113.70686111111,-22.107969444444,0 114.20728055556,-21.895375,0 115.35845277778,-20.545811111111,0 115.28103333333,-20.93095,0 115.64102222222,-20.728930555556,0 115.64102222222,-20.744272801958,150
 
 </coordinates>
 </LineString>
 </Placemark>
+
+<Placemark>
+<name>EoliaMC-RKN_route</name>
+<Style>
+<LineStyle>
+<color>ffe324ff</color>
+<width>1</width>
+</LineStyle>
+</Style>
+<LineString>
+<extrude>1</extrude>
+<tessellate>1</tessellate>
+<coordinates>
+72.411144444444,-49.143805555556,0 71.780502777778,-49.202855555556,0 70.491069444444,-49.405905555556,0 69.518494444444,-48.823136111111,0 68.865905555556,-48.421691666667,0 71.070202777778,-46.121391666667,0 74.423197222222,-43.132125,0 76.881069444444,-40.389394444444,0 81.195436111111,-37.948072222222,0 85.622180555556,-39.107177777778,0 87.657825,-41.541508333333,0 90.515502777778,-42.063091666667,0 100.86874722222,-41.902527777778,0 104.3134,-40.576313888889,0 106.63328888889,-39.303252777778,0 109.33493611111,-37.793336111111,0 112.61739444444,-34.766655555556,0 113.7121,-29.3544,0 114.12141111111,-28.493986111111,0 114.15629166667,-28.136925,0 113.64568333333,-26.877263888889,0 113.26388333333,-26.410761111111,0 113.09973333333,-25.500775,0 113.03808888889,-24.996075,0 112.57673611111,-23.785883333333,0 113.59998888889,-22.315638888889,0 114.16403611111,-21.781986111111,0 115.35189722222,-20.747838888889,0 115.616625,-20.502158333333,0 115.43577777778,-20.442772222222,0 115.43577777778,-20.457902672282,150
+
+</coordinates>
+</LineString>
+</Placemark>
+
+<Placemark>
+<name>DANA_C-RKN_route</name>
+<Style>
+<LineStyle>
+<color>ff0013e4</color>
+<width>1</width>
+</LineStyle>
+</Style>
+<LineString>
+<extrude>1</extrude>
+<tessellate>1</tessellate>
+<coordinates>
+56.490930555556,-45.320844444444,0 70.151047222222,-49.347402777778,0 70.244475,-49.369552777778,0 70.608452777778,-49.092580555556,0 69.617441666667,-48.306538888889,0 71.854658333333,-45.676744444444,0 74.341680555556,-43.043033333333,0 77.550416666667,-37.761952777778,0 77.888777777778,-38.162038888889,0 83.089088888889,-37.854647222222,0 85.872386111111,-37.484733333333,0 88.071533333333,-37.174605555556,0 93.627172222222,-39.8379,0 96.326727777778,-39.158066666667,0 93.096980555556,-37.930986111111,0 95.275527777778,-37.262797222222,0 97.724441666667,-36.325586111111,0 101.79558611111,-34.590594444444,0 114.04926111111,-30.055002777778,0 113.74561944444,-28.423225,0 113.75837222222,-28.497736111111,0 114.06593888889,-27.906236111111,0 114.04821111111,-27.697541666667,0 113.81446388889,-27.035475,0 113.46995555556,-26.566827777778,0 112.68601944444,-25.958575,0 112.68755555556,-25.685186111111,0 112.32389722222,-24.600455555556,0 113.24446388889,-23.027419444444,0 113.65965277778,-22.315597222222,0 115.60011944444,-20.457391666667,0 115.50976944444,-20.361102777778,0 115.31710277778,-20.808155555556,0 115.31710277778,-20.823556439304,150
+
+</coordinates>
+</LineString>
+</Placemark>
+
+<Placemark>
+<name>SrevnelaC-RKN_route</name>
+<Style>
+<LineStyle>
+<color>ff3c0000</color>
+<width>1</width>
+</LineStyle>
+</Style>
+<LineString>
+<extrude>1</extrude>
+<tessellate>1</tessellate>
+<coordinates>
+55.221380555556,-44.654158333333,0 70.320394444444,-49.522738888889,0 68.623119444444,-49.287813888889,0 69.322627777778,-48.409616666667,0 71.386555555556,-46.256075,0 73.962522222222,-43.346191666667,0 76.044347222222,-40.682686111111,0 80.576411111111,-37.629480555556,0 80.049158333333,-37.677041666667,0 80.933113888889,-38.109688888889,0 83.828941666667,-38.420286111111,0 91.820977777778,-39.682697222222,0 95.308352777778,-40.039277777778,0 99.052825,-38.481927777778,0 101.92723611111,-37.050408333333,0 105.05829166667,-36.05895,0 110.3138,-33.796916666667,0 114.34228888889,-30.660655555556,0 113.82768888889,-28.638097222222,0 113.18396666667,-27.643013888889,0 113.35351388889,-27.144477777778,0 112.27395277778,-26.634991666667,0 112.10019444444,-26.3298,0 113.14723333333,-25.535902777778,0 112.57968333333,-25.034083333333,0 112.54179722222,-23.998175,0 113.27976111111,-22.588963888889,0 113.89250555556,-21.964780555556,0 115.629475,-20.413769444444,0 115.48690833333,-20.3789,0 115.30699444444,-20.827638888889,0 115.30699444444,-20.843054192971,150
+
+</coordinates>
+</LineString>
+</Placemark>
+
+<Placemark>
+<name>GarosseC-RKN_route</name>
+<Style>
+<LineStyle>
+<color>ff000000</color>
+<width>1</width>
+</LineStyle>
+</Style>
+<LineString>
+<extrude>1</extrude>
+<tessellate>1</tessellate>
+<coordinates>
+73.53245,-49.576655555556,0 72.955391666667,-49.570125,0 71.142127777778,-49.825430555556,0 70.458194444444,-49.432641666667,0 69.173336111111,-48.61925,0 69.612736111111,-47.837416666667,0 71.766447222222,-45.587472222222,0 74.829813888889,-42.559238888889,0 77.206272222222,-40.103577777778,0 77.382875,-38.504655555556,0 77.917658333333,-38.406238888889,0 80.258519444444,-40.935875,0 84.275716666667,-41.005788888889,0 86.591266666667,-42.366341666667,0 97.915538888889,-42.080855555556,0 101.94605833333,-42.023880555556,0 106.00051111111,-41.047391666667,0 109.14456666667,-39.350911111111,0 112.49901388889,-36.66325,0 114.89568333333,-30.569433333333,0 113.723675,-28.4163,0 113.65353055556,-27.676513888889,0 113.81162777778,-27.306127777778,0 113.19777222222,-26.245372222222,0 112.967375,-25.802458333333,0 113.38938888889,-25.882022222222,0 113.39811944444,-24.824666666667,0 112.75482777778,-23.618652777778,0 113.57378055556,-22.293630555556,0 114.16812777778,-21.784113888889,0 115.58781111111,-20.377541666667,0 115.42711111111,-20.529202777778,0 115.25258888889,-20.976175,0 115.25258888889,-20.991700241138,150
+
+</coordinates>
+</LineString>
+</Placemark>
+	</Folder>
+
+	<Folder>
+  		<name>Tour</name>
+        <Style id="pushpin">
+    		<IconStyle id="mystyle">
+      			<Icon>
+        			<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+        			<scale>1.0</scale>
+      			</Icon>
+    		</IconStyle>
+  		</Style>
+
+		<gx:Tour>
+			<name>Play me!</name>
+			<description>
+				<![CDATA[Le Grand Tour de la Flotte...]]>
+			</description>
+			<gx:Playlist>
+
+				<gx:FlyTo>
+        			<gx:flyToMode>smooth</gx:flyToMode>
+        			<gx:duration>20</gx:duration>
+        			<LookAt>
+          				<longitude>115.64102222222</longitude>
+          				<latitude>-20.744272801958</latitude>
+          				<altitude>5000</altitude>
+          				<heading>37.876</heading>
+                        <range>25000</range>
+          				<tilt>80.0</tilt>
+        			</LookAt>
+      			</gx:FlyTo>
+
+				<gx:AnimatedUpdate>
+       				<gx:duration>2.0</gx:duration>
+        			<Update>
+          				<targetHref></targetHref>
+          				<Change>
+            				<IconStyle targetId="mystyle">
+              					<scale>1</scale>
+            				</IconStyle>
+          				</Change>
+			        </Update>
+			    </gx:AnimatedUpdate>
+
+				<gx:FlyTo>
+        			<gx:flyToMode>smooth</gx:flyToMode>
+        			<gx:duration>7.3266344155947</gx:duration>
+        			<LookAt>
+          				<longitude>115.25258888889</longitude>
+          				<latitude>-20.991700241138</latitude>
+          				<altitude>5000</altitude>
+          				<heading>136</heading>
+                        <range>25000</range>
+          				<tilt>80.0</tilt>
+        			</LookAt>
+      			</gx:FlyTo>
+
+				<gx:AnimatedUpdate>
+       				<gx:duration>2.0</gx:duration>
+        			<Update>
+          				<targetHref></targetHref>
+          				<Change>
+            				<IconStyle targetId="mystyle">
+              					<scale>1</scale>
+            				</IconStyle>
+          				</Change>
+			        </Update>
+			    </gx:AnimatedUpdate>
+
+			</gx:Playlist>
+		</gx:Tour>
 	</Folder>
 </Folder>
 	</Folder>

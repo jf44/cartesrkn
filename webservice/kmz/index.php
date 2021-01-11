@@ -25,42 +25,46 @@ if (isset($_COOKIE["rknnomboat"]) && ($_COOKIE["rknnomboat"]!='')){
 	$boatname=$_COOKIE["rknnomboat"];
 }
 
+if (!empty($_GET['boatname']))
+{
+	$boatname=to_utf8($_GET['boatname']);      // to_utf8($_GET['params'])
+	$choice='Mine';
+}
+
 if (!empty($_POST['choice']))
 {
 	$choice=to_utf8($_POST['choice']);      // to_utf8($_GET['params'])
 }
 
-if (!empty($_GET['boatname']))
-{
-	$boatname=to_utf8($_GET['boatname']);      // to_utf8($_GET['params'])
-	$choce='Mine';
-}
 if (!empty($_POST['otherboat']))
 {
 	$otherboat=to_utf8($_POST['otherboat']);      // to_utf8($_GET['params'])
+	if (!empty($otherboat) && empty($boatname))
+	{
+		$boatname=$otherboat;
+	}
 	$choice='Other';
 }
 
+if (!empty($boatname))
+{
+    setcookie("rknnomboat", $boatname, time()+24*3600);  /* expire in a day */
+}
 
-echo '<!DOCTYPE html>
-<html  dir="ltr" lang="fr" xml:lang="fr">
-<head>
-	<title>VGv2020 : Carte du VGV dans Google Earth</title>
-	<meta name="ROBOTS" content="none,noarchive">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="Author" content="JF">
-	<meta name="description" content="Courses Vendée Globe Virtuel 2020."/>
-    <link rel="author" title="Auteur" href="mailto:jean.fruitet@free.fr">
-	<link href="../../select_param.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<h1>Cartes Google Earth du Vendée Globe Virtuel 2020</h1>
+entete();
+echo '<div id="bandeauDiv"><h1 class="bandeau">Vos bateaux amis du Vendée Globe virtuel 2020 dans Google Earth</h1></div>
 ';
 // DEBUG
 //echo "BOATNAME : $boatname, OTHERBOAT : $otherboat, CHOICE : $choice <br />\n";
 
 echo '
-<form action="'.$appli.'" method="post">
+<div id="centerDiv">
+';
+if (!empty($boatname))
+{
+	echo '<p>Bonjour <i><b>'.$boatname.'</b></i></p>'."\n";
+}
+echo '<form action="'.$appli.'" method="post">
 ';
 echo '<p>Vous pouvez</p><ul>';
 echo '<li>Soit saisir le nom d\'un bateau pour ne voir que ses propres cartes<br />';
@@ -96,10 +100,9 @@ else if (!empty($otherboat) && !empty($choice) && ($choice=="Other"))
 else if (!empty($choice) && ($choice=="All")){
 	display(listeArchives($extension_kmz, ""));
 }
-
-echo '</body>
-</html>
+echo '</div>
 ';
+enqueue();
 
 // ################################################### FONCTIONS DIVERSES
 // ----------------------------
@@ -166,7 +169,6 @@ function listeArchives($extension, $boatname=""){
 			// Les fichiers ne commençant pas par le nom par defaut ne sont pas affichés
 			// les fichier n'ayant pas la bonne extension ne sont pas affichés
 	        if (!is_dir($path.$sep.$f)){
-				// KML
 				$g=preg_replace('/'.$extension.'/', '', $f); //
 				// DEBUG
 				// echo "<br>g:$g  g+:$g$extension_kml  f:$f\n ";
@@ -193,21 +195,40 @@ function listeArchives($extension, $boatname=""){
 // -------------------
 function display($str)
 {
-global $url_serveur_local;
+	global $url_serveur_local;
 	if (!empty($str))
 	{
 		$res= explode(",",$str);
+        $nobj=count($res);
 		$urlbase = $url_serveur_local;
 		echo '<h3>Liste des fichiers KMZ</h3>
-<p>Les cartes G.E. sont distribuées au format KML /KMZ indépendants du serveur</p>
-<ul>
-';
+<p>Les cartes G.E. sont distribuées au format KMZ indépendant du serveur</p>
+<table class="small">
+<tr><th class="small" colspan="5" align="center">Archives</th></tr>
+<tr valign="top" bgcolor="#ffffff">'."\n";
+    	$colonne=0;
+		$i=0;
+    	$max_colonne=min($nobj,5);
 		foreach ($res as $item)
 		{
         	$url=$urlbase.'/'.$item;
-            echo "<li><a href=\"".$url."\">".$item."</a></li>";
+            echo '<td class="small"><a class="small" href="'.$url.'">'.$item.'</a></td>'."\n";
+	        $colonne++;
+			$i++;
+			if ($colonne>=$max_colonne){
+               	echo '</tr>'."\n";
+				if ($i<$nobj)
+				{
+            		echo '<tr valign="top" bgcolor="#ffffff">'."\n";
+				}
+        		$colonne=0;
+			}
+    	}
+		while($colonne<$max_colonne){
+       		echo '<td class="small" >&nbsp;</td>'."\n";
+			$colonne++;
 		}
-        "</ul>\n";
+       	echo '</tr>'."\n";
 	}
 	else
 	{
@@ -219,5 +240,33 @@ global $url_serveur_local;
 }
 
 
+//----------------------------------
+function entete(){
+echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="Author" content="JF">
+<meta name="description" content="Vos bateaux dans Google Earth">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="author" title="Auteur" href="mailto:jean.fruitet@free.fr">
+<title>Vos bateaux dans Google Earth</title>
+<meta name="ROBOTS" content="none,noarchive">
+<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+';
+}
+
+
+//----------------------------------
+function enqueue(){
+echo '
+<div id="baspageDiv"><a class="bandeau" href="mailto:jean.fruitet@free.fr?subject=Cartes GE">(c) JF</a></div>
+
+</body>
+</html>
+';
+}
 
 ?>

@@ -40,7 +40,7 @@
 		else
 		{
            	//alert( "Fournissez un nom de bateau !" );
-			document.naming.imputvalue.innerHTML =  "Fournissez un nom de bateau ! Give Boatname Please!";
+			// document.getElementById("imputvalue").innerHTML =  "Fournissez un nom de bateau ! Give Boatname Please!";
             document.naming.nomboat.focus() ;
 		}
 	}
