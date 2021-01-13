@@ -36,8 +36,8 @@ function verifHexa(acolor){
 }
 
 
-var tparam = ["","","",""];
-var modele="";
+var tparam = [];
+var modele="IMOCA";
 var tmodeles=[];
 var course="";
 var team="";
@@ -49,6 +49,7 @@ var nomboat="";
 // enregistre la valeurs dans un tableau global
 function placerUneValeur(index){
 var message="";
+    var strparams="";
 	switch(index)
 	{
 		case 0 :
@@ -57,6 +58,10 @@ var message="";
 		{
             document.getElementById("imputvalue").innerHTML = "Valeur nulle !";
 			return false;
+		}
+        else
+		{
+            document.getElementById("imputvalue").innerHTML = "Course Ok !";
 		}
         tparam[0]=valeur;
         course = valeur;
@@ -71,6 +76,11 @@ var message="";
             document.getElementById("imputvalue").innerHTML = "Valeur nulle !";
 			return false;
 		}
+        else
+		{
+            document.getElementById("imputvalue").innerHTML = "Team Ok !";
+		}
+
 		tparam[1]= valeur;
 	    team = valeur;
         document.getElementById("cTeam").style.backgroundColor = "#ffffaa";
@@ -78,13 +88,20 @@ var message="";
         //message =  "Vous avez saisi la Team "+Valeur;
 		break;
   		case 2 :
-		var valeur = parseFloat(document.getElementById("cScale").value);
-		//console.debug(valeur);
+		var input = document.getElementById("cScale").value;
+        console.debug("Saisie "+input);
+        var valeur = parseFloat(input);
+        if (isNaN(valeur) )
+		{
+        	var valeur = parseInt(input);
+		}
 		if (isNaN(valeur))
 		{
             document.getElementById("imputvalue").innerHTML = "Ce n'est pas un nombre !";
 			return false;
 		}
+        console.debug("Valeur "+valeur);
+
 		tparam[2]= valeur;
 		scale = valeur;
        	document.getElementById("cScale").style.backgroundColor = "#ffffaa";
@@ -98,30 +115,22 @@ var message="";
             document.getElementById("imputvalue").innerHTML = "Valeur nulle !";
 			return false;
 		}
+
 		tparam[3]= valeur;
 		modele = valeur;
        	document.getElementById("cModele").style.backgroundColor = "#ffffaa";
 		document.getElementById("lModele").innerHTML = valeur;
 		break;
 	}
-
     var strparams="";
-	for (var i=0; i< tparam .length; i++)
+	if (tparam.length>=4)
 	{
-		if  (tparam [i]!==undefined)
+		for (var i=0; i<tparam.length-1; i++)
 		{
-			if (i< tparam .length-1)
-			{
-				strparams +=  tparam [i] + ",";
-			}
-			else
-			{
-            	strparams +=  tparam [i];
-			}
+            strparams+=tparam[i]+",";
 		}
-	}
-	if ((strparams != "") && (tparam.length>=3))
-	{
+        strparams+=tparam[3];
+        console.debug(strparams);
         set_params();
 		document.steering.submitBtn1.focus() ;
 		message =  "Vous pouvez maintenant valider vos choix... / You can validate your choices...";
@@ -152,33 +161,33 @@ function set_all_params(strparams){
 		{
 			document.getElementById("cCourse").style.backgroundColor =  "#ffffaa";
             document.getElementById("cCourse").value = tparam[0];
-            //document.getElementById("lCourse").innerHTML = tparam[0];
+            document.getElementById("lCourse").innerHTML = tparam[0];
 			course = tparam[0];
 		}
 		else if ( tparam.length==2)
 		{
 			document.getElementById("cCourse").style.backgroundColor =  "#ffaaff";
             document.getElementById("cCourse").value = tparam[0];
-            //document.getElementById("lCourse").innerHTML = tparam[0];
+            document.getElementById("lCourse").innerHTML = tparam[0];
             course = tparam[0];
             document.getElementById("cTeam").style.backgroundColor = "#ffffaa";
             document.getElementById("cTeam").value = tparam[1];
             team = tparam[1];
-        	//document.getElementById("lTeam").innerHTML = tparam[1];
+        	document.getElementById("lTeam").innerHTML = tparam[1];
 		}
 		else if ( tparam.length==3)
 		{
 			document.getElementById("cCourse").style.backgroundColor = "#ffaaff";
             document.getElementById("cCourse").value = tparam[0];
-            //document.getElementById("lCourse").innerHTML = tparam[0];
+            document.getElementById("lCourse").innerHTML = tparam[0];
             course = tparam[0];
             document.getElementById("cTeam").style.backgroundColor = "#aaffaa";
             document.getElementById("cTeam").value = tparam[1];
-            //document.getElementById("lTeam").innerHTML = tparam[1];
+            document.getElementById("lTeam").innerHTML = tparam[1];
             team = tparam[1];
             document.getElementById("cScale").style.backgroundColor = "#ffffaa";
             document.getElementById("cScale").value = tparam[2];
-            //document.getElementById("lScale").innerHTML = tparam[2];
+            document.getElementById("lScale").innerHTML = tparam[2];
             scale = tparam[2];
 			return true;
 		}
@@ -186,19 +195,19 @@ function set_all_params(strparams){
 		{
 			document.getElementById("cCourse").style.backgroundColor = "#ffaaff";
             document.getElementById("cCourse").value = tparam[0];
-            //document.getElementById("lCourse").innerHTML = tparam[0];
+            document.getElementById("lCourse").innerHTML = tparam[0];
             course = tparam[0];
             document.getElementById("cTeam").style.backgroundColor = "#aaffaa";
             document.getElementById("cTeam").value = tparam[1];
-            //document.getElementById("lTeam").innerHTML = tparam[1];
+            document.getElementById("lTeam").innerHTML = tparam[1];
             team = tparam[1];
             document.getElementById("cScale").style.backgroundColor = "#aaaaff";
             document.getElementById("cScale").value = tparam[2];
-            //document.getElementById("lScale").innerHTML = tparam[2];
+            document.getElementById("lScale").innerHTML = tparam[2];
             scale = tparam[2];
             document.getElementById("cModele").style.backgroundColor = "#ffaaaa";
             document.getElementById("cModele").value = tparam[3];
-            //document.getElementById("lModele").innerHTML = tparam[3];
+            document.getElementById("lModele").innerHTML = tparam[3];
             modele = tparam[3];
 			return true;
 		}
