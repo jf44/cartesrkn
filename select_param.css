@@ -141,7 +141,7 @@ div#steering {
 div#maPalette {
 	clear : both;
  	position:relative;
-	width:480px;
+	width:900px;
 	height:20px;
     z-index: 1;
     background-color:white;

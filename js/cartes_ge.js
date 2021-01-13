@@ -89,7 +89,7 @@ var message="";
 		break;
   		case 2 :
 		var input = document.getElementById("cScale").value;
-        console.debug("Saisie "+input);
+        // console.debug("Saisie "+input);
         var valeur = parseFloat(input);
         if (isNaN(valeur) )
 		{
@@ -100,7 +100,7 @@ var message="";
             document.getElementById("imputvalue").innerHTML = "Ce n'est pas un nombre !";
 			return false;
 		}
-        console.debug("Valeur "+valeur);
+        //console.debug("Valeur "+valeur);
 
 		tparam[2]= valeur;
 		scale = valeur;
@@ -130,7 +130,7 @@ var message="";
             strparams+=tparam[i]+",";
 		}
         strparams+=tparam[3];
-        console.debug(strparams);
+        //console.debug(strparams);
         set_params();
 		document.steering.submitBtn1.focus() ;
 		message =  "Vous pouvez maintenant valider vos choix... / You can validate your choices...";

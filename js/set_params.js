@@ -203,13 +203,14 @@
 					{
  						if ((this.response!==undefined) && (this.response.length>0))
 						{
-                            console.debug("RESPONSE : "+this.responseText);
+                            //console.debug("RESPONSE : "+this.responseText);
 							var obj = JSON.parse(this.responseText);
   							// Accessing individual value from JS object
 							if (obj.modeles)
 							{
-								console.debug("MODELES  : "+obj.modeles);
+								//console.debug("MODELES  : "+obj.modeles);
 								tmodeles=obj.modeles.split(",");
+								modele=tmodeles[0];
                                 select_modele_3D();
 							}
                             else

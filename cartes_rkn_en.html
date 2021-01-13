@@ -37,27 +37,26 @@
 &nbsp; &nbsp;
 <label for="cScale"><b>Scale</b></label> <span class="small"> (from <i>0.1</i> to <i>50</i>)</span>
 <input type="text" name="cScale" id="cScale" size="4" maxsize="4" value="" onchange="placerUneValeur(2);"/>
-<br />;
+<br />
 <label for="cModele"><b>3D Boat's Models</b></label> <span class="small"> (among those available on the server)</span>
 &nbsp; &nbsp; <select name="cModele" id="cModele" onchange="placerUneValeur(3);">
 </select>
-<br /><br />
-<label for="params">Your setup</label>
+<br /><label for="params"></label>
 <br />
 <input type="text" name="params" id="params" size="80" maxsize="255" value="" />
 <br /><br />
-<br /><i><span class="error"><label id="imputvalue"></label></span></i>
-<br /><br />
+<i><span class="error"><label id="imputvalue"></label></span></i>
+<br />
 <input type="reset" >
 <input id="submitBtn1" type="submit" name="action" value="Valider" />
 </form>
 
 <div id="maPalette">
-<p align="center"><b>Your Setup</b>
-&nbsp; &nbsp; <label id="lCourse">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-&nbsp; &nbsp; <label id="lTeam">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-&nbsp; &nbsp; <label id="lScale">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-&nbsp; &nbsp; <label id="lModele">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+<p align="center"><b>Your Setup</b> :
+<b>Race</b>: <label id="lCourse">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+<b>Team</b>: <label id="lTeam">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+<b>Scale</b>: <label id="lScale">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+<b>3D Model</b>: <label id="lModele">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
 </p></div>
 
 <div id="ajaxBox"></div>
