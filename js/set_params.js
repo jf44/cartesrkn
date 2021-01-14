@@ -12,9 +12,10 @@
 	{
 		if (document.naming.nomboat.value != "")
 		{
-            return (get_params_boat(document.naming.nomboat.value)); // Appel Ajax
+            nomboat=document.naming.nomboat.value;
+            setCookie("rknnomboat",nomboat,8);
+            return (get_params_boat(nomboat)); // Appel Ajax
 		}
-
         return true;
 	}
 
@@ -140,7 +141,7 @@
 
 					if ((this.response!==undefined) && (this.response.length>0))
 					{
-        	            console.debug("RESPONSE: %s",this.response);
+        	            //console.debug("RESPONSE: %s",this.response);
                         var json = this.response;
                         // Converting JSON-encoded string to JS object
 						var obj = JSON.parse(json);

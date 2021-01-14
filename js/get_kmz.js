@@ -12,12 +12,13 @@
     // Set the boatname.
 	function set_BoatName()
 	{
-		if (document.naming.nomboat.value != "")
+		if (document.getElementById("nomboat").value != "")
 		{
-            nomboat=document.naming.nomboat.value;
+            nomboat=document.getElementById("nomboat").value;
             setCookie("rknnomboat", nomboat, 8);
-			document.naming.nomboat.style.backgroundColor =  "#ceceff";
-    		document.naming.nomboat.innerHTML=nomboat;
+			document.getElementById("nomboat").style.backgroundColor =  "#ffceff";
+    		document.getElementById("nomboat").innerHTML=nomboat;
+            document.getElementById("inputValue").innerHTML="Bonjour "+nomboat;
             get_kmz(nomboat);
   		}
         return true;
@@ -27,21 +28,28 @@
 	// -------------------------------
 	function checkCookieBoatName()
 	{
-  		nomboat = getCookie("rknnomboat");
-
- 		if (nomboat.length != 0)
+        // Find a nomboat
+		var cookies = document.cookie;
+		if (cookies !== null)
 		{
-        	nomboat = document.naming.nomboat.value;
-      		setCookie("rknnomboat",nomboat,8);
-			document.naming.nomboat.style.backgroundColor =  "#ceceff";
-    		document.naming.nomboat.innerHTML=nomboat;
-            get_kmz(nomboat);
-		}
-		else
-		{
-           	//alert( "Fournissez un nom de bateau !" );
-			// document.getElementById("imputvalue").innerHTML =  "Fournissez un nom de bateau ! Give Boatname Please!";
-            document.naming.nomboat.focus() ;
+  			nomboat = getCookie("rknnomboat");
+            //console.log("COOKIES: %s",cookies);
+            //console.log("rknnomboat: %s",nomboat);
+ 			if (nomboat.length)
+			{
+				document.getElementById("nomboat").style.backgroundColor =  "#ceceff";
+    			document.getElementById("nomboat").innerHTML=nomboat;
+                document.getElementById("nomboat").value=nomboat;
+            	get_kmz(nomboat);
+                //console.log("NOMBOAT: %s",nomboat);
+				document.getElementById("inputValue").innerHTML =  "Bonjour "+nomboat+" !";
+			}
+			else
+			{
+           		// alert( "Fournissez un nom de bateau !" );
+				document.getElementById("inputValue").innerHTML =  "Saisissez le nom du bateau ! Give a Boatname Please!";
+    	        document.naming.nomboat.focus() ;
+			}
 		}
 	}
 

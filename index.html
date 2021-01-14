@@ -14,16 +14,16 @@
 <script src="js/get_kmz.js"></script>
 <script src="js/config_server.js"></script> <!-- server configuration :: need to be adapted to the server position (local or remote) -->
 </head>
-<body onload="checkCookieBoatName()">
+<!-- body onload="checkCookieBoatName()" -->
+<body>
 <div id="bandeauDiv"><h1 class="bandeau">Vos bateaux amis du Vendée Globe virtuel 2020 dans Google Earth</h1></div>
 <div id="leftDiv">
 <p> &gt;&gt;&gt; <b>French</b> &gt;&gt;&gt; <a href="index_en.html">English</a></p>
 <h2>Création d'une carte Google Earth</h2>
-<p>Saisissez le nom de votre bateau dans VR (<i>en respectant la graphie !</i>)</p>
-<div id="inputValue"></div>
+<div id="inputValue">Saisissez le nom de votre bateau dans VR (<i>en respectant la graphie !</i>)</div>
 <form action="" name="naming" id="naming" method="post" onsubmit="return set_BoatName();">
 <b><label for="nomboat">Nom</label></b>
-<input type="text" class="textInput" name="nomboat" id="nomboat" size="30" value=""/>
+<input type="text" class="textInput" name="nomboat" id="nomboat" size="30"/>
 <input id="submitBtn2" type="submit" name="action2" value="Choisir" />
 </form>
 <p> &gt;&gt;&gt; <a href="cartes_rkn.html">Créer une carte</a></p>
@@ -61,6 +61,7 @@
 	document.getElementById("naming").addEventListener("submit", function(event){
     	event.preventDefault()
 	});
+    checkCookieBoatName();
 	// info utilisateur
 	document.getElementById("linkDiv").innerHTML="<p>Pour que vos amis choisissent leurs couleurs de voile et de coque fournissez leur le lien :<br /><a target=\"_blank\" href=\""+rknserveururl+"color_picker.html\">"+rknserveururl+"color_picker.html</a>";
 </script>

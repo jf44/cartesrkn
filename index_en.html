@@ -14,22 +14,20 @@
 <script src="js/get_kmz.js"></script>
 <script src="js/config_server.js"></script> <!-- server configuration :: need to be adapted to the server position (local or remote) -->
 </head>
-<body onload="checkCookieBoatName()">
+<body>
 <div id="bandeauDiv"><h1 class="bandeau">Vendée Globe Virtuel: Your Friend's boats in Google Earth</h1></div>
 <div id="leftDiv">
 <p> &gt;&gt;&gt; <b>English</b> &gt;&gt;&gt; <a href="index.html">French</a></p>
 <h2>Google Earth Map Generation</h2>
-<p>Input your Boat Name in VR (<i>exact spelling!</i>)</p>
-<div id="inputValue"></div>
+<div id="inputValue">Input your Boat Name in VR (<i>exact spelling!</i>)</div>
 <form action="" name="naming" id="naming" method="post" onsubmit="return set_BoatName();">
 <b><label for="nomboat">Name</label></b>
-<input type="text" class="textInput" name="nomboat" id="nomboat" size="30" value=""/>
+<input type="text" class="textInput" name="nomboat" id="nomboat" size="30"/>
 <input id="submitBtn2" type="submit" name="action2" value="Go" />
 </form>
-<p> &gt;&gt;&gt; <a href="cartes_rkn_en.html"><b>Set up a Map</b></a></p>
+<p> &gt;&gt;&gt; <a href="cartes_rkn_en.html">Set up a Map</a></p>
 <h2>Sails and Hull colors</h2>
-<p> &gt;&gt;&gt; <a href="color_picker_en.html"><b>Sails and Hull Colors</b></a></p>
-<div id="ajaxBox"></div>
+<p> &gt;&gt;&gt; <a href="color_picker_en.html">Sails and Hull Colors</a>
 <div id="myMap"></div>
 <div id="myFiles">
 <img src="images/vgv20-rkn_202012051530-04.jpg" border="0" alt="Rkn en course" title="Rkn en course" />
@@ -61,6 +59,9 @@
 	document.getElementById("naming").addEventListener("submit", function(event){
     	event.preventDefault()
 	});
+
+	checkCookieBoatName();
+
 	// info utilisateur
 	document.getElementById("linkDiv").innerHTML="<p>Let your friends choose the colors of their boats; give them the link :<br /><a target=\"_blank\" href=\""+rknserveururl+"color_picker.html\">"+rknserveururl+"color_picker_en.html</a>";
 </script>
