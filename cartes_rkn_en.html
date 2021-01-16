@@ -41,6 +41,7 @@
 <label for="cModele"><b>3D Boat's Models</b></label> <span class="small"> (among those available on the server)</span>
 &nbsp; &nbsp; <select name="cModele" id="cModele" onchange="placerUneValeur(3);">
 </select>
+&nbsp; &nbsp; <button type="button" id="submitBtn" onsubmit="return (steeringvalidate_params());">Ok!</button>
 <br /><label for="params"></label>
 <br />
 <input type="text" name="params" id="params" size="80" maxsize="255" value="" />

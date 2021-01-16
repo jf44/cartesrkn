@@ -30,17 +30,18 @@
 <p>Puis sélectionnez les paramètres indispensables à la génération des fichiers KMZ.</p>
 <form action="" name="steering" id="steering"  method="post" onsubmit="return (steeringvalidate_params());">
 <label for="cCourse"><b>Course</b></label>
-<input type="text" name="cCourse" id="cCourse" size="20" maxsize="30" value="" onclick="placerUneValeur(0);" onchange="placerUneValeur(0);" oninput="placerUneValeur(0);"/>
+<input type="text" name="cCourse" id="cCourse" size="20" maxsize="30" value=""  onchange="placerUneValeur(0);"/>
 &nbsp; &nbsp;
 <label for="cTeam"><b>Team</b></label> &nbsp;
-<input type="text" name="cTeam" id="cTeam" size="10" maxsize="30" value="" onclick="placerUneValeur(1);" onchange="placerUneValeur(1);" oninput="placerUneValeur(1);"/>
+<input type="text" name="cTeam" id="cTeam" size="10" maxsize="30" value=""  onchange="placerUneValeur(1);" />
 &nbsp; &nbsp;
 <label for="cScale"><b>Echelle</b></label> <span class="small"> (entre <i>0.1</i> et <i>50</i>)</span>
-<input type="text" name="cScale" id="cScale" size="4" maxsize="4" value="" onclick="placerUneValeur(2);" onchange="placerUneValeur(2);" onchange="placerUneValeur(2);"/>
+<input type="text" name="cScale" id="cScale" size="4" maxsize="4" value=""  onchange="placerUneValeur(2);" />
 <br />
 <label for="cModele"><b>Modèle 3D</b></label> <span class="small"> (parmi ceux disponibles sur le serveur)</span>
-&nbsp; &nbsp; <select name="cModele" id="cModele" onclick="placerUneValeur(3);"onchange="placerUneValeur(3);">
+&nbsp; &nbsp; <select name="cModele" id="cModele" onchange="placerUneValeur(3);">
 </select>
+&nbsp; &nbsp; <button type="button" id="submitBtn" onsubmit="return (steeringvalidate_params());">Ok !</button>
 <br /><br />
 <label for="params">Jeu de paramètres choisis</label>
 <br />
