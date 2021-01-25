@@ -83,7 +83,7 @@
 
 		var xhr = new XMLHttpRequest();
 
-		var url =	rknserveururl+"/webservice/set_boat_color.php";
+		var url =	rknserveururl+"webservice/set_boat_color.php";
         //console.debug("POST_COLORS ::URL: %s",url);
 
 		xhr.open("POST", encodeURI(url), true);
@@ -131,7 +131,7 @@
 			//var rknserveururl ="http://localhost:8080/voilevirtuelle/vgv2020/";
 			// Deplacé dans le fichier de configuration
 			//console.debug("BOATNAME: %s",boatname);
-            var url =	rknserveururl+"/webservice/get_boat_color.php?boatname="+boatname;
+            var url =	rknserveururl+"webservice/get_boat_color.php?boatname="+boatname;
 
 			var xhr = new XMLHttpRequest();
 

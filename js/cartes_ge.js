@@ -217,20 +217,20 @@ function set_all_params(strparams){
 
 // -------------------
 function help(){
-    document.getElementById("myMap").style.backgroundColor =  "#ceceaa";
-    document.getElementById("myMap").innerHTML="<h3>Sélection des paramètres d'affichage</h3>";
-    document.getElementById("myMap").innerHTML="<p><b>Echelle des modèles</b><br>Elle détermine la taille des modèles dans Google Earth. <span class=\"small\"><i>Entre 10 et 20</i> --&gt; Courses océaniques, sinon voiliers invisibles ! <i>De 2 à 10</i> --&gt;  Détroits et îles ; <i>De 0.1 et 2</i> --&gt; Passages étroits et arrivées de courses, sinon les modèles se superposent.</span></p>";
-    document.getElementById("myMap").innerHTML+="<img src=\"images/voiliers_echelles.jpg\" border=\"0\" alt=\"Echelles 0.1 à 12\" title=\"Echelles 0.1 à 12\" />";
-	document.getElementById("myMap").innerHTML+="<p><b>Modèles 3D</b><br>Les modèles sont simplifiés au maximum pour accélérer la restitution. Si vous souhaitez ajouter votre propre modèle de voilier contactez-moi.</p>";
+    document.getElementById("myHelp").style.backgroundColor =  "#ceceaa";
+    document.getElementById("myHelp").innerHTML="<h3>Sélection des paramètres d'affichage</h3>";
+    document.getElementById("myHelp").innerHTML="<p><b>Echelle des modèles</b><br>Elle détermine la taille des modèles dans Google Earth. <span class=\"small\"><i>Entre 10 et 20</i> --&gt; Courses océaniques, sinon voiliers invisibles ! <i>De 2 à 10</i> --&gt;  Détroits et îles ; <i>De 0.1 et 2</i> --&gt; Passages étroits et arrivées de courses, sinon les modèles se superposent.</span></p>";
+    document.getElementById("myHelp").innerHTML+="<img src=\"images/voiliers_echelles.jpg\" border=\"0\" alt=\"Echelles 0.1 à 12\" title=\"Echelles 0.1 à 12\" />";
+	document.getElementById("myHelp").innerHTML+="<p><b>Modèles 3D</b><br>Les modèles sont simplifiés au maximum pour accélérer la restitution. Si vous souhaitez ajouter votre propre modèle de voilier contactez-moi.</p>";
 }
 
 // -------------------
 function help_en(){
-    document.getElementById("myMap").style.backgroundColor =  "#ceceaa";
-    document.getElementById("myMap").innerHTML="<h3>Display pParameters Selection</h3>";
-    document.getElementById("myMap").innerHTML="<p><b>Models' scale</b><br>The scale set the models size in G.E. <span class=\"small\"><i>Between 10 and 20</i> --&gt; Ocean races, otherway boats are too small! <i>2 to 10</i> --&gt; Islands and Narrows; <i>0.1 to 2</i> --&gt; Very narrow and Arrival, otherway the boats are packed.</span></p>";
-    document.getElementById("myMap").innerHTML+="<img src=\"images/voiliers_echelles.jpg\" border=\"0\" alt=\"Echelles 0.1 à 12\" title=\"Echelles 0.1 à 12\" />";
-	document.getElementById("myMap").innerHTML+="<p><b>3D Models</b><br>Very simplificated to speed up the restitution. If you like add your own boat model contact-me.</p>";
+    document.getElementById("myHelp").style.backgroundColor =  "#ceceaa";
+    document.getElementById("myHelp").innerHTML="<h3>Display pParameters Selection</h3>";
+    document.getElementById("myHelp").innerHTML="<p><b>Models' scale</b><br>The scale set the models size in G.E. <span class=\"small\"><i>Between 10 and 20</i> --&gt; Ocean races, otherway boats are too small! <i>2 to 10</i> --&gt; Islands and Narrows; <i>0.1 to 2</i> --&gt; Very narrow and Arrival, otherway the boats are packed.</span></p>";
+    document.getElementById("myHelp").innerHTML+="<img src=\"images/voiliers_echelles.jpg\" border=\"0\" alt=\"Echelles 0.1 à 12\" title=\"Echelles 0.1 à 12\" />";
+	document.getElementById("myHelp").innerHTML+="<p><b>3D Models</b><br>Very simplificated to speed up the restitution. If you like add your own boat model contact-me.</p>";
 }
 
 // -------------------
