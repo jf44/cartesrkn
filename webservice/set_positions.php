@@ -367,7 +367,13 @@ function purge($lines, $terminateur=false){
 								$horaire = $heure.$minute.$seconde;
                                 $horaire_fichier = $heure.$minute;
 								$last_update=trim($date_data).' '.trim($heure).':'.trim($minute).':'.trim($seconde).' '.trim($utc);
-								$sauve=true;							}
+								$sauve=true;
+
+							}
+                            if ($speed=='-') // Enregistrer les bateaux à l'arrivée
+							{
+                            	$speed=0.0;
+							}
 
                             $output.="$rt;$skipper;$last_update;$rank;$dtf;$dtu;$brg;$sail;$state;$position;$hdg;$twa;$tws;$speed;$factor;$foils;$hull";
 							if ($terminateur)
@@ -385,7 +391,8 @@ function purge($lines, $terminateur=false){
 									$dtu='0.0';
 							       	//echo " --&gt; '$dtu'\n";
 								}
-								if (($twa!='-') && ($tws!='-') && ($speed!='-')) // Certains bateaux dont les rééel n'ont pas ces informations attachées
+
+								if (($twa!='-') && ($tws!='-')) // Certains bateaux dont les réél n'ont pas ces informations attachées
                             	{
 									$rposition = new stdClass();
 									$rposition->boatname=$skipper;
