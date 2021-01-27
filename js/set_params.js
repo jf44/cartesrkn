@@ -121,11 +121,8 @@
 			// Deplacé dans le fichier de configuration
 			//console.debug("BOATNAME: %s",boatname);
             var url =	rknserveururl+"webservice/get_ge_params.php?boatname="+boatname;
-
 			var xhr = new XMLHttpRequest();
-
         	xhr.open("GET", encodeURI(url), true);
-
 			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); // Mandatory
 
 			// The following code does'nt work on the the SolServer because it is not CORS  (Cross-Origin Resource Sharing)!
@@ -162,6 +159,7 @@
 	// -------------------
 	function select_modele_3D()
 	{
+		//console.log ("MODELE: "+modele);
 		if ((tmodeles !== null) && (tmodeles !== "undefined"))
 		{
  			for(const item of tmodeles)
@@ -169,6 +167,7 @@
                 if (item==modele)
 				{
 					document.getElementById("cModele").innerHTML += "<option value=\""+item+"\" selected>"+item+"</option>";
+                    //console.log (item +" Sélectionné");
 				}
 				else
 				{
@@ -211,7 +210,10 @@
 							{
 								//console.debug("MODELES  : "+obj.modeles);
 								tmodeles=obj.modeles.split(",");
-								modele=tmodeles[0];
+								if (modele=="")
+								{
+									modele=tmodeles[0];
+								}
                                 select_modele_3D();
 							}
                             else

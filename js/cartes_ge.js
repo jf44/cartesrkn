@@ -37,7 +37,7 @@ function verifHexa(acolor){
 
 
 var tparam = [];
-var modele="IMOCA";
+var modele="";
 var tmodeles=[];
 var course="";
 var team="";
@@ -145,6 +145,7 @@ var message="";
 	return true;
 }
 
+
 // -----------------
 function set_all_params(strparams){
 // initialise la liste des paramètres après telechargement
@@ -157,14 +158,14 @@ function set_all_params(strparams){
         document.getElementById("params").value= strparams;
 		document.getElementById("imputvalue").innerHTML = "Paramètres rechargés... / Parameters reloaded ";
 
-		if ( tparam.length==1)
+		if (tparam.length==1)
 		{
 			document.getElementById("cCourse").style.backgroundColor =  "#ffffaa";
             document.getElementById("cCourse").value = tparam[0];
             document.getElementById("lCourse").innerHTML = tparam[0];
 			course = tparam[0];
 		}
-		else if ( tparam.length==2)
+		else if (tparam.length==2)
 		{
 			document.getElementById("cCourse").style.backgroundColor =  "#ffaaff";
             document.getElementById("cCourse").value = tparam[0];
@@ -175,7 +176,7 @@ function set_all_params(strparams){
             team = tparam[1];
         	document.getElementById("lTeam").innerHTML = tparam[1];
 		}
-		else if ( tparam.length==3)
+		else if (tparam.length==3)
 		{
 			document.getElementById("cCourse").style.backgroundColor = "#ffaaff";
             document.getElementById("cCourse").value = tparam[0];
@@ -191,7 +192,7 @@ function set_all_params(strparams){
             scale = tparam[2];
 			return true;
 		}
-		else if ( tparam.length==4)
+		else if (tparam.length==4)
 		{
 			document.getElementById("cCourse").style.backgroundColor = "#ffaaff";
             document.getElementById("cCourse").value = tparam[0];

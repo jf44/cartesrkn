@@ -5,52 +5,36 @@
 // Génération KML des  VOILIERS en 3D
 
 // --------------------
-function amure($nom_voile, $cog, $twa)
+function get_amure($cog, $twa)
 {
 	$awa = $twa-$cog;
-	if ($awa<180) // Bâbord
+	return($awa<180?"BABORD":"TRIBORD");
+}
+
+// --------------------
+function str_amure($nom_voile, $boat_amure){
+	if ($nom_voile=='spi')
 	{
-		if ($nom_voile=='spi')
-		{
-			return '_SPI_BABORD';
-		}
-		else if ($nom_voile=='genois')
-		{
-			return '_GENOIS_BABORD';
-		}
-		else if ($nom_voile=='gennaker')
-		{
-			return '_GENNAKER_BABORD';
-		}
-		else
-		{
-			return '_FOC_BABORD';
-		}
+		return '_SPI_'.$boat_amure;
 	}
-	else {
- 		if ($nom_voile=='spi')
-		{
-			return '_SPI_TRIBORD';
-		}
-		else if ($nom_voile=='genois')
-		{
-			return '_GENOIS_TRIBORD';
-		}
-		else if ($nom_voile=='gennaker')
-		{
-			return '_GENNAKER_TRIBORD';
-		}
-		else
-		{
-			return '_FOC_TRIBORD';
-		}
+	else if ($nom_voile=='genois')
+	{
+		return '_GENOIS_'.$boat_amure;
+	}
+	else if ($nom_voile=='gennaker')
+	{
+		return '_GENNAKER_'.$boat_amure;
+	}
+	else
+	{
+		return '_FOC_'.$boat_amure;
 	}
 }
 
 // --------------------
-function GetFichierModele($nom_voile, $boat_type, $cog, $twa){
+function GetFichierModele($nom_voile, $boat_type, $boat_amure){
 // retourne un modele de fichier dae correspondant a la voile portee
-	return ($boat_type. amure( $nom_voile, $cog, $twa).'.dae');
+	return ($boat_type.str_amure($nom_voile, $boat_amure).'.dae');
 }
 
 // --------------------
@@ -310,16 +294,17 @@ if (!empty($bato->dbl)){
 	    	</Scale>
 ';
 				// A VERIFIER CAR ICI J'IMPROVISE
-				$fichier_dae=GetFichierModele($bato->GetVoile(), $boat_type, $bato->cog, $bato->twa);
+                $boat_amure=get_amure($bato->cog, $bato->twa);
+                $fichier_dae=GetFichierModele($bato->GetVoile(), $boat_type, $boat_amure);
 
 				if ($fichier_dae!='')
 				{
 					// recopier le fichier modele
-					if (recopier_modele_dae($dossier_3d, $fichier_dae, $bato->nomboat, $bato->GetVoile(), $boat_type))
+					if (recopier_modele_dae($dossier_3d, $fichier_dae, $bato->nomboat, $bato->GetVoile(), $boat_type, $boat_amure))
 					{
 						$s.='
 			<Link id="'.$bato->nomboat.'">
-    			<href>'.$url_modeles.'/'.$boat_type.'_'.$bato->nomboat.'_'.$bato->GetVoile().'.dae</href>
+				<href>'.$url_modeles.'/'.$boat_type.'_'.$bato->nomboat.'_'.$bato->GetVoile().'_'.$boat_amure.'.dae</href>
     		</Link>
 ';
 					}
@@ -449,7 +434,7 @@ global $dossier_marques;
 
 
 //------------------------
-function recopier_modele_dae($dossier_3d, $fichier_dae, $nom_bato, $voile, $boat_type){
+function recopier_modele_dae($dossier_3d, $fichier_dae, $nom_bato, $voile, $boat_type, $boat_amure){
 // copie du modele sous le nom du bateau
 global $dir_serveur;
 global $extension_dae;
@@ -457,14 +442,13 @@ global $dossier_modeles;
 global $t_fichiers_dae;
 
 	// DEBUG
-	//echo "\nkml_3d.php:: 459 :: DIR_SERVEUR:".$dir_serveur.'/sources_3d/'.$dossier_modeles.'/'.$fichier_dae."<br />\n";
-
+	//echo "\nkml_3d.php:: 445:: DIR_SERVEUR:".$dir_serveur.'/sources_3d/'.$dossier_modeles.'/'.$fichier_dae."<br />\n";
 	if (file_exists($dir_serveur.'/sources_3d/'.$dossier_modeles.'/'.$fichier_dae))
 	{
 		$contenu=file_get_contents($dir_serveur.'/sources_3d/'.$dossier_modeles.'/'.$fichier_dae);
-		$f_name=$dir_serveur.'/'.$dossier_3d.'/'.$dossier_modeles.'/'.$boat_type.'_'.$nom_bato.'_'.$voile.$extension_dae;
-        // echo "\n422 :: -->".$dir_serveur.'/'.$dossier_3d.'/'.$dossier_modeles.'/'.$boat_type.'-'.$nom_bato.'_'.$voile.$extension_dae."<br />\n";
-        $t_fichiers_dae[]=$boat_type.'_'.$nom_bato.'_'.$voile.$extension_dae;
+		$f_name=$dir_serveur.'/'.$dossier_3d.'/'.$dossier_modeles.'/'.$boat_type.'_'.$nom_bato.'_'.$voile.'_'.$boat_amure.$extension_dae;
+        //echo "\n451 :: -->".$dir_serveur.'/'.$dossier_3d.'/'.$dossier_modeles.'/'.$boat_type.'-'.$nom_bato.'_'.$voile.'_'.$boat_amure.$extension_dae."<br />\n";
+        $t_fichiers_dae[]=$boat_type.'_'.$nom_bato.'_'.$voile.'_'.$boat_amure.$extension_dae;
 		if (file_exists($f_name))
 		{
 			return true;

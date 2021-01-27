@@ -115,23 +115,27 @@
 		team = getCookie("rknteam");
         scale = getCookie("rknscale");
         modele = getCookie("rknmodele");
+        console.log("Cookie : "+ modele+" sélectionné");
 	}
-	if (modele.length != 0)
+
+	if (modele != "")
 	{
-		document.getElementById('cModele').value = scale;
+        console.log("Cookie : "+ modele+" sélectionné");
+		document.getElementById('cModele').value = modele;
         setCookie("rknmodele",modele,8);
 	}
+
 	if (scale.length != 0)
 	{
 		document.getElementById('cScale').value = scale;
         setCookie("rknscale",scale,8);
 	}
-	if (team.length != 0)
+	if (team != "")
 	{
 		document.getElementById('cTeam').value = team;
         setCookie("rknteam",team,8);
 	}
-	if (course.length != 0)
+	if (course != "")
 	{
 		document.getElementById('cCourse').value = course;
         setCookie("rkncourse",course,8);
