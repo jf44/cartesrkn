@@ -105,9 +105,9 @@
 	if (cookies !== null)
 	{
 		nomboat = getCookie("rknnomboat");
-		if (nomboat.length != 0){
+		if (nomboat != ""){
 	    	document.naming.nomboat.value = nomboat;
-			// console.debug("NOMBOAT: %s",nomboat);
+			// console.log("NOMBOAT: %s",nomboat);
 			get_params_boat(nomboat); // Ajax Call
 		}
 		course = getCookie("rkncourse");
@@ -115,7 +115,7 @@
         scale = getCookie("rknscale");
 		modele = getCookie("rknmodele");
 	}
-	if (modele.length != 0)
+	if (modele != "")
 	{
 		document.getElementById('cModele').value = scale;
         setCookie("rknmodele",modele,8);
@@ -125,17 +125,18 @@
 		document.getElementById('cScale').value = scale;
         setCookie("rknscale",scale,8);
 	}
-	if (team.length != 0)
+	if (team != "")
 	{
 		document.getElementById('cTeam').value = team;
         setCookie("rknteam",team,8);
 	}
-	if (course.length != 0)
+	if (course != "")
 	{
 		document.getElementById('cCourse').value = course;
         setCookie("rkncourse",course,8);
 	}
-	if (nomboat.length != 0)
+
+	if (document.naming.nomboat.value)
 	{
         nomboat = document.naming.nomboat.value;
       	setCookie("rknnomboat",nomboat,8);
@@ -143,7 +144,7 @@
 	else
 	{
         //alert( "Fournissez un nom de bateau !" );
-		document.getElementById('imputvalue').innerHTML =  "Type in a Boat Name please!";
+		document.getElementById('imputvalue').innerHTML =  "Fournissez un nom de bateau !";
         document.naming.nomboat.focus() ;
 	}
 

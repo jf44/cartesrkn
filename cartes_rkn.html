@@ -106,21 +106,21 @@
 	if (cookies !== null)
 	{
 		nomboat = getCookie("rknnomboat");
-		if (nomboat.length != 0){
+		if (nomboat != ""){
 	    	document.naming.nomboat.value = nomboat;
-			console.debug("NOMBOAT: %s",nomboat);
+			//console.log("NOMBOAT: %s",nomboat);
 			get_params_boat(nomboat); // Appel Ajax
 		}
 		course = getCookie("rkncourse");
 		team = getCookie("rknteam");
         scale = getCookie("rknscale");
         modele = getCookie("rknmodele");
-        console.log("Cookie : "+ modele+" sélectionné");
+        //console.log("Cookie : "+ modele+" sélectionné");
 	}
 
 	if (modele != "")
 	{
-        console.log("Cookie : "+ modele+" sélectionné");
+        //console.log("Cookie : "+ modele+" sélectionné");
 		document.getElementById('cModele').value = modele;
         setCookie("rknmodele",modele,8);
 	}
