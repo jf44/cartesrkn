@@ -228,7 +228,7 @@ function help(){
 // -------------------
 function help_en(){
     document.getElementById("myHelp").style.backgroundColor =  "#ceceaa";
-    document.getElementById("myHelp").innerHTML="<h3>Display pParameters Selection</h3>";
+    document.getElementById("myHelp").innerHTML="<h3>Display Parameters Selection</h3>";
     document.getElementById("myHelp").innerHTML="<p><b>Models' scale</b><br>The scale set the models size in G.E. <span class=\"small\"><i>Between 10 and 20</i> --&gt; Ocean races, otherway boats are too small! <i>2 to 10</i> --&gt; Islands and Narrows; <i>0.1 to 2</i> --&gt; Very narrow and Arrival, otherway the boats are packed.</span></p>";
     document.getElementById("myHelp").innerHTML+="<img src=\"images/voiliers_echelles.jpg\" border=\"0\" alt=\"Echelles 0.1 à 12\" title=\"Echelles 0.1 à 12\" />";
 	document.getElementById("myHelp").innerHTML+="<p><b>3D Models</b><br>Very simplificated to speed up the restitution. If you like add your own boat model contact-me.</p>";
@@ -252,6 +252,7 @@ function help1(){
 function helpkmz(){
     document.getElementById("rightDiv").style.backgroundColor =  "#ceffce";
     document.getElementById("rightDiv").innerHTML="<h2>Lire les fichiers KML / KMZ</h2>";
+    document.getElementById("rightDiv").innerHTML+="<blockquote><span class=\"error\">Attention !</span> : Seule la version desktop <i>Google Earth Professionnel</i> peut afficher les modèles 3D générés par cette application !</blockquote>";
  	document.getElementById("rightDiv").innerHTML+="<p>Les cartes G.E. sont distribuées au format KML /KMZ indépendants du serveur<br />";
  	document.getElementById("rightDiv").innerHTML+="<li>Cliquez sur <b>Télécharger</b></li>\n";
     document.getElementById("rightDiv").innerHTML+="<li>Si le fichier s'enregistre comme un fichier <i><b>.ZIP</b></i>\" renommez le <i><b>.kmz</b></i>\"</li>\n";
@@ -262,14 +263,15 @@ function helpkmz(){
 // -------------------
 function info_carte(fname){
     document.getElementById("myMap").style.backgroundColor =  "#ccccff";
-    document.getElementById("myMap").innerHTML="<h2>Génération de la carte Google Earth</h2>";
-    document.getElementById("myMap").innerHTML+="<p>Votre fichier Google Earth est disponible / the map is here: <a target=\"_blank\" href=\""+ fname +"\">Télécharger / Download</a></p>";
-    document.getElementById("myMap").innerHTML+="<h3>Lire les fichiers KMZ</h3>";
- 	document.getElementById("myMap").innerHTML+="<p>Les cartes G.E. sont distribuées au format KMZ indépendants du serveur<br />";
- 	document.getElementById("myMap").innerHTML+="<li>Cliquez sur <b>Télécharger / Download</b></li>\n";
-    document.getElementById("myMap").innerHTML+="<li>Si le fichier s'enregistre comme un fichier <i><b>.ZIP</b></i>\" renommez le <i><b>.kmz</b></i>\"</li>\n";
-    document.getElementById("myMap").innerHTML+="<li>Puis ouvrez le dans Google Earth; au besoin supprimez le contenu du dossier \"Lieux préférés\".</li>\n";
-    document.getElementById("myMap").innerHTML+="<li>... et profitez de la vue ! :))</li>\n";
+    document.getElementById("myMap").innerHTML="<h2>Carte Google Earth / Google Earth Map</h2>";
+    document.getElementById("myMap").innerHTML+="<blockquote><span class=\"error\">Attention !</span> : Utilisez exclusivement <i>Google Earth Professionnel</i>  (Desktop version) pour afficher ces cartes de modèles 3D. / Use only <i>Google Earth Professional</i> (Desktop version) to display these 3D maps.</blockquote>";
+    document.getElementById("myMap").innerHTML+="Votre fichier Google Earth est disponible / The map is here: <a target=\"_blank\" href=\""+ fname +"\"><b>Télécharger / Download</b></a><br />";
+ 	document.getElementById("myMap").innerHTML+="<i>N.B : Le format KMZ est indépendants du serveur / This file don't depends of the web server</i><br />";
+    document.getElementById("myMap").innerHTML+="<li>Si le fichier s'enregistre comme un fichier \"<i><b>.ZIP</b></i>\" renommez le \"<i><b>.kmz</b></i>\" / ";
+    document.getElementById("myMap").innerHTML+="<br />If the file is downloaded as a \"<i><b>.ZIP</b></i>\" file rename it \"<i><b>.kmz</b></i>\"</li>\n";
+    document.getElementById("myMap").innerHTML+="<li>Puis ouvrez le dans Google Earth Professionnel ; au besoin supprimez le contenu du dossier \"Lieux préférés\". / \n";
+    document.getElementById("myMap").innerHTML+="Then open it in Google Earth Professionnal (descktop version).</li>\n";
+    document.getElementById("myMap").innerHTML+="<li>... et profitez de la vue ! / ... and Enjoy! :))</li><br />\n";
 }
 
 // http://localhost:8080/voilevirtuelle/vgv2020/ge/cartes_rkn/webservice/kmz/VGv2020_RKN_Iroizo+C-RKN_3D2020122414.kmz
