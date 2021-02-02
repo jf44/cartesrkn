@@ -4,7 +4,7 @@
 // Evolution des versions de 2008 et de 2016 sans utilisation d'une base de données
 // 2020 : Capture des données grace à l'extension Chrome VR Dashboard
 // Les données de course sont lues dans un fichier ./positions/course_team_skipper-aaaammjj_hhmm.csv
-// Les trajectoires dans le fichier
+// Les trajectoires dans le fichier ./trajectoires/COURSE_SKIPPER.json
 // Un script color_picker.html permet aux utilisateur d'indiquer les couleurs de leur bateau (coque, pont, GV, voile d'avant, Spi)
 
 // Exemple d'appel :
@@ -216,7 +216,11 @@ if (!empty($boatname) && !empty($course) && !empty($team) && !empty($nfile))
 		{
 			if (!empty($a_voilier))
 			{
+				//echo "course-2-kml.pho :: 219\n";
+				//print_r($a_voilier);
+
 				$a_voilier->latitude *= $correction_geodesique;  // tenir compte de la correction de latitude
+				// GenereBateauKML_3D($dossier_3d, $url_serveur, $boat_type, $bato, $echelle=6, $altitude=1000){
 				$s.=GenereBateauKML_3D($dossier_3d, $url_serveur, $boat_type, $a_voilier, $scale, $scale*150);
 			}
 		}

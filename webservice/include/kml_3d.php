@@ -250,10 +250,7 @@ if (!empty($bato->dbl)){
 	$s.='<br>DBL : '.$bato->dbl;
 }
 */
-				if (!empty($bato->voile))
-				{
-					$s.='<br>Voile : '.$bato->GetVoile();
-				}
+				$s.='<br>Voile : '.$bato->GetVoile();
 				$s.='</p>]]>
 </description>
 	<LookAt>

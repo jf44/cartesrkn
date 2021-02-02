@@ -252,7 +252,7 @@ $t_voiliers = array();
 	                    		$CouleurVoilier= SetCouleurBd2Voilier(get_boat_color($skipper)); // "coque,pont,grand voile,voile avant : genois,spi" ff0000,ffff33,ffffff,ee33ef,0000ff
 								list($longitude, $latitude) = explode('!',get_lonlat($position));
         	                    $classement = get_classement($skipper); // A terminer
-
+								$voile = set_voile($sail);	// transformation
 								$un_voilier = new Voilier();
 
                     			$un_voilier->SetPosition(
@@ -269,7 +269,7 @@ $t_voiliers = array();
 									(float)$hdg,
 									(float)$speed,
             	                	$state,
-									$sail,	//
+									$voile,	// transformation
 									(float)$tws,
 									(float)$twa,
 									$CouleurVoilier->couleur_coque,   // RRR;VVV;BBB
